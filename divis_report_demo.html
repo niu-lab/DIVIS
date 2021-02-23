@@ -1,0 +1,913 @@
+
+<!DOCTYPE html> 
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>DIVS Report</title>
+
+        <script src="http://niulab.scgrid.cn/dataserver/data/public_resources/anychart-core.min.js"></script>
+        <script src="http://niulab.scgrid.cn/dataserver/data/public_resources/anychart-venn.min.js"></script>
+        <script src="http://niulab.scgrid.cn/dataserver/data/public_resources/pastel.min.js"></script>
+        <script src="http://niulab.scgrid.cn/dataserver/data/public_resources/anychart-base.min.js"></script>
+        <script src="http://niulab.scgrid.cn/dataserver/data/public_resources/anychart-ui.min.js"></script>
+        <script src="http://niulab.scgrid.cn/dataserver/data/public_resources/anychart-exports.min.js"></script>
+        <script src="http://niulab.scgrid.cn/dataserver/data/public_resources/anychart-circular-gauge.min.js"></script>
+        <script src="http://niulab.scgrid.cn/dataserver/data/public_resources/anychart-pie.min.js"></script>
+        <script src="http://niulab.scgrid.cn/dataserver/data/public_resources/anychart-tag-cloud.min.js"></script>
+        <script src="http://niulab.scgrid.cn/dataserver/data/public_resources/anychart-cartesian.min.js"></script>
+        <script src="http://niulab.scgrid.cn/dataserver/data/public_resources/anychart-data-adapter.min.js"></script>
+
+        <link href="http://niulab.scgrid.cn/dataserver/data/public_resources/anychart-ui.min.css" type="text/css" rel="stylesheet" />
+        <link href="http://niulab.scgrid.cn/dataserver/data/public_resources/anychart-font.min.css" type="text/css" rel="stylesheet" />
+        <link href="http://niulab.scgrid.cn/dataserver/data/public_resources/css2.css" type="text/css" rel="stylesheet" />
+       
+        <script type="text/javascript" src="http://niulab.scgrid.cn/dataserver/data/public_resources/shCore.js"></script>
+        <script type="text/javascript" src="http://niulab.scgrid.cn/dataserver/data/public_resources/shBrushBash.js"></script>
+        <link type="text/css" rel="stylesheet" href="http://niulab.scgrid.cn/dataserver/data/public_resources/shCore.css"/>
+        <link type="text/css" rel="stylesheet" href="http://niulab.scgrid.cn/dataserver/data/public_resources/shThemeRDark.css"/>
+        
+        <script type="text/javascript">
+            SyntaxHighlighter.config.clipboardSwf = './releases/scripts/clipboard.swf';
+            SyntaxHighlighter.all();
+        </script>
+        <script type="javascript">
+            document.getElementById("demo").style.fontVariant = "small-caps";
+        </script>
+        
+        <style type="text/css">
+          html,
+          body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            border : 'solid red 3px';
+          }
+          #figure1 {
+            width: 70%;
+            height: 70%;
+            margin: 0% 15%;
+            display: flex;
+            #border:1px dashed #000; 
+            align-items: center;
+          }
+          #figure2 {
+            width: 70%;
+            height: 70%;
+            margin: 0% 15%;
+            display: flex;
+            #border:1px dashed #000;
+            align-items: center;
+          }
+          #hexyvenn_SNV {
+            width: 50%;
+            height: 80%;
+            padding: 0;
+          }
+          #hexyvenn_INDEL {
+            width: 50%;
+            height: 80%;
+            padding: 0;
+          }
+          #hexygauge{
+            width: 50%;
+            height: 80%;
+            padding: 0;
+          }
+          #hexypie {
+            width: 50%;
+            height: 80%;
+            padding: 0;
+          }
+          #hexytagcloud {
+            margin: 0% 15%;
+            width: 70%;
+            height: 40%;
+            padding: 0;
+          }
+          #hexybar {
+            width: 70%;
+            height: 70%;
+            margin: 0% 15%;
+            padding: 0;
+          }
+          h1{
+            font-size: 20px;
+            margin: 3% 15%;
+            color: #3399CC;
+          }
+          h3{
+            margin: 2% 15%;
+            font-family: Times, TimesNR, 'New Century Schoolbook',Georgia, 'New York', serif;
+            font-style:italic;
+            font-weight:normal;
+            font-size:18px;
+          }
+          #tmb{
+            width: 60%;
+            height: 80%;
+            margin: 0% 20%;
+            padding: 0;
+            border: solid red 2px;
+          }
+          #hexyshell {
+            width: 70%;
+            margin: 0% 15%;
+            padding: 0;
+          }
+          footer {
+            margin: 0% 15%;
+            background-color: #333333;
+            padding: 1% 2%;
+            #float: inline-block;
+          }
+          footer>p{
+            color: #ffffff;
+          }
+          a:link{color: #6666FF;}
+          a:visited{color:#990066;} 
+          a:hover{color: #FF6666;}  
+          a:active{color: #99CCCC;}
+        </style>
+    </head>      
+
+    <body>
+        <h1> DIVIS report of sample CNIC-02-04-0031 (WES) </h1>
+        <h3> 
+            <strong> Analyst: &nbsp;</strong> Xiaoyu He &nbsp;&nbsp;&nbsp;&nbsp;
+            <strong> Email:&nbsp;</strong> hexy@sccas.cn &nbsp;&nbsp;&nbsp;&nbsp; 
+            <strong> Date:&nbsp;</strong> 2021-02-05 
+        </h3>
+        <div id="hexyshell">
+        <pre class="brush: shell">
+            divis substep \
+                -s divis_report \ 
+                -c CNIC-02-04-0031.divis_report.config \ 
+                -o CNIC-02-04-0031 \
+        </pre>
+        </div>
+<table style="border-collapse:collapse;word-break:hyphenate;white-space:pre-wrap;width:70%;margin:auto;"><tr style="color:#fff;background-color:#48a6fb;font-size:15px;"><th colspan="3" style="padding:15px;">Quality control of raw sequencing data</th></tr><tr style="align:center;background-color:#fefdfa;"><td rowspan="7" style="font-family:arial;font-size:16px;color:#3B3B3B;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;background-color:#F5F5F5;width:30%;font-weight:bold;font-style:italic;">DIVIS processes raw sequencing data with <a href="http://www.bioinformatics.babraham.ac.uk/projects/fastqc/">FasfQC</a> and <a href = "https://github.com/OpenGene/fastp">Fastp</a></td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">raw_reads</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">191261918</td></tr><tr style="align:center;"><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">clean_reads</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">190210786</td></tr><tr style="align:center;background-color:#fefdfa;"><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">read_length</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">150,150</td></tr><tr style="align:center;"><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">q20</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">97.83%</td></tr><tr style="align:center;background-color:#fefdfa;"><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">q30</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">93.55%</td></tr><tr style="align:center;"><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">gc</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">50.17%</td></tr><tr style="align:center;background-color:#fefdfa;"><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">insert_size</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">222</td></tr></table>
+        <p> </p>
+    <table style="border-collapse:collapse;word-break:hyphenate;white-space:pre-wrap;width:70%;margin:auto;"><tr style="color:#fff;background-color:#48a6fb;font-size:16px;"><th colspan="3" style="padding:15px;">Quality control of alignment data </th></tr><tr style="align:center;background-color:#fefdfa;"><td rowspan="10" style="font-family:arial;font-size:16px;color:#3B3B3B;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;background-color:#F5F5F5;width:30%;font-weight:bold;font-style:italic;">DIVIS maps clean sequencing reads with <a href="https://github.com/lh3/bwa">BWA</a>, sorts and deduplicates the raw alignment with <a href="https://github.com/broadinstitute/picard/">Picard</a>, then perform the realignment and BQSR with <a href="https://github.com/broadinstitute/gatk">GATK</a></td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">mean_depth</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">190.5538</td></tr><tr style="align:center;"><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">depth > 4X</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">99.10%</td></tr><tr style="align:center;background-color:#fefdfa;"><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">depth > 10X</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">97.83%</td></tr><tr style="align:center;"><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">depth > 20X</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">95.00%</td></tr><tr style="align:center;background-color:#fefdfa;"><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">depth > 30X</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">91.50%</td></tr><tr style="align:center;"><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">depth > 40X</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">87.56%</td></tr><tr style="align:center;background-color:#fefdfa;"><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">depth > 50X</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">83.46%</td></tr><tr style="align:center;"><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">mapped reads</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">134537034 </td></tr><tr style="align:center;background-color:#fefdfa;"><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">dup_reads</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">75979588</td></tr><tr style="align:center;"><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">dup_ratio</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">51.66%</td></tr></table>
+        <p> </p>
+    <table style="border-collapse:collapse;word-break:normal;white-space:pre-wrap;width:70%;margin:auto;"><tr style="color:#fff;background-color:#48a6fb;font-size:16px;"><th colspan="7" style="padding:15px;border-width:1px;border-color:#fff;border-style:solid;">statistics of variants</th></tr><tr style="color:#fff;background-color:#48a6fb;font-size:16px;"><th style="padding:15px;border-width:1px;border-color:#fff;border-style:solid;background-color:#48a6fb;">Description</th><th style="padding:15px;border-width:1px;border-color:#fff;border-style:solid;background-color:#48a6fb;">caller</th><th style="padding:15px;border-width:1px;border-color:#fff;border-style:solid;background-color:#48a6fb;">SNVs</th><th style="padding:15px;border-width:1px;border-color:#fff;border-style:solid;background-color:#48a6fb;">Insertions</th><th style="padding:15px;border-width:1px;border-color:#fff;border-style:solid;background-color:#48a6fb;">Deletions</th><th style="padding:15px;border-width:1px;border-color:#fff;border-style:solid;background-color:#48a6fb;">Complexs</th><th style="padding:15px;border-width:1px;border-color:#fff;border-style:solid;background-color:#48a6fb;">Ti/Tv</th></tr><tr style="align:center;background-color:#fefdfa;"><td rowspan="5" style="font-family:arial;font-size:16px;color:#3B3B3B;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;background-color:#F5F5F5;width:30%;font-weight:bold;font-style:italic;">DIVIS detected variants with <a href="https://github.com/AstraZeneca-NGS/VarDictJava">VarDict</a>, <a href="https://github.com/dkoboldt/varscan">VarScan</a>, <a href="https://github.com/Illumina/strelka/">Strelka</a> and <a href="https://github.com/genome/pindel">Pindel</a>, then merge SNVs and indels from at least 2 callers</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">VarScan2(v2.4.9)</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">420</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">36</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">27</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">0</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">2.11</td></tr><tr style="align:center;"><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">VarDict(v1.8.7)</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">399</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">115</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">96</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">48</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">1.81</td></tr><tr style="align:center;background-color:#fefdfa;"><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">Strelka2(v0.0.3)</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">123</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">5</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">5</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">0</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">2.73</td></tr><tr style="align:center;"><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">Pindel(v1.1.1)</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">0</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">1068</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">581</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">0</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">nan</td></tr><tr style="align:center;background-color:#fefdfa;"><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">DIVIS(v1.0)</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">711</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">668</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">1147</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">70</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">1.844</td></tr></table>
+        <p> </p>
+    <table style="border-collapse:collapse;word-break:normal;white-space:pre-wrap;width:70%;margin:auto;"><tr style="color:#fff;background-color:#48a6fb;font-size:16px;"><th colspan="3" style="padding:15px;">Tumor Mutation Burden (TMB)</th></tr><tr style="align:center;background-color:#fefdfa;"><td rowspan="3" style="font-family:arial;font-size:16px;color:#3B3B3B;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;background-color:#F5F5F5;width:30%;font-weight:bold;font-style:italic;">TMB of a tumor sample is calculated by the number of non-synonymous somatic mutations (single nucleotide variants and small insertions/deletions) per mega-base in coding regions.</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">Coding region size in Megabases</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">60.5M</td></tr><tr style="align:center;"><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">Number of non-synonymous somatic mutations</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">2250</td></tr><tr style="align:center;background-color:#fefdfa;"><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">Non-synonymous TMB</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">37.19</td></tr></table>
+        <div id="figure1">
+
+        <div id="hexyvenn_SNV"></div>
+        <script>
+        anychart.onDocumentReady(function () {
+            // set chart theme
+            anychart.theme('pastel');
+            var data = [
+                {
+                  x: 'A',
+                  value: 114,
+                  name: 'Strelka ',
+                  tooltipTitle: 'v1.8.7',
+                  normal: {fill: "#8ecafb 1"},
+                  hovered: {fill: "#8ecafb 1"},
+                  selected: {fill: "#8ecafb 1"}
+                },
+                {
+                  x: 'B',
+                  value: 161,
+                  name: 'VarScan',
+                  tooltipTitle: 'v2.4.9',
+                  normal: {fill: "#ffeaa6 1"},
+                  hovered: {fill: "#ffeaa6 1"},
+                  selected: {fill: "#ffeaa6 1"}
+                },
+                {
+                  x: 'C',
+                  value: 119,
+                  name: 'VarDit',
+                  tooltipTitle: 'v1.2.1',
+                  normal: {fill: "#ee957f 1"},
+                  hovered: {fill: "#ee957f 1"},
+                  selected: {fill: "#ee957f 1"}
+                },
+                {
+                  x: ['A', 'B'],
+                  value: 112,
+                  name: '',
+                  tooltipTitle: 'Strelka & VarScan',
+                  tooltipDesc: 'Priority: Strelka',
+                  normal: {fill: "#9fdebe 0.8"},
+                  hovered: {fill: "#9fdebe 1"},
+                  selected: {fill: "#9fdebe 1"},
+                  hatchFill: {type:"weave", color: "#83c3a3"}    
+                },
+                {
+                  x: ['A', 'C'],
+                  value: 70,
+                  name: '',
+                  tooltipTitle: 'VarDict & Strelka',
+                  tooltipDesc: 'Priority: Strelka',
+                  normal: {fill: "#a98caf 0.6"},
+                  hovered: {fill: "#a98caf 1"},
+                  selected: {fill: "#a98caf 1"},
+                  hatchFill: {type:"weave", color: "#8b6b92"}
+                },
+                {
+                  x: ['B', 'C'],
+                  value: 117,
+                  name: '',
+                  tooltipTitle: 'VarDict & VarScan',
+                  tooltipDesc: 'Priority: VarScan',
+                  normal: {fill: "#f5b57c 0.8"},
+                  hovered: {fill: "#f5b57c 1"},
+                  selected: {fill: "#f5b57c 1"},
+                  hatchFill: {type:"weave", color: "#d09259"}
+                },
+                {
+                  x: ['A', 'B', 'C'],
+                  value: 68,
+                  name: '',
+                  tooltipTitle: 'VarDict & VarScan2 & Strelka',
+                  tooltipDesc: 'Priority: VarScan2 > Strelka > VarDict',
+                  label: {enabled:true, fontStyle: 'normal'},
+                  normal: {fill: "#8392ab 0.9"},
+                  hovered: {fill: "#8392ab 1"},
+                  selected: {fill: "#8392ab 1"},
+                  hatchFill: {type:"percent40",color: "#5f6b7d"}
+                }
+                ];
+    
+                // create venn diagram
+                var chart = anychart.venn(data);
+            
+                // set chart title
+                chart
+                    .title()
+                    .enabled(true)
+                    .fontFamily('Roboto, sans-serif')
+                    .fontSize(20)
+                    .padding({ bottom: 30 })
+                    .text('SNV Intersect in Callers');
+            
+                // set chart stroke
+                chart.stroke('1 #fff');
+            
+                  // set labels settings
+                chart
+                    .labels()
+                    .fontSize(12)
+                    .fontColor('#5e6469')
+                    .hAlign("center")
+                    .vAlign("center")
+                    .fontFamily('Roboto, sans-serif')
+                    .fontWeight('500')
+                    .format('{%Name}');
+            
+                // set intersections labels settings
+                chart
+                    .intersections()
+                    .labels()
+                    .fontStyle('italic')
+                    .fontColor('#fff')
+                    .format('{%Name}');
+            
+                // disable legend
+                chart.legend(false);
+            
+                // set tooltip settings
+                chart
+                    .tooltip()
+                    .titleFormat('{%tooltipTitle}')
+                    .format("{%tooltipDesc}")
+                    .background().fill("#000 0.5");
+            
+                // set container id for the chart
+                chart.container('hexyvenn_SNV');
+            
+                // initiate chart drawing
+                chart.draw();
+                });
+        </script>
+    
+        <div id="hexyvenn_INDEL"></div>
+        <script>
+        anychart.onDocumentReady(function () {
+            // set chart theme
+            anychart.theme('pastel');
+            var data = [
+                {
+                  x: 'A',
+                  value: 9,
+                  name: 'Strelka ',
+                  tooltipTitle: 'v1.8.7',
+                  normal: {fill: "#8ecafb 1"},
+                  hovered: {fill: "#8ecafb 1"},
+                  selected: {fill: "#8ecafb 1"}
+                },
+                {
+                  x: 'B',
+                  value: 24,
+                  name: 'VarScan',
+                  tooltipTitle: 'v2.4.9',
+                  normal: {fill: "#ffeaa6 1"},
+                  hovered: {fill: "#ffeaa6 1"},
+                  selected: {fill: "#ffeaa6 1"}
+                },
+                {
+                  x: 'C',
+                  value: 23,
+                  name: 'VarDict',
+                  tooltipTitle: 'v1.2.1',
+                  normal: {fill: "#ee957f 1"},
+                  hovered: {fill: "#ee957f 1"},
+                  selected: {fill: "#ee957f 1"}
+                },
+                {
+                  x: 'D',
+                  value: 15,
+                  name: 'Pindel',
+                  tooltipTitle: 'v1.11',
+                  normal: {fill: "#66CC99 1"},
+                  hovered: {fill: "#66CC99 1"},
+                  selected: {fill: "#66CC99 1"}
+                },
+                {
+                  x: ['A', 'B'],
+                  value: 9,
+                  name: '',
+                  tooltipTitle: 'Strelka & VarScan',
+                  tooltipDesc: 'Priority: VarScan',
+                  normal: {fill: "#9fdebe 0.8"},
+                  hovered: {fill: "#9fdebe 1"},
+                  selected: {fill: "#9fdebe 1"},
+                  hatchFill: {type:"weave",color: "#83c3a3"}    
+                },
+                {
+                  x: ['A', 'C'],
+                  value: 5,
+                  name: '',
+                  tooltipTitle: 'VarDict & Strelka',
+                  tooltipDesc: 'Priority: Strelka',
+                  normal: {fill: "#a98caf 0.6"},
+                  hovered: {fill: "#a98caf 1"},
+                  selected: {fill: "#a98caf 1"},
+                  hatchFill: {type:"weave",color: "#8b6b92"}
+                },
+                {
+                  x: ['A', 'D'],
+                  value: 15,
+                  name: '',
+                  tooltipTitle: 'VarDict & VarScan',
+                  tooltipDesc: 'Priority: VarScan',
+                  normal: {fill: "#f5b57c 0.8"},
+                  hovered: {fill: "#f5b57c 1"},
+                  selected: {fill: "#f5b57c 1"},
+                  hatchFill: {type:"weave",color: "#d09259"}
+                },
+                {
+                  x: ['B', 'C'],
+                  value: 7,
+                  name: '',
+                  tooltipTitle: 'VarScan & Pindel',
+                  tooltipDesc: 'Priority: VarScan',
+                  normal: {fill: "#f5b57c 0.8"},
+                  hovered: {fill: "#f5b57c 1"},
+                  selected: {fill: "#f5b57c 1"},
+                  hatchFill: {type:"weave",color: "#d09259"}
+                },
+                {
+                  x: ['B', 'D'],
+                  value: 2,
+                  name: '',
+                  tooltipTitle: 'Strelka & Pindel',
+                  tooltipDesc: 'Priority: VarScan',
+                  normal: {fill: "#f5b57c 0.8"},
+                  hovered: {fill: "#f5b57c 1"},
+                  selected: {fill: "#f5b57c 1"},
+                  hatchFill: {type:"weave",color: "#d09259"}
+                },
+                {
+                  x: ['C', 'D'],
+                  value: 9,
+                  name: '',
+                  tooltipTitle: 'VarDict & Pindel',
+                  tooltipDesc: 'Priority: Strelka',
+                  normal: {fill: "#f5b57c 0.8"},
+                  hovered: {fill: "#f5b57c 1"},
+                  selected: {fill: "#f5b57c 1"},
+                  hatchFill: {type:"weave",color: "#d09259"}
+                },
+                {
+                  x: ['A', 'B', 'C'],
+                  value: 5,
+                  name: '',
+                  tooltipTitle: 'VarDict & VarScan2 & Strelka',
+                  tooltipDesc: 'Priority: VarScan2 > Strelka > VarDict',
+                  label: {enabled:true, fontStyle: 'normal'},
+                  normal: {fill: "#8392ab 0.9"},
+                  hovered: {fill: "#8392ab 1"},
+                  selected: {fill: "#8392ab 1"},
+                  hatchFill: {type:"percent40",color: "#5f6b7d"}
+                },
+                {
+                  x: ['A', 'B', 'D'],
+                  value: 2,
+                  name: '',
+                  tooltipTitle: 'Strelka & VarScan & Pindel',
+                  tooltipDesc: 'Priority: VarScan2 > Pindel > VarDict',
+                  label: {enabled:true, fontStyle: 'normal'},
+                  normal: {fill: "#8392ab 0.9"},
+                  hovered: {fill: "#8392ab 1"},
+                  selected: {fill: "#8392ab 1"},
+                  hatchFill: {type:"percent40",color: "#5f6b7d"}
+                },
+                {
+                  x: ['A', 'C', 'D'],
+                  value: 1,
+                  name: '',
+                  tooltipTitle: 'VarDict & VarScan & Pindel',
+                  tooltipDesc: 'Priority: VarScan2 > Pindel > Strelka',
+                  label: {enabled:true, fontStyle: 'normal'},
+                  normal: {fill: "#8392ab 0.9"},
+                  hovered: {fill: "#8392ab 1"},
+                  selected: {fill: "#8392ab 1"},
+                  hatchFill: {type:"percent40",color: "#5f6b7d"}
+                },
+                {
+                  x: ['B', 'C', 'D'],
+                  value: 1,
+                  name: '',
+                  tooltipTitle: 'VarDict & Strelka & Pindel',
+                  tooltipDesc: 'Priority: VarScan2 > Pindel > Strelka',
+                  label: {enabled:true, fontStyle: 'normal'},
+                  normal: {fill: "#8392ab 0.9"},
+                  hovered: {fill: "#8392ab 1"},
+                  selected: {fill: "#8392ab 1"},
+                  hatchFill: {type:"percent40",color: "#5f6b7d"}
+                },
+                {
+                  x: ['A', 'B', 'C', 'D'],
+                  value: 1,
+                  name: '',
+                  tooltipTitle: 'VarDict & Strelka & Pindel & VarScan',
+                  tooltipDesc: 'Priority: VarScan2 > Pindel > Strelka > VarScan',
+                  label: {enabled:true, fontStyle: 'normal'},
+                  normal: {fill: "#8392ab 0.9"},
+                  hovered: {fill: "#8392ab 1"},
+                  selected: {fill: "#8392ab 1"},
+                  hatchFill: {type:"percent40",color: "#5f6b7d"}
+                }
+                ];
+
+                // create venn diagram
+                var chart = anychart.venn(data);
+
+                // set chart title
+                chart
+                    .title()
+                    .enabled(true)
+                    .fontFamily('Roboto, sans-serif')
+                    .fontSize(20)
+                    .padding({ bottom: 30 })
+                    .text('SNV Intersect in Callers');
+
+                // set chart stroke
+                chart.stroke('1 #fff');
+
+                  // set labels settings
+                chart
+                    .labels()
+                    .fontSize(12)
+                    .fontColor('#5e6469')
+                    .hAlign("center")
+                    .vAlign("center")
+                    .fontFamily('Roboto, sans-serif')
+                    .fontWeight('500')
+                    .format('{%Name}');
+
+                // set intersections labels settings
+                chart
+                    .intersections()
+                    .labels()
+                    .fontStyle('italic')
+                    .fontColor('#fff')
+                    .format('{%Name}');
+
+                // disable legend
+                chart.legend(false);
+
+                // set tooltip settings
+                chart
+                    .tooltip()
+                    .titleFormat('{%tooltipTitle}')
+                    .format("{%tooltipDesc}")
+                    .background().fill("#000 0.5");
+
+                // set container id for the chart
+                chart.container('hexyvenn_INDEL');
+
+                // initiate chart drawing
+                chart.draw();
+                });
+        </script>
+    
+        </div>
+
+        <p> </p>
+    
+        <div id="figure2">
+
+        <div id="hexygauge"></div>
+            <script>
+            var names = [
+              'SNP',
+              'DEL',
+              'INS',
+              'ONP',
+              'DNP',
+              'TNP'
+            ];
+            var data = ['65.99', '8.50', '6.07', '7.69', '7.69', '4.05', '100'];
+            var dataSet = anychart.data.set(data);
+            var palette = anychart.palettes
+              .distinctColors()
+              .items([
+                '#64b5f6',
+                '#1976d2', 
+                '#ef6c00',
+                '#ffd54f',
+                '#455a64',
+                '#96a6a6',
+                '#dd2c00',
+                '#00838f',
+                '#00bfa5',
+                '#ffa000',
+              ]);
+        
+            var makeBarWithBar = function (gauge, radius, i, width) {
+              var stroke = null;
+              gauge
+                .label(i)
+                .text(names[i] + ', <span style="">' + data[i] + '%</span>') // color: #7c868e
+                .useHtml(true);
+              gauge
+                .label(i)
+                .hAlign('center')
+                .vAlign('middle')
+                .anchor('right-center')
+                .padding(0, 10)
+                .height(width / 2 + '%')
+                .offsetY(radius + '%')
+                .offsetX(0);
+        
+              gauge
+                .bar(i)
+                .dataIndex(i)
+                .radius(radius)
+                .width(width)
+                .fill(palette.itemAt(i))
+                .stroke(null)
+                .zIndex(6);
+              gauge
+                .bar(i + 100)
+                .dataIndex(6)
+                .radius(radius)
+                .width(width)
+                .fill('#F5F4F4')
+                .stroke(stroke)
+                .zIndex(5);
+        
+              return gauge.bar(i);
+            };
+        
+            anychart.onDocumentReady(function () {
+              var gauge = anychart.gauges.circular();
+              gauge.data(dataSet);
+              gauge
+                .fill('#fff')
+                .stroke(null)
+                .padding(0)
+                .margin(100)
+                .startAngle(0)
+                .sweepAngle(270);
+        
+              var axis = gauge.axis().radius(100).width(1).fill(null);
+              axis
+                .scale()
+                .minimum(0)
+                .maximum(100)
+                .ticks({ interval: 1 })
+                .minorTicks({ interval: 1 });
+              axis.labels().enabled(false);
+              axis.ticks().enabled(false);
+              axis.minorTicks().enabled(false);
+              makeBarWithBar(gauge, 100, 0, 12);
+              makeBarWithBar(gauge, 85, 1, 12);
+              makeBarWithBar(gauge, 70, 2, 12);
+              makeBarWithBar(gauge, 55, 3, 12);
+              makeBarWithBar(gauge, 40, 4, 12);
+              makeBarWithBar(gauge, 25, 5, 12);
+              
+              gauge.margin(0);
+              gauge
+                .title()
+                .text('Variants Classification')
+                .fontSize(20)
+                .useHtml(true);
+              gauge
+                .title()
+                .enabled(true)
+                .hAlign('center')
+                .padding(10)
+                .margin([0, 0, 20, 0]);
+              gauge.container('hexygauge');
+              gauge.draw();
+            }); 
+             </script>          
+
+        <div id="hexypie"></div>
+        <script>
+        anychart.onDocumentReady(function () {
+            var chart = anychart.pie([
+                {x: "Missen_Mutation", value: 51,
+                   normal:  {fill: "#1976d2"},              
+                },
+                {x: "Silent", value: 19,
+                   normal:  {fill: "#ef6c00"},
+                },
+                {x: 'Nonsense_Mutation', value: 5,
+                  normal: {fill: "#00bfa5"},
+                },
+                {x: 'Splice_Site', value: 0,
+                  normal: {fill: "#00838f"},
+                },
+                {x: 'RNA', value: 8,
+                  normal: {fill: "#6666CC"},
+                },
+                {x: 'Nonstop_Mutation', value: 0,
+                  normal: {fill: "#455a64"},
+                },
+                {x: 'FrameShiftIndels', value: 3,
+                  normal: {fill: "#96a6a6"},
+                },
+                {x: 'InFrameIndels', value: 1,
+                  normal: {fill: "#dd2c00"},
+                },
+                {x: 'Intron', value: 126,
+                  normal: {fill: "#64b5f6"},
+                },
+                {x: 'Others', value: 34,
+                  normal: {fill: "#ffa000"},
+                },
+            ]);
+            chart
+                .title('Variant Type')
+                .radius('48%')
+                .innerRadius('30%') 
+                .sort("asc");     
+            var title = chart.title()
+            title.fontSize(20)
+            chart.normal().outline().enabled(true);
+            chart.normal().outline().width("2%");
+            chart.hovered().outline().width("4%");
+            chart.selected().outline().width("3");
+            chart.selected().outline().fill("#FF6666");
+            chart.selected().outline().stroke(null);
+            chart.selected().outline().offset(2);
+            chart.container('hexypie');
+            chart.legend.enabled = false;            
+            chart.draw();
+        });
+        </script>
+
+        <p> </p>
+    
+        </div>
+
+    <div id="hexytagcloud"> </div>
+    <script>
+    anychart.onDocumentReady(function () {
+        // create data
+        var data = [
+{"x": "MUC4", value: 22},
+{"x": "NBPF20", value: 15},
+{"x": "MYO3B", value: 8},
+{"x": "NBPF8", value: 8},
+{"x": "MUC19", value: 8},
+{"x": "RP1L1", value: 8},
+{"x": "MAN1B1", value: 7},
+{"x": "FRG1B", value: 7},
+{"x": "SLC6A10P", value: 6},
+{"x": "MUC16", value: 6},
+{"x": "NBPF1", value: 6},
+{"x": "HAVCR1", value: 6},
+{"x": "COL9A3", value: 6},
+{"x": "SLC12A7", value: 6},
+{"x": "NBPF10", value: 6},
+{"x": "ANKRD36", value: 6},
+{"x": "KMT2C", value: 6},
+{"x": "PARVA", value: 5},
+{"x": "ASAH1", value: 5},
+{"x": "AHRR", value: 5},
+{"x": "FHAD1", value: 5},
+{"x": "GTPBP6", value: 5},
+{"x": "CTC-281F24.1", value: 5},
+{"x": "ANKRD30A", value: 5},
+{"x": "UBR2", value: 5},
+{"x": "NBPF12", value: 4},
+{"x": "GADL1", value: 4},
+{"x": "MUC3A", value: 4},
+{"x": "ULK1", value: 4},
+{"x": "PCDH7", value: 4},
+{"x": "DNAH11", value: 4},
+{"x": "CNOT6", value: 4},
+{"x": "ABCC4", value: 4},
+{"x": "MUC2", value: 4},
+{"x": "KIR3DX1", value: 4},
+{"x": "PTCHD2", value: 4},
+{"x": "SPDYE1", value: 4},
+{"x": "CALB2", value: 4},
+{"x": "CSMD1", value: 4},
+{"x": "NEB", value: 4},
+{"x": "EPHB1", value: 4},
+{"x": "TRABD", value: 4},
+{"x": "FRG1", value: 4},
+{"x": "MUC6", value: 4},
+{"x": "C10ORF71", value: 4},
+{"x": "CBWD3", value: 4},
+{"x": "GCKR", value: 4},
+{"x": "SHROOM4", value: 4},
+{"x": "GUSBP2", value: 4},
+{"x": "NBPF9", value: 4},
+{"x": "NBPF14", value: 4},
+{"x": "ESPNP", value: 4},
+{"x": "WDR66", value: 4},
+{"x": "NBAS", value: 3},
+{"x": "HRG", value: 3},
+{"x": "TPSG1", value: 3},
+{"x": "SLC4A8", value: 3},
+{"x": "B4GALNT4", value: 3},
+{"x": "EIF4G3", value: 3},
+{"x": "UTRN", value: 3},
+{"x": "ODF1", value: 3},
+{"x": "CHST15", value: 3},
+{"x": "LMF1", value: 3},
+{"x": "ABI2", value: 3},
+{"x": "ARPC3", value: 3},
+{"x": "ZNF138", value: 3},
+{"x": "NBPF6", value: 3},
+{"x": "WDR24", value: 3},
+{"x": "TNRC18", value: 3},
+{"x": "ITSN1", value: 3},
+{"x": "CNDP2", value: 3},
+{"x": "VWCE", value: 3},
+{"x": "CFHR4", value: 3},
+{"x": "CNTNAP3B", value: 3},
+{"x": "ADAMTS14", value: 3},
+{"x": "MAD1L1", value: 3},
+{"x": "TSPAN16", value: 3},
+{"x": "HPCAL4", value: 3},
+{"x": "PODXL", value: 3},
+{"x": "ALDH7A1", value: 3},
+{"x": "DSC1", value: 3},
+{"x": "LIMS1", value: 3},
+{"x": "RSPH10B2", value: 3},
+{"x": "DPY19L2P2", value: 3},
+{"x": "MAGI1", value: 3},
+{"x": "EIF5AL1", value: 3},
+{"x": "VPS8", value: 3},
+{"x": "SRL", value: 3},
+{"x": "ETNPPL", value: 3},
+{"x": "PGAM5", value: 3},
+{"x": "PARP12", value: 3},
+{"x": "MYOM2", value: 3},
+{"x": "ADCYAP1", value: 3},
+{"x": "NPEPPS", value: 3},
+{"x": "AF121898.3", value: 3},
+{"x": "TUBGCP2", value: 3},
+{"x": "RP11-514P8.7", value: 3},
+{"x": "ACSBG1", value: 3},
+{"x": "UBA6", value: 3},
+{"x": "CELA3B", value: 3},
+]
+
+        // create a chart and set the data
+        chart = anychart.tagCloud(data);
+        chart
+            .title('Top 100 mutated genes')
+            
+        var title = chart.title();
+        title.fontSize(20);
+        chart.container('hexytagcloud');
+        chart.mode('spiral');
+      
+        chart.draw();
+    });
+    </script>
+
+        <p> </p>
+    
+    <div id="hexybar"></div>
+    <script>
+        anychart.onDocumentReady(function () {
+            var dataSet = anychart.data.set([
+['chr1', -127, 210],
+['chr2', -69, 151],
+['chr3', -35, 125],
+['chr4', -29, 84],
+['chr5', -30, 95],
+['chr6', -22, 71],
+['chr7', -58, 123],
+['chr8', -51, 76],
+['chr9', -52, 91],
+['chr10', -23, 83],
+['chr11', -26, 93],
+['chr12', -28, 126],
+['chr13', -4, 33],
+['chr14', -9, 39],
+['chr15', -12, 54],
+['chr16', -25, 66],
+['chr17', -23, 74],
+['chr18', -7, 38],
+['chr19', -31, 106],
+['chr20', -15, 43],
+['chr21', -3, 28],
+['chr22', -14, 43],
+['chrX', -17, 38],
+['chrY', -1, 4],
+]
+);
+            var firstSeriesData = dataSet.mapAs({ x: 0, value: 1 });
+            var secondSeriesData = dataSet.mapAs({ x: 0, value: 2 });
+            var chart = anychart.bar();
+            chart.animation(true);
+            chart.padding([10, 20, 5, 20]);
+            chart.yScale().stackMode('value');
+            chart
+                .yAxis()
+                .labels()
+                .format(function () {
+                  return Math.abs(this.value).toLocaleString();
+                });
+            chart.yAxis(0).title('Revenue in Dollars');
+            chart.xAxis(0).overlapMode('allow-overlap');
+        
+            chart
+                .xAxis(1)
+                .enabled(true)
+                .orientation('right')
+                .overlapMode('allow-overlap');
+        
+            chart.title('Genetic Mutations by Chromosome');
+            var title = chart.title()
+            title.fontSize(20)
+            chart.interactivity().hoverMode('by-x');
+            chart
+                .tooltip()
+                .title(false)
+                .separator(false)
+                .displayMode('separated')
+                .positionMode('point')
+                .useHtml(true)
+                .fontSize(12)
+                .offsetX(5)
+                .offsetY(0)
+                .format(function () {
+                    return (
+                        '<span style="color: #D9D9D9"> </span>' +
+                        Math.abs(this.value).toLocaleString()
+                    );
+                });
+        
+            var series;
+        
+            series = chart.bar(firstSeriesData);
+            //series.name('Females').color('HotPink');#FF69B4 #FF99CC
+            series.name('SNVs').color('#1976d2')
+            series.tooltip().position('right').anchor('left-center');
+            series = chart.bar(secondSeriesData);
+            series.name('InDels').color('#FF1493');
+            series.tooltip().position('left').anchor('right-center');
+        
+            chart
+                .legend()
+                .enabled(true)
+                .inverted(true)
+                .fontSize(13)
+                .padding([0, 0, 20, 0]);
+                
+            chart.container('hexybar');
+            chart.draw();
+    });
+</script>
+
+        <p> </p>
+    <table style="border-collapse:collapse;table-layout:fixed;word-break:normal;word-wrap:break-word;white-space:pre-wrap;width:70%;margin:auto;"><tr style="color:#fff;background-color:#48a6fb;font-size:16px;"><th colspan="7" style="padding:15px;border-width:1px;border-color:#fff;border-style:solid;">Cancer Driver Genes in Sample</th></tr><tr style="color:#fff;background-color:#48a6fb;font-size:16px;"><th style="padding:15px;border-width:1px;border-color:#fff;border-style:solid;">Chr</th><th style="padding:15px;border-width:1px;border-color:#fff;border-style:solid;">Start</th><th style="padding:15px;border-width:1px;border-color:#fff;border-style:solid;">End</th><th style="padding:15px;border-width:1px;border-color:#fff;border-style:solid;">Gene Symbol</th><th style="padding:15px;border-width:1px;border-color:#fff;border-style:solid;">Gene Name</th><th style="padding:15px;border-width:1px;border-color:#fff;border-style:solid;">Cancer Type</th><th style="padding:15px;border-width:1px;border-color:#fff;border-style:solid;">Level</th></tr><tr style="align:center;"><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">2</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">167055631</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">167055631</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">SCN9A</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">sodium voltage-gated channel alpha subunit 9</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">Brain;Sarc</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">level D</td></tr><tr style="align:center;"><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">2</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">215876189</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">215876189</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">ABCA12</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">ATP binding cassette subfamily A member 12</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">Panc</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">level B</td></tr><tr style="background-color:#FBC7B9;align:center;"><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">3</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">178936091</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">178936091</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">PIK3CA</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">AdCyst;Bladder;Brain;Breast;Cervix;Colo;Endo;GaEso;Head;KiCl;Liver;LuAD;LuSC;Panc;Prost</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">level A</td></tr><tr style="background-color:#FBC7B9;align:center;"><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">4</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">153244185</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">153244185</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">FBXW7</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">F-box and WD repeat domain containing 7</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">Bladder;Cervix;Colo;Endo;GaEso;Head;Panc</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">level A</td></tr><tr style="align:center;"><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">6</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">17624902</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">17624902</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">NUP153</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">nucleoporin 153</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">Liver</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">level B</td></tr><tr style="background-color:#FBC7B9;align:center;"><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">6</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">135524260</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">135524260</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">MYB</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">MYB proto-oncogene, transcription factor</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">AdCyst;Breast</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">level A</td></tr><tr style="background-color:#FBC7B9;align:center;"><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">7</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">151835812</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">151835812</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">KMT2C</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">lysine methyltransferase 2C</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">Breast;Cervix;Chol;KiCl;KiNCl;Panc;Prost;Skin;Thyr</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">level A</td></tr><tr style="background-color:#FBC7B9;align:center;"><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">12</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">25398322</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">25398322</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">KRAS</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">KRAS proto-oncogene, GTPase</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">Bladder;Blood;Breast;Cervix;Chol;Colo;Endo;GaEso;LuAD;Panc;Testis</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">level A</td></tr><tr style="align:center;"><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">19</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">19825212</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">19825212</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">ZNF14</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">zinc finger protein 14</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">Colo</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">level D</td></tr><tr style="align:center;"><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">19</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">56544014</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">56544014</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">NLRP5</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">NLR family pyrin domain containing 5</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">Lymph</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">level D</td></tr><tr style="align:center;"><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">X</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">138727921</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">138727921</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">MCF2</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">MCF.2 cell line derived transforming sequence</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">Colo</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">level C</td></tr></table>
+        <p> </p>
+    <table style="border-collapse:collapse;word-break:normal;white-space:pre-wrap;width:70%;margin:auto;"><tr style="color:#fff;background-color:#48a6fb;font-size:16px;"><th colspan="10" style="padding:15px;border-width:1px;border-color:#fff;border-style:solid;">Cancer Genes Census in Sample</th></tr><tr style="color:#fff;background-color:#48a6fb;font-size:16px;"><th style="padding:15px;border-width:1px;border-color:#fff;border-style:solid;">Chr</th><th style="padding:15px;border-width:1px;border-color:#fff;border-style:solid;">Start</th><th style="padding:15px;border-width:1px;border-color:#fff;border-style:solid;">End</th><th style="padding:15px;border-width:1px;border-color:#fff;border-style:solid;">Gene Symbol</th><th style="padding:15px;border-width:1px;border-color:#fff;border-style:solid;">Gene Name</th><th style="padding:15px;border-width:1px;border-color:#fff;border-style:solid;">Somtic</th><th style="padding:15px;border-width:1px;border-color:#fff;border-style:solid;">Germline</th><th style="padding:15px;border-width:1px;border-color:#fff;border-style:solid;">Cancer Type(Somatic)</th><th style="padding:15px;border-width:1px;border-color:#fff;border-style:solid;">Cancer Type(Germline)</th><th style="padding:15px;border-width:1px;border-color:#fff;border-style:solid;">Cancer Syndrome</th></tr><tr style="align:center;"><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">1</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">179077766</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">179077766</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">ABL2</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">c-abl oncogene 2, non-receptor tyrosine kinase</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">yes</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">nan</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">AML</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">none</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">nan</td></tr><tr style="align:center;"><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">2</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">109374886</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">109374886</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">RANBP2</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">RAN binding protein 2</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">yes</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">nan</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">inflammatory myofibroblastic tumour</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">none</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">nan</td></tr><tr style="align:center;"><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">3</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">37067097</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">37067099</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">MLH1</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">E.coli MutL homolog gene</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">yes</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">yes</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">colorectal, endometrial, ovarian, CNS tumours</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">colorectal, endometrial, ovarian, CNS</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">hereditary non-polyposis colorectal cancer, Turcot syndrome</td></tr><tr style="align:center;"><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">3</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">178936091</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">178936091</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">PIK3CA</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">phosphoinositide-3-kinase, catalytic, alpha polypeptide</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">yes</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">nan</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">colorectal, gastric, glioblastoma, breast</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">none</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">nan</td></tr><tr style="align:center;"><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">3</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">189507621</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">189507625</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">TP63</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">tumor protein p63</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">yes</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">yes</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">HNSCC, DLBCL</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">NSCLC</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">nan</td></tr><tr style="align:center;"><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">3</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">195506722</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">195506726</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">MUC4</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">mucin 4, cell surface associated</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">yes</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">nan</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">HNSCC</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">none</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">nan</td></tr><tr style="align:center;"><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">3</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">195508451</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">195508454</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">MUC4</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">mucin 4, cell surface associated</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">yes</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">nan</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">HNSCC</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">none</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">nan</td></tr><tr style="align:center;"><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">3</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">195510347</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">195510350</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">MUC4</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">mucin 4, cell surface associated</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">yes</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">nan</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">HNSCC</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">none</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">nan</td></tr><tr style="align:center;"><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">4</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">153244185</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">153244185</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">FBXW7</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">F-box and WD-40 domain protein 7 (archipelago homolog, Drosophila)</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">yes</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">nan</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">colorectal, endometrial, T-ALL</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">none</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">nan</td></tr><tr style="align:center;"><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">5</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">38528981</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">38528981</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">LIFR</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">leukemia inhibitory factor receptor</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">yes</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">nan</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">salivary adenoma</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">none</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">nan</td></tr><tr style="align:center;"><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">6</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">135524260</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">135524260</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">MYB</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">v-myb myeloblastosis viral oncogene homolog</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">yes</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">nan</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">adenoid cystic carcinoma</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">none</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">nan</td></tr><tr style="align:center;"><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">7</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">98495297</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">98495299</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">TRRAP</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">transformation/transcription domain-associated protein</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">yes</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">nan</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">melanoma</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">none</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">nan</td></tr><tr style="align:center;"><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">7</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">151835812</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">151835812</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">KMT2C</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">lysine (K)-specific methyltransferase 2C</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">yes</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">nan</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">medulloblastoma</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">none</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">nan</td></tr><tr style="align:center;"><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">8</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">41558152</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">41558152</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">ANK1</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">ankyrin 1</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">yes</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">nan</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">CCRCC</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">none</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">nan</td></tr><tr style="align:center;"><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">8</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">90983407</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">90983407</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">NBN</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">nibrin</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">nan</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">yes</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">nan</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">NHL, glioma, medulloblastoma, rhabdomyosarcoma</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">Nijmegen breakage syndrome</td></tr><tr style="align:center;"><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">12</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">25398322</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">25398322</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">KRAS</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">v-Ki-ras2 Kirsten rat sarcoma 2 viral oncogene homolog</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">yes</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">nan</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">pancreatic, colorectal, lung, thyroid, AML, other tumour types</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">none</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">nan</td></tr><tr style="align:center;"><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">17</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">78319203</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">78319203</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">RNF213</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">ring finger protein 213</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">yes</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">nan</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">ALCL</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">none</td><td style="font-family:arial;font-size:14px;color:#333333;border-width:1px;border-color:#A5A5A5;border-style:solid;padding:8px;">nan</td></tr></table>
+    </body>
+        <p> </p>
+    <footer>
+        <p> </p>
+        <p> Posted by: DIVIS (verison 1.0.3) at 2021-02-05 </p>
+        <p> Contact information: <a href="mailto:hexy@sccas.cn"> hexy@sccas.cn </a> </p>
+    </footer>
+</html>
