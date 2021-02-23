@@ -1,0 +1,153 @@
+{
+  "workflow": {
+    "nodes": [
+      {
+        "name": "normal_align",
+        "cmd": "divis substep -s align -c ./config_dir/normal_align.macros -o divis.normal.align.out"
+      },
+      {
+        "name": "tumor_align",
+        "cmd": "divis substep -s align -c ./config_dir/tumor_align.macros -o divis.tumor.align.out"
+      },
+      {
+        "name": "varscan_somatic",
+        "cmd": "divis substep -s varscan_somatic -c ./config_dir/varscan_somatic.macros -o divis.varscan_somatic.out"
+      },
+      {
+        "name": "strelka_somatic",
+        "cmd": "divis substep -s strelka_somatic -c ./config_dir/strelka_somatic.macros -o divis.strelka_somatic.out"
+      },
+      {
+        "name": "pindel_somatic",
+        "cmd": "divis substep -s pindel_somatic -c ./config_dir/pindel_somatic.macros -o divis.pindel_somatic.out"
+      },
+      {
+        "name": "vardict_somatic",
+        "cmd": "divis substep -s vardict_somatic -c ./config_dir/vardict_somatic.macros -o divis.vardict_somatic.out"
+      },
+      {
+        "name": "generate_config",
+        "cmd": "python3 ./generate_config.py"
+      },
+      {
+        "name": "append_required_macros",
+        "cmd": "echo \"BAM_READCOUNT=#BAM_READCOUNT#\" >> required.macros\necho \"BAM_READCOUNT_PARAMS=#BAM_READCOUNT_PARAMS#\" >> required.macros\necho \"BED_FILE=#BED_FILE#\" >> required.macros\necho \"BWA=#BWA#\" >> required.macros\necho \"FILTER_COV=#FILTER_COV#\" >> required.macros\necho \"FILTER_HOM=#FILTER_HOM#\" >> required.macros\necho \"FILTER_VAF=#FILTER_VAF#\" >> required.macros\necho \"GATK4=#GATK4#\" >> required.macros\necho \"GATK4_BASERECALIBRATE_PARAMS=#GATK4_BASERECALIBRATE_PARAMS#\" >> required.macros\necho \"NORMAL_BARCODE=#NORMAL_BARCODE#\" >> required.macros\necho \"NORMAL_R1=#NORMAL_R1#\" >> required.macros\necho \"NORMAL_R2=#NORMAL_R2#\" >> required.macros\necho \"PICARD=#PICARD#\" >> required.macros\necho \"PICARD_JAVA_OPTS=#PICARD_JAVA_OPTS#\" >> required.macros\necho \"PINDEL=#PINDEL#\" >> required.macros\necho \"PINDEL2VCF=#PINDEL2VCF#\" >> required.macros\necho \"PINDEL_PARAMS=#PINDEL_PARAMS#\" >> required.macros\necho \"PLATFORM=#PLATFORM#\" >> required.macros\necho \"REF=#REF#\" >> required.macros\necho \"REFDATE=#REFDATE#\" >> required.macros\necho \"REFNAME=#REFNAME#\" >> required.macros\necho \"SAMPLE_NAME=#SAMPLE_NAME#\" >> required.macros\necho \"SAMTOOLS=#SAMTOOLS#\" >> required.macros\necho \"SAMTOOLS_MPILEUP_PARAMS=#SAMTOOLS_MPILEUP_PARAMS#\" >> required.macros\necho \"SNPSIFT=#SNPSIFT#\" >> required.macros\necho \"SNPSIFT_FILTER_STATEMENT=#SNPSIFT_FILTER_STATEMENT#\" >> required.macros\necho \"SNPSIFT_JAVA_OPTS=#SNPSIFT_JAVA_OPTS#\" >> required.macros\necho \"STRELKA=#STRELKA#\" >> required.macros\necho \"STRELKA_IS_WES=#STRELKA_IS_WES#\" >> required.macros\necho \"TEST_SOMATIC_R=#TEST_SOMATIC_R#\" >> required.macros\necho \"THREAD=#THREAD#\" >> required.macros\necho \"TMP=#TMP#\" >> required.macros\necho \"TUMOR_BARCODE=#TUMOR_BARCODE#\" >> required.macros\necho \"TUMOR_R1=#TUMOR_R1#\" >> required.macros\necho \"TUMOR_R2=#TUMOR_R2#\" >> required.macros\necho \"VAR2VCF_PAIRED=#VAR2VCF_PAIRED#\" >> required.macros\necho \"VAR2VCF_PARAMS=#VAR2VCF_PARAMS#\" >> required.macros\necho \"VARDICT=#VARDICT#\" >> required.macros\necho \"VARDICT_PARAMS=#VARDICT_PARAMS#\" >> required.macros\necho \"VARSCAN=#VARSCAN#\" >> required.macros\necho \"VARSCAN_FPFILTER_PARAMS=#VARSCAN_FPFILTER_PARAMS#\" >> required.macros\necho \"VARSCAN_JAVA_OPTS=#VARSCAN_JAVA_OPTS#\" >> required.macros\necho \"VARSCAN_PROCESS_SOMATIC_INDEL_PARAMS=#VARSCAN_PROCESS_SOMATIC_INDEL_PARAMS#\" >> required.macros\necho \"VARSCAN_PROCESS_SOMATIC_SNP_PARAMS=#VARSCAN_PROCESS_SOMATIC_SNP_PARAMS#\" >> required.macros\necho \"VARSCAN_SOMATIC_PARAMS=#VARSCAN_SOMATIC_PARAMS#\" >> required.macros\n"
+      }
+    ],
+    "links": [
+      {
+        "from": "Step-append_required_macros",
+        "to": "Step-generate_config",
+        "frompid": "Step-append_required_macros",
+        "topid": "Step-generate_config"
+      },
+      {
+        "from": "Step-generate_config",
+        "to": "Step-normal_align",
+        "frompid": "Step-generate_config",
+        "topid": "Step-normal_align"
+      },
+      {
+        "from": "Step-generate_config",
+        "to": "Step-tumor_align",
+        "frompid": "Step-generate_config",
+        "topid": "Step-tumor_align"
+      },
+      {
+        "from": "Step-normal_align",
+        "to": "Step-varscan_somatic",
+        "frompid": "Step-normal_align",
+        "topid": "Step-varscan_somatic"
+      },
+      {
+        "from": "Step-tumor_align",
+        "to": "Step-varscan_somatic",
+        "frompid": "Step-tumor_align",
+        "topid": "Step-varscan_somatic"
+      },
+      {
+        "from": "Step-normal_align",
+        "to": "Step-strelka_somatic",
+        "frompid": "Step-normal_align",
+        "topid": "Step-strelka_somatic"
+      },
+      {
+        "from": "Step-tumor_align",
+        "to": "Step-strelka_somatic",
+        "frompid": "Step-tumor_align",
+        "topid": "Step-strelka_somatic"
+      },
+      {
+        "from": "Step-normal_align",
+        "to": "Step-pindel_somatic",
+        "frompid": "Step-normal_align",
+        "topid": "Step-pindel_somatic"
+      },
+      {
+        "from": "Step-tumor_align",
+        "to": "Step-pindel_somatic",
+        "frompid": "Step-tumor_align",
+        "topid": "Step-pindel_somatic"
+      },
+      {
+        "from": "Step-normal_align",
+        "to": "Step-vardict_somatic",
+        "frompid": "Step-normal_align",
+        "topid": "Step-vardict_somatic"
+      },
+      {
+        "from": "Step-tumor_align",
+        "to": "Step-vardict_somatic",
+        "frompid": "Step-tumor_align",
+        "topid": "Step-vardict_somatic"
+      }
+    ]
+  },
+  "macros": {
+    "BAM_READCOUNT": "",
+    "BAM_READCOUNT_PARAMS": "",
+    "BED_FILE": "",
+    "BWA": "",
+    "FILTER_COV": "",
+    "FILTER_HOM": "",
+    "FILTER_VAF": "",
+    "GATK4": "",
+    "GATK4_BASERECALIBRATE_PARAMS": "",
+    "NORMAL_BARCODE": "",
+    "NORMAL_R1": "",
+    "NORMAL_R2": "",
+    "PICARD": "",
+    "PICARD_JAVA_OPTS": "",
+    "PINDEL": "",
+    "PINDEL2VCF": "",
+    "PINDEL_PARAMS": "",
+    "PLATFORM": "",
+    "REF": "",
+    "REFDATE": "",
+    "REFNAME": "",
+    "SAMPLE_NAME": "",
+    "SAMTOOLS": "",
+    "SAMTOOLS_MPILEUP_PARAMS": "",
+    "SNPSIFT": "",
+    "SNPSIFT_FILTER_STATEMENT": "",
+    "SNPSIFT_JAVA_OPTS": "",
+    "STRELKA": "",
+    "STRELKA_IS_WES": "",
+    "TEST_SOMATIC_R": "",
+    "THREAD": "",
+    "TMP": "",
+    "TUMOR_BARCODE": "",
+    "TUMOR_R1": "",
+    "TUMOR_R2": "",
+    "VAR2VCF_PAIRED": "",
+    "VAR2VCF_PARAMS": "",
+    "VARDICT": "",
+    "VARDICT_PARAMS": "",
+    "VARSCAN": "",
+    "VARSCAN_FPFILTER_PARAMS": "",
+    "VARSCAN_JAVA_OPTS": "",
+    "VARSCAN_PROCESS_SOMATIC_INDEL_PARAMS": "",
+    "VARSCAN_PROCESS_SOMATIC_SNP_PARAMS": "",
+    "VARSCAN_SOMATIC_PARAMS": ""
+  }
+}

@@ -1,0 +1,128 @@
+{
+  "workflow": {
+    "nodes": [
+      {
+        "name": "sam_to_bam",
+        "cmd": "#SAMTOOLS# view -bS <#SAMPLE_NAME#.bwa.sam> -o [#SAMPLE_NAME#.bwa.bam]"
+      },
+      {
+        "name": "sort_sam",
+        "cmd": "java -jar #PICARD# SortSam INPUT=<#SAMPLE_NAME#.bwa.bam> OUTPUT=[#SAMPLE_NAME#.sort.bam] SORT_ORDER=coordinate"
+      },
+      {
+        "name": "mark_deduplicate",
+        "cmd": "java -Djava.io.tmpdir=#TMP# -jar #PICARD# MarkDuplicates INPUT=<#SAMPLE_NAME#.sort.bam> OUTPUT=[#SAMPLE_NAME#.dedupped.bam] METRICS_FILE=#SAMPLE_NAME#.dedupped.metrics REMOVE_DUPLICATES=false"
+      },
+      {
+        "name": "deduplicate_index",
+        "cmd": "#SAMTOOLS# index -b <#SAMPLE_NAME#.dedupped.bam> #SAMPLE_NAME#.dedupped.bam.bai"
+      },
+      {
+        "name": "baserecalibrate",
+        "cmd": "#GATK4# BaseRecalibrator -R #REF# -I <#SAMPLE_NAME#.dedupped.bam> -O [#SAMPLE_NAME#.baserecal.grp] #GATK4_BASERECALIBRATE_PARAMS#"
+      },
+      {
+        "name": "apply_bqsr",
+        "cmd": "#GATK4# ApplyBQSR -R #REF# -I <#SAMPLE_NAME#.dedupped.bam> --bqsr-recal-file <#SAMPLE_NAME#.baserecal.grp> -O [#SAMPLE_NAME#.bam]"
+      },
+      {
+        "name": "fastp",
+        "cmd": "#FASTP# #FASTP_PARAMS# -i <#R1#> -o [#SAMPLE_NAME#.r1.clean] -I <#R2#> -O [#SAMPLE_NAME#.r2.clean] -j #SAMPLE_NAME#.fastp.json -h #SAMPLE_NAME#.fastp.html"
+      },
+      {
+        "name": "bwa",
+        "cmd": "#BWA# mem -t #THREAD# -M -R #RG# #REF# <#SAMPLE_NAME#.r1.clean> <#SAMPLE_NAME#.r2.clean> -o [#SAMPLE_NAME#.bwa.sam]"
+      },
+      {
+        "name": "fastqc",
+        "cmd": "rm -rf #SAMPLE_NAME#.fastqc.dir && mkdir #SAMPLE_NAME#.fastqc.dir && #FASTQC# #FASTQC_PARAMS# -o #SAMPLE_NAME#.fastqc.dir <#R1#> <#R2#>"
+      }
+    ],
+    "links": [
+      {
+        "from": "Step-deduplicate_index",
+        "to": "Step-baserecalibrate",
+        "frompid": "Step-deduplicate_index",
+        "topid": "Step-baserecalibrate"
+      },
+      {
+        "from": "Step-baserecalibrate",
+        "to": "Step-apply_bqsr",
+        "frompid": "#SAMPLE_NAME#.baserecal.grp",
+        "topid": "#SAMPLE_NAME#.baserecal.grp"
+      },
+      {
+        "from": "Step-sort_sam",
+        "to": "Step-mark_deduplicate",
+        "frompid": "#SAMPLE_NAME#.sort.bam",
+        "topid": "#SAMPLE_NAME#.sort.bam"
+      },
+      {
+        "from": "Step-mark_deduplicate",
+        "to": "Step-deduplicate_index",
+        "frompid": "Step-mark_deduplicate",
+        "topid": "#SAMPLE_NAME#.dedupped.bam"
+      },
+      {
+        "from": "Step-mark_deduplicate",
+        "to": "Step-baserecalibrate",
+        "frompid": "#SAMPLE_NAME#.dedupped.bam",
+        "topid": "#SAMPLE_NAME#.dedupped.bam"
+      },
+      {
+        "from": "Step-mark_deduplicate",
+        "to": "Step-apply_bqsr",
+        "frompid": "#SAMPLE_NAME#.dedupped.bam",
+        "topid": "#SAMPLE_NAME#.dedupped.bam"
+      },
+      {
+        "from": "Step-sam_to_bam",
+        "to": "Step-sort_sam",
+        "frompid": "#SAMPLE_NAME#.bwa.bam",
+        "topid": "#SAMPLE_NAME#.bwa.bam"
+      },
+      {
+        "from": "Step-fastp",
+        "to": "Step-bwa",
+        "frompid": "#SAMPLE_NAME#.r1.clean",
+        "topid": "#SAMPLE_NAME#.r1.clean"
+      },
+      {
+        "from": "Step-fastp",
+        "to": "Step-bwa",
+        "frompid": "#SAMPLE_NAME#.r2.clean",
+        "topid": "#SAMPLE_NAME#.r2.clean"
+      },
+      {
+        "from": "Step-bwa",
+        "to": "Step-sam_to_bam",
+        "frompid": "#SAMPLE_NAME#.bwa.sam",
+        "topid": "#SAMPLE_NAME#.bwa.sam"
+      },
+      {
+        "from": "Step-fastqc",
+        "to": "Step-bwa",
+        "frompid": "Step-fastqc",
+        "topid": "Step-bwa"
+      }
+    ]
+  },
+  "macros": {
+    "SAMTOOLS": "",
+    "TMP": "",
+    "GATK4": "",
+    "GATK4_BASERECALIBRATE_PARAMS": "",
+    "PICARD": "",
+    "FASTP": "",
+    "FASTP_PARAMS": "",
+    "BWA": "",
+    "THREAD": "",
+    "RG": "",
+    "REF": "",
+    "SAMPLE_NAME": "",
+    "FASTQC": "",
+    "FASTQC_PARAMS": "",
+    "R1": "",
+    "R2": ""
+  }
+}

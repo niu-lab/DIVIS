@@ -1,0 +1,46 @@
+{
+  "workflow": {
+    "nodes": [
+      {
+        "name": "divis_generate_oncotator_config",
+        "cmd": "python3 ./divis_generate_oncotator_config.py --sample_name #SAMPLE_NAME# --normal_barcode #NORMAL_BARCODE# --tumor_barcode #TUMOR_BARCODE# --center #CENTER# --ncbi_build #NCBI_BUILD# --source #SOURCE# --sequencer #SEQUENCER# --mutattion_status #MUTATION_STATUS#"
+      },
+      {
+        "name": "divis_merge_and_sort",
+        "cmd": "python3 ./divis_merge_and_sort.py --vcfs \"#VCFS#\" --sample_name #SAMPLE_NAME# > #SAMPLE_NAME#.duplicates.txt"
+      },
+      {
+        "name": "oncotator",
+        "cmd": "#ONCOTATOR# --override_config #SAMPLE_NAME#.overrides.config -c #CANONICAL_TX_FILE# --db-dir #ONCOTATOR_DB_DIR# -i MAFLITE -o TCGAMAF #SAMPLE_NAME#.sorted.maflite #SAMPLE_NAME#.maf #NCBI_BUILD#"
+      }
+    ],
+    "links": [
+      {
+        "from": "Step-divis_merge_and_sort",
+        "to": "Step-divis_generate_oncotator_config",
+        "frompid": "Step-divis_merge_and_sort",
+        "topid": "Step-divis_generate_oncotator_config"
+      },
+      {
+        "from": "Step-divis_generate_oncotator_config",
+        "to": "Step-oncotator",
+        "frompid": "Step-divis_generate_oncotator_config",
+        "topid": "Step-oncotator"
+      }
+    ]
+  },
+  "macros": {
+    "VCFS": "",
+    "SAMPLE_NAME": "",
+    "NORMAL_BARCODE": "",
+    "TUMOR_BARCODE": "",
+    "CENTER": "",
+    "NCBI_BUILD": "",
+    "SOURCE": "",
+    "SEQUENCER": "",
+    "MUTATION_STATUS": "",
+    "ONCOTATOR": "",
+    "ONCOTATOR_DB_DIR": "",
+    "CANONICAL_TX_FILE": ""
+  }
+}

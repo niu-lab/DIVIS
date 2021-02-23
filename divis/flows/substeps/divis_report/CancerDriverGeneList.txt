@@ -1,0 +1,461 @@
+Gene	Full Name	Cancer Type(s)	Literature Support
+TP53	tumor protein p53	AdCyst;Bladder;Blood;Brain;Breast;Chol;Colo;Endo;GaEso;Head;KiNCl;Liver;LuAD;LuSC;Lymph;Ovar;Panc;Pleura;Prost;Sarc;Skin;Thym;Thyr	level A
+KRAS	"KRAS proto-oncogene, GTPase"	Bladder;Blood;Breast;Cervix;Chol;Colo;Endo;GaEso;LuAD;Panc;Testis	level A
+APC	"APC, WNT signaling pathway regulator"	Colo;Endo;GaEso;Panc;Prost;Testis	level A
+BRAF	"B-Raf proto-oncogene, serine/threonine kinase"	Blood;Brain;Colo;LuAD;Lymph;Panc;Skin;Thyr	level A
+PTEN	phosphatase and tensin homolog	Brain;Breast;Cervix;Endo;GaEso;KiCl;KiNCl;Liver;LuSC;Panc;Prost;Skin;Thyr	level A
+RB1	RB transcriptional corepressor 1	Bladder;Brain;Breast;Cervix;Endo;GaEso;KiNCl;Liver;LuAD;LuSC;Ovar;Prost;Sarc;Skin	level A
+PIK3CA	"phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit alpha"	AdCyst;Bladder;Brain;Breast;Cervix;Colo;Endo;GaEso;Head;KiCl;Liver;LuAD;LuSC;Panc;Prost	level A
+VHL	von Hippel-Lindau tumor suppressor	KiCl	level A
+GNA11	G protein subunit alpha 11	Skin;UvMel	level A
+IDH1	"isocitrate dehydrogenase (NADP(+)) 1, cytosolic"	Blood;Brain;Chol;Prost;Skin	level A
+GTF2I	general transcription factor IIi	Thym	level B
+ARID1A	AT-rich interaction domain 1A	Bladder;Blood;Brain;Breast;Cervix;Chol;Colo;Endo;GaEso;KiCl;KiNCl;Liver;LuAD;Panc	level A
+PBRM1	polybromo 1	Chol;GaEso;KiCl;KiNCl;Panc;Pleura;Skin	level A
+BAP1	BRCA1 associated protein 1	Bladder;Cervix;Chol;KiCl;Liver;Pleura;UvMel	level A
+PIK3R1	phosphoinositide-3-kinase regulatory subunit 1	Brain;Colo;Endo;GaEso;Prost	level A
+CTNNB1	catenin beta 1	Endo;GaEso;Liver;LuAD;Panc;Prost;Skin	level A
+KMT2D	lysine methyltransferase 2D	Bladder;Cervix;GaEso;GaEso;Head;Liver;LuSC;Lymph;Prost	level A
+NRAS	"NRAS proto-oncogene, GTPase"	Bladder;Blood;Colo;Skin;Testis;Thym;Thyr	level A
+ATRX	"ATRX, chromatin remodeler"	Brain;Sarc	level A
+KDM6A	lysine demethylase 6A	AdCyst;Bladder;Breast;Head;KiNCl;LuSC;Panc;Prost	level A
+SF3B1	splicing factor 3b subunit 1	AdCyst;Bladder;Blood;Breast;Panc;Skin;UvMel	level A
+NF2	neurofibromin 2	KiNCl;Pleura	level A
+FAT1	FAT atypical cadherin 1	Bladder;Brain;Head;LuSC	level A
+FBXW7	F-box and WD repeat domain containing 7	Bladder;Cervix;Colo;Endo;GaEso;Head;Panc	level A
+SMAD4	SMAD family member 4	Colo;GaEso;Panc	level A
+KMT2C	lysine methyltransferase 2C	Breast;Cervix;Chol;KiCl;KiNCl;Panc;Prost;Skin;Thyr	level A
+NOTCH1	notch 1	AdCyst;Blood;Brain;Head;LuSC;Lymph	level A
+NF1	neurofibromin 1	Bladder;Blood;Brain;Breast;GaEso;LuAD;Ovar;Panc;Pheo;Sarc;Skin	level A
+CDKN2A	cyclin dependent kinase inhibitor 2A	GaEso;Head;Liver;LuAD;LuSC;Panc;Skin	level A
+FLG	filaggrin	GaEso	level B
+PIM1	"Pim-1 proto-oncogene, serine/threonine kinase"	Lymph	level A
+EGFR	epidermal growth factor receptor	Brain;LuAD	level A
+CTCF	CCCTC-binding factor	Breast;Endo	level A
+STK11	serine/threonine kinase 11	LuAD;Panc	level A
+KEAP1	kelch like ECH associated protein 1	Liver;LuAD;LuSC	level A
+CARD11	caspase recruitment domain family member 11	Lymph	level A
+ERCC2	"ERCC excision repair 2, TFIIH core complex helicase subunit"	Bladder	level A
+ARID2	AT-rich interaction domain 2	Bladder;GaEso;Head;Liver;LuAD;Panc;Skin	level A
+PPP2R1A	protein phosphatase 2 scaffold subunit Aalpha	Endo	level A
+CREBBP	CREB binding protein	AdCyst;Bladder;Blood;Lymph	level A
+FGFR3	fibroblast growth factor receptor 3	Bladder;Blood	level A
+KIT	KIT proto-oncogene receptor tyrosine kinase	Blood;Skin;Testis	level A
+ATM	ATM serine/threonine kinase	AdCyst;Bladder;Blood;Colo;Endo;KiCl;LuAD;Lymph;Panc;Prost	level A
+CDH1	cadherin 1	Bladder;Breast;GaEso	level A
+MYD88	myeloid differentiation primary response 88	Blood;Lymph	level A
+POLE	"DNA polymerase epsilon, catalytic subunit"	Endo	level A
+BCL2	"BCL2, apoptosis regulator"	Lymph	level A
+IGLL5	immunoglobulin lambda like polypeptide 5	Lymph	level C
+ERBB4	erb-b2 receptor tyrosine kinase 4	Bladder;GaEso	level A
+HRAS	"HRas proto-oncogene, GTPase"	Bladder;Head;Pheo;Prost;Thym;Thyr	level A
+STAG2	stromal antigen 2	Bladder;Blood;Brain;KiNCl	level A
+CDKN1A	cyclin dependent kinase inhibitor 1A	Bladder;KiNCl;Liver	level A
+ERBB2	erb-b2 receptor tyrosine kinase 2	Bladder;Breast;Cervix;Colo;GaEso	level A
+FGFR2	fibroblast growth factor receptor 2	Breast;Endo	level A
+RPL22	ribosomal protein L22	Endo	level A
+SETD2	SET domain containing 2	KiCl;KiNCl;LuAD;Pleura;Skin	level A
+ZNF804B	zinc finger protein 804B	GaEso;Lymph	level D
+GATA3	GATA binding protein 3	Breast	level A
+CASP8	caspase 8	Cervix;Head	level A
+SPOP	speckle type BTB/POZ protein	Endo;Prost	level A
+ALB	albumin	Liver	level B
+CIC	capicua transcriptional repressor	Brain;GaEso	level A
+RNF43	ring finger protein 43	GaEso;Panc	level A
+RXRA	retinoid X receptor alpha	Bladder	level B
+CENPE	centromere protein E	Skin	level C
+MAP3K1	mitogen-activated protein kinase kinase kinase 1	Breast	level A
+FOXA1	forkhead box A1	Breast;Prost	level A
+GNAS	GNAS complex locus	GaEso;Panc	level A
+AXIN1	axin 1	Liver;Panc	level A
+SMARCA2	"SWI/SNF related, matrix associated, actin dependent regulator of chromatin, subfamily a, member 2"	AdCyst	level B
+REV3L	"REV3 like, DNA directed polymerase zeta catalytic subunit"	Skin	level B
+DNMT3A	DNA methyltransferase 3 alpha	Blood;Thyr	level A
+FLT3	fms related tyrosine kinase 3	Blood	level A
+NPM1	nucleophosmin 1	Blood	level A
+RAC1	Rac family small GTPase 1	Skin	level A
+TET2	tet methylcytosine dioxygenase 2	Blood;Lymph	level A
+MAML2	mastermind like transcriptional coactivator 2	KiNCl	level A
+EZH2	enhancer of zeste 2 polycomb repressive complex 2 subunit	Lymph;Skin	level A
+IDH2	"isocitrate dehydrogenase (NADP(+)) 2, mitochondrial"	Blood;Brain;Chol	level A
+U2AF1	U2 small nuclear RNA auxiliary factor 1	Blood;Endo;LuAD;Panc	level A
+FUBP1	far upstream element binding protein 1	Blood;Brain	level A
+XPO1	exportin 1	Blood	level A
+AKT1	AKT serine/threonine kinase 1	Breast;Prost	level A
+NEFH	neurofilament heavy	KiCl;KiNCl	level B
+CD79B	CD79b molecule	Lymph	level A
+RBM10	RNA binding motif protein 10	Bladder;Colo;LuAD;Panc	level A
+NSD1	nuclear receptor binding SET domain protein 1	Head	level A
+MAP2K4	mitogen-activated protein kinase kinase 4	Breast;Panc	level A
+ZNF479	zinc finger protein 479	LuAD;Prost	level A
+CHEK2	checkpoint kinase 2	Pheo;Thyr	level A
+TGFBR2	transforming growth factor beta receptor 2	Head;Panc	level A
+RPS6KA3	ribosomal protein S6 kinase A3	Liver	level B
+ERBB3	erb-b2 receptor tyrosine kinase 3	Bladder;Cervix;Colo;GaEso	level A
+CEBPA	CCAAT enhancer binding protein alpha	Blood	level A
+HLA-A	"major histocompatibility complex, class I, A"	Cervix;GaEso;Head;LuSC;Lymph	level A
+BACH1	BTB domain and CNC homolog 1	Thym	level C
+MET	"MET proto-oncogene, receptor tyrosine kinase"	KiNCl;LuAD	level A
+CDK12	cyclin dependent kinase 12	Ovar;Prost	level A
+ESR1	estrogen receptor 1	Breast;Endo	level A
+AMER1	APC membrane recruitment protein 1	Colo	level A
+ACVR2A	activin A receptor type 2A	Colo;GaEso;Liver;Panc	level A
+IKZF3	IKAROS family zinc finger 3	Blood	level B
+ARHGAP35	Rho GTPase activating protein 35	Bladder;Endo	level C
+TNFRSF11A	TNF receptor superfamily member 11a	Testis	level C
+TSC2	TSC complex subunit 2	KiNCl;Liver	level A
+LATS2	large tumor suppressor kinase 2	Pleura	level B
+CHD2	chromodomain helicase DNA binding protein 2	Blood	level A
+NFE2L2	"nuclear factor, erythroid 2 like 2"	Endo;GaEso;Head;Liver;LuSC	level A
+BRCA1	"BRCA1, DNA repair associated"	Ovar	level A
+CCND1	cyclin D1	Endo;Lymph	level A
+ASXL1	ASXL transcriptional regulator 1	Blood	level A
+CBFB	core-binding factor subunit beta	Breast	level A
+HLA-B	"major histocompatibility complex, class I, B"	Cervix;Colo;GaEso;Head;Lymph;Panc	level B
+POLR2A	RNA polymerase II subunit A	LuAD	level C
+KDM5C	lysine demethylase 5C	KiCl	level A
+POU2F2	POU class 2 homeobox 2	Lymph	level B
+MAP2K1	mitogen-activated protein kinase kinase 1	Bladder;Skin	level A
+RET	ret proto-oncogene	Pheo	level A
+TSC1	TSC complex subunit 1	Bladder;KiNCl;Liver	level A
+TCHH	trichohyalin	Skin	level D
+NCOR1	nuclear receptor corepressor 1	Bladder;Breast;Pleura;Prost	level A
+EPAS1	endothelial PAS domain protein 1	Pheo	level A
+NUP93	nucleoporin 93	Breast;Thyr	level B
+FAM157B	null	Breast	level D
+RUNX1	runt related transcription factor 1	Blood;Breast	level A
+EGR2	early growth response 2	Blood	level B
+B2M	beta-2-microglobulin	GaEso;Lymph	level A
+WT1	Wilms tumor 1	Blood	level A
+RGPD3	RANBP2-like and GRIP domain containing 3	Prost	level A
+KLHL6	kelch like family member 6	Blood;Lymph	level B
+PTCH1	patched 1	Brain;GaEso;Pleura	level A
+MAPK1	mitogen-activated protein kinase 1	Cervix;Head	level A
+TBX3	T-box 3	Breast	level A
+EP300	E1A binding protein p300	Bladder;Cervix;Head	level A
+EPHA2	EPH receptor A2	Cervix;Head	level B
+MAEA	macrophage erythroblast attacher	Testis	level D
+HS6ST1	heparan sulfate 6-O-sulfotransferase 1	Breast	level C
+ACPP	"acid phosphatase, prostate"	Testis	level D
+BCOR	BCL6 corepressor	Blood;Brain;Endo;GaEso	level A
+CS	citrate synthase	Chol	level D
+RHPN2	rhophilin Rho GTPase binding protein 2	Lymph;Testis	level C
+ZNF280D	zinc finger protein 280D	Brain	level D
+RHOA	ras homolog family member A	GaEso;Head	level A
+CNBD1	cyclic nucleotide binding domain containing 1	GaEso	level A
+SOX9	SRY-box 9	Colo;GaEso;Panc	level B
+BRD7	bromodomain containing 7	Liver;Skin	level B
+PPP6C	protein phosphatase 6 catalytic subunit	Skin	level A
+ELF3	E74 like ETS transcription factor 3	Bladder;Chol;Colo;Panc	level A
+GNAQ	G protein subunit alpha q	UvMel	level A
+BIRC3	baculoviral IAP repeat containing 3	Blood	level A
+BRCA2	"BRCA2, DNA repair associated"	Ovar;Prost	level A
+IL6ST	interleukin 6 signal transducer	Liver;Prost	level A
+SMARCA4	"SWI/SNF related, matrix associated, actin dependent regulator of chromatin, subfamily a, member 4"	Brain;LuAD	level A
+CLIP1	CAP-Gly domain containing linker protein 1	Bladder;LuAD;Skin	level A
+RBM12	RNA binding motif protein 12	Panc	level D
+HNRNPM	heterogeneous nuclear ribonucleoprotein M	KiNCl	level C
+EMG1	"EMG1, N1-specific pseudouridine methyltransferase"	Skin	level D
+ERC1	ELKS/RAB6-interacting/CAST family member 1	Testis	level A
+CDKN1B	cyclin dependent kinase inhibitor 1B	Breast;Liver;Prost	level A
+TYRO3	TYRO3 protein tyrosine kinase	Bladder	level B
+MGA	"MGA, MAX dimerization protein"	Blood;LuAD;Prost	level B
+STK19	serine/threonine kinase 19	Skin	level B
+TMPRSS15	transmembrane serine protease 15	Brain	level C
+TCF12	transcription factor 12	Brain	level A
+CDC27	cell division cycle 27	Colo;Prost	level B
+GNA13	G protein subunit alpha 13	Bladder;Lymph	level B
+TMPRSS13	transmembrane serine protease 13	Panc	level D
+CNOT9	CCR4-NOT transcription complex subunit 9	Skin	level B
+AJUBA	ajuba LIM protein	Head	level B
+CHD4	chromodomain helicase DNA binding protein 4	Endo	level A
+ACVR1B	activin A receptor type 1B	Panc	level B
+TPTE2	transmembrane phosphoinositide 3-phosphatase and tensin homolog 2	Testis	level C
+GPS2	G protein pathway suppressor 2	Breast	level B
+LARP4B	La ribonucleoprotein domain family member 4B	GaEso	level A
+TRAF3	TNF receptor associated factor 3	Blood	level B
+ZNF430	zinc finger protein 430	LuAD	level D
+XYLT2	xylosyltransferase 2	GaEso	level D
+ZFHX3	zinc finger homeobox 3	Endo;Prost;Testis	level A
+MBD6	methyl-CpG binding domain protein 6	GaEso	level D
+NUMBL	"NUMB like, endocytic adaptor protein"	Sarc	level C
+TNFRSF14	TNF receptor superfamily member 14	Lymph	level A
+SPEN	spen family transcriptional repressor	Blood;Breast;KiCl;Lymph	level A
+ZFP36L1	ZFP36 ring finger protein like 1	Bladder;Breast	level B
+ZNF292	zinc finger protein 292	Blood;Prost	level B
+HMGCR	3-hydroxy-3-methylglutaryl-CoA reductase	Testis	level D
+PEG3	paternally expressed 3	Head	level B
+USP28	ubiquitin specific peptidase 28	Prost	level C
+ERF	ETS2 repressor factor	Prost	level B
+ZC3H13	zinc finger CCCH-type containing 13	Colo;Endo;GaEso	level B
+BTG2	BTG anti-proliferation factor 2	Lymph	level B
+LRRC37A3	leucine rich repeat containing 37 member A3	Breast	level D
+DLC1	DLC1 Rho GTPase activating protein	Prost	level B
+CHIT1	chitinase 1	Bladder	level C
+POT1	protection of telomeres 1	Blood	level A
+ZNF233	zinc finger protein 233	Bladder	level C
+PNPLA4	patatin like phospholipase domain containing 4	Testis	level C
+TMEM30A	transmembrane protein 30A	Lymph	level C
+CIITA	class II major histocompatibility complex transactivator	Lymph	level A
+PABPC1	poly(A) binding protein cytoplasmic 1	KiNCl;Lymph	level A
+P2RY8	P2Y receptor family member 8	Lymph	level A
+FOXA2	forkhead box A2	Endo	level B
+LILRA3	null	Pleura	level D
+MSH3	mutS homolog 3	Sarc	level B
+MIA2	MIA SH3 domain ER export factor 2	Panc	level B
+EEF1A1	eukaryotic translation elongation factor 1 alpha 1	Liver	level B
+SGK1	serum/glucocorticoid regulated kinase 1	Lymph	level A
+MEF2B	myocyte enhancer factor 2B	Lymph	level B
+UBXN11	UBX domain protein 11	Lymph	level D
+HJURP	Holliday junction recognition protein	Thym	level C
+NCOA6	nuclear receptor coactivator 6	Brain	level C
+KMT2A	lysine methyltransferase 2A	Bladder;Thyr	level A
+FGFRL1	fibroblast growth factor receptor like 1	Bladder	level B
+FAM104B	family with sequence similarity 104 member B	Testis	level D
+KCNT2	potassium sodium-activated channel subfamily T member 2	GaEso	level C
+ZMYM3	zinc finger MYM-type containing 3	Prost	level A
+SOX17	SRY-box 17	Endo	level B
+ZNF14	zinc finger protein 14	Colo	level D
+FRMD4A	FERM domain containing 4A	GaEso	level C
+CTNND1	catenin delta 1	GaEso	level A
+RBBP6	"RB binding protein 6, ubiquitin ligase"	Endo	level C
+MED12	mediator complex subunit 12	Blood;Brain	level A
+DOT1L	DOT1 like histone lysine methyltransferase	LuAD	level B
+RAD21	RAD21 cohesin complex component	Blood	level A
+HLA-DRB1	"major histocompatibility complex, class II, DR beta 1"	Lymph	level B
+PAX5	paired box 5	Lymph	level A
+PRSS48	serine protease 48	Prost	level D
+CCDC91	coiled-coil domain containing 91	Brain	level D
+MTOR	mechanistic target of rapamycin kinase	KiCl	level A
+ZNF814	zinc finger protein 814	Lymph	level D
+ERICH6B	glutamate rich 6B	Panc	level D
+NUP210L	nucleoporin 210 like	Brain	level D
+USP9X	ubiquitin specific peptidase 9 X-linked	AdCyst;Pheo	level C
+UBE2A	ubiquitin conjugating enzyme E2 A	Lymph	level C
+WNK1	WNK lysine deficient protein kinase 1	Lymph	level C
+TNFAIP3	TNF alpha induced protein 3	Lymph	level A
+C3orf70	chromosome 3 open reading frame 70	Bladder;Cervix	level D
+ZNF234	zinc finger protein 234	Sarc	level D
+TENT5D	terminal nucleotidyltransferase 5D	GaEso	level D
+TP53BP1	tumor protein p53 binding protein 1	GaEso	level B
+AKAP2	A-kinase anchoring protein 2	KiCl	level C
+SSC5D	scavenger receptor cysteine rich family member with 5 domains	Skin	level D
+VCX	variable charge X-linked	Liver	level B
+HNF1A	HNF1 homeobox A	Liver	level A
+ZNF750	zinc finger protein 750	Cervix;GaEso;Head	level B
+MB21D2	Mab-21 domain containing 2	Breast;Head	level A
+FAT3	FAT atypical cadherin 3	Ovar	level A
+ARID1B	AT-rich interaction domain 1B	GaEso;Thyr	level A
+ERRFI1	ERBB receptor feedback inhibitor 1	Liver	level B
+DTX1	deltex E3 ubiquitin ligase 1	Blood	level B
+HRNR	hornerin	LuAD	level C
+STAT3	signal transducer and activator of transcription 3	Lymph	level A
+TRAK1	trafficking kinesin protein 1	Liver	level C
+BAZ2A	bromodomain adjacent to zinc finger domain 2A	Blood	level B
+CTNND2	catenin delta 2	Brain	level A
+POLQ	DNA polymerase theta	Skin	level A
+ZFX	zinc finger protein X-linked	Skin	level B
+C10orf113	chromosome 10 open reading frame 113	Panc	level D
+AIM2	absent in melanoma 2	Panc	level B
+NUDCD2	NudC domain containing 2	Panc	level D
+DDX3X	DEAD-box helicase 3 X-linked	Blood;Skin	level A
+PCCA	propionyl-CoA carboxylase subunit alpha	GaEso	level B
+RASA1	RAS p21 protein activator 1	Endo;GaEso;Head	level B
+RGS7	regulator of G protein signaling 7	Skin	level A
+TTK	TTK protein kinase	GaEso	level B
+KIF26B	kinesin family member 26B	Brain	level C
+AKR1D1	aldo-keto reductase family 1 member D1	Brain	level D
+SETDB1	SET domain bifurcated 1	Pleura	level B
+CDK4	cyclin dependent kinase 4	Skin	level A
+ZKSCAN4	zinc finger with KRAB and SCAN domains 4	Brain	level D
+DHX30	DExH-box helicase 30	Bladder	level D
+AKAP9	A-kinase anchoring protein 9	Endo	level A
+NPFFR2	neuropeptide FF receptor 2	Head	level B
+FAM86B2	family with sequence similarity 86 member B2	Ovar	level D
+RRP36	ribosomal RNA processing 36	Skin	level D
+JMJD1C	jumonji domain containing 1C	Thyr	level C
+EYS	eyes shut homolog (Drosophila)	Brain	level D
+FGFR4	fibroblast growth factor receptor 4	Brain	level A
+RIMS1	regulating synaptic membrane exocytosis 1	Colo	level D
+SPATA31E1	SPATA31 subfamily E member 1	Blood	level D
+MAGI2	"membrane associated guanylate kinase, WW and PDZ domain containing 2"	GaEso	level C
+TBC1D5	TBC1 domain family member 5	Brain	level C
+DMWD	"DM1 locus, WD repeat containing"	Brain	level D
+AKR1C3	aldo-keto reductase family 1 member C3	Breast	level B
+PPM1F	"protein phosphatase, Mg2+/Mn2+ dependent 1F"	Pleura	level C
+NFKBIA	NFKB inhibitor alpha	Lymph	level B
+BAX	"BCL2 associated X, apoptosis regulator"	Breast	level A
+FRG1	FSHD region gene 1	KiNCl	level C
+MYB	"MYB proto-oncogene, transcription factor"	AdCyst;Breast	level A
+KANK3	KN motif and ankyrin repeat domains 3	KiCl	level B
+IRF4	interferon regulatory factor 4	Blood;Lymph	level A
+CHORDC1	cysteine and histidine rich domain containing 1	Brain	level C
+ZBTB7A	zinc finger and BTB domain containing 7A	Lymph	level C
+SPHKAP	"SPHK1 interactor, AKAP domain containing"	Brain	level D
+PRDM2	PR/SET domain 2	Colo	level A
+SCN9A	sodium voltage-gated channel alpha subunit 9	Brain;Sarc	level D
+ATP2B4	ATPase plasma membrane Ca2+ transporting 4	Brain	level C
+MSH6	mutS homolog 6	Endo;Skin	level A
+CCNQ	cyclin Q	Skin	level D
+ZC3H12A	zinc finger CCCH-type containing 12A	Lymph	level B
+NUP153	nucleoporin 153	Liver	level B
+PRSS50	serine protease 50	Brain	level D
+RNF152	ring finger protein 152	Skin	level C
+PSKH2	protein serine kinase H2	Brain	level D
+PTPN11	"protein tyrosine phosphatase, non-receptor type 11"	Blood	level A
+PCDH9	protocadherin 9	Colo	level C
+BCL11B	B cell CLL/lymphoma 11B	Brain	level A
+ARID5B	AT-rich interaction domain 5B	Endo	level B
+SEMA4D	semaphorin 4D	Brain	level B
+DIS3	"DIS3 homolog, exosome endoribonuclease and 3'-5' exoribonuclease"	Blood	level B
+IGHMBP2	immunoglobulin mu binding protein 2	Brain	level D
+HIST1H1C	histone cluster 1 H1 family member c	Lymph	level C
+RPL21	ribosomal protein L21	Brain	level C
+TPTE	transmembrane phosphatase with tensin homology	Bladder;Head;LuSC	level B
+RHOB	ras homolog family member B	Bladder	level B
+TEX13A	testis expressed 13A	Head	level D
+CUX1	cut like homeobox 1	Endo	level A
+HEPH	hephaestin	Brain	level C
+NCOR2	nuclear receptor corepressor 2	Prost	level A
+HOXC12	homeobox C12	Brain	level D
+IRF8	interferon regulatory factor 8	Lymph	level B
+KLF3	Kruppel like factor 3	GaEso	level B
+ARL16	ADP ribosylation factor like GTPase 16	Skin	level D
+MAP2K7	mitogen-activated protein kinase kinase 7	GaEso	level B
+PCNT	pericentrin	Skin	level C
+ANAPC1	anaphase promoting complex subunit 1	GaEso	level C
+INMT	indolethylamine N-methyltransferase	Skin	level C
+ZIC4	Zic family member 4	Lymph	level C
+LILRB4	leukocyte immunoglobulin like receptor B4	KiCl	level C
+DLGAP2	DLG associated protein 2	Lymph	level D
+RAD54B	RAD54 homolog B	Brain	level B
+RARS2	"arginyl-tRNA synthetase 2, mitochondrial"	Breast	level D
+PRB4	proline rich protein BstNI subfamily 4	Panc	level C
+FAM8A1	family with sequence similarity 8 member A1	Testis	level D
+FAT4	FAT atypical cadherin 4	Lymph	level A
+CDH11	cadherin 11	GaEso	level A
+RECQL4	RecQ like helicase 4	Panc	level A
+MARK2	microtubule affinity regulating kinase 2	Panc	level C
+PCDHA3	null	Colo	level D
+TEAD3	TEA domain transcription factor 3	Brain	level D
+MDN1	midasin AAA ATPase 1	KiNCl	level C
+ARHGAP5	Rho GTPase activating protein 5	Breast	level A
+THSD7B	thrombospondin type 1 domain containing 7B	Liver	level D
+PJA2	praja ring finger ubiquitin ligase 2	Brain	level B
+BOD1L1	biorientation of chromosomes in cell division 1 like 1	Brain	level D
+SHROOM3	shroom family member 3	Thyr	level D
+CCDC73	coiled-coil domain containing 73	Endo	level D
+YLPM1	YLP motif containing 1	KiNCl	level D
+PRDM1	PR/SET domain 1	Lymph	level A
+SF3B2	splicing factor 3b subunit 2	GaEso	level B
+ZC3H4	zinc finger CCCH-type containing 4	GaEso	level D
+CYLD	CYLD lysine 63 deubiquitinase	Thym	level A
+STAT6	signal transducer and activator of transcription 6	Lymph	level A
+RELN	reelin	Lymph	level B
+ZNF208	zinc finger protein 208	Bladder;Thym	level D
+ZNF107	zinc finger protein 107	Brain	level D
+NOTCH2	notch 2	Breast;Head;Lymph	level A
+SELPLG	selectin P ligand	Liver	level B
+PKHD1L1	PKHD1 like 1	Liver	level D
+BDP1	"B double prime 1, subunit of RNA polymerase III transcription initiation factor IIIB"	Thyr	level C
+FRAS1	Fraser extracellular matrix complex subunit 1	Cervix;Liver	level C
+FOXQ1	forkhead box Q1	Bladder	level B
+CACNA1B	calcium voltage-gated channel subunit alpha1 B	Panc	level C
+PPM1D	"protein phosphatase, Mg2+/Mn2+ dependent 1D"	Thyr	level A
+ABCA12	ATP binding cassette subfamily A member 12	Panc	level B
+ATP11A	ATPase phospholipid transporting 11A	KiNCl	level C
+CDH9	cadherin 9	Blood	level C
+SMAD3	SMAD family member 3	Panc	level A
+MCF2	MCF.2 cell line derived transforming sequence	Colo	level C
+PDE3A	phosphodiesterase 3A	Lymph	level C
+AHNAK	AHNAK nucleoprotein	Sarc	level C
+BIRC6	baculoviral IAP repeat containing 6	KiNCl	level A
+CCDC66	coiled-coil domain containing 66	GaEso;Panc	level C
+FLT3LG	fms related tyrosine kinase 3 ligand	Breast	level C
+RRAS2	RAS related 2	Endo	level B
+ROCK2	Rho associated coiled-coil containing protein kinase 2	Endo	level C
+SMTNL2	smoothelin like 2	Endo	level D
+PTPN14	"protein tyrosine phosphatase, non-receptor type 14"	Pleura	level C
+ATF7IP	activating transcription factor 7 interacting protein	Endo;LuAD	level C
+PLXNA2	plexin A2	KiNCl	level C
+SPTAN1	"spectrin alpha, non-erythrocytic 1"	Bladder	level B
+NFKBIE	NFKB inhibitor epsilon	Lymph	level A
+PHRF1	PHD and ring finger domains 1	Pleura	level C
+KNTC1	kinetochore associated 1	AdCyst	level C
+ZZEF1	zinc finger ZZ-type and EF-hand domain containing 1	KiNCl	level D
+ETV6	ETS variant 6	Blood;Lymph	level A
+ESRP1	epithelial splicing regulatory protein 1	Endo	level C
+ASXL3	ASXL transcriptional regulator 3	Lymph	level B
+PRKD2	protein kinase D2	AdCyst	level C
+DICER1	"dicer 1, ribonuclease III"	Endo	level A
+PLCB1	phospholipase C beta 1	Lymph	level C
+TBL1XR1	transducin beta like 1 X-linked receptor 1	Breast	level A
+LRRTM4	leucine rich repeat transmembrane neuronal 4	Lymph	level D
+NLRP5	NLR family pyrin domain containing 5	Lymph	level D
+DAZAP1	DAZ associated protein 1	Lymph	level B
+BTG1	BTG anti-proliferation factor 1	Lymph	level A
+RPL5	ribosomal protein L5	LuAD	level A
+TCF7L1	transcription factor 7 like 1	Thyr	level C
+EIF1AX	eukaryotic translation initiation factor 1A X-linked	Thyr	level A
+LTBP3	latent transforming growth factor beta binding protein 3	Sarc	level C
+SON	SON DNA binding protein	Ovar	level C
+NLRC5	NLR family CARD domain containing 5	Cervix	level B
+GPRIN2	G protein regulated inducer of neurite outgrowth 2	Breast	level C
+EPS8	epidermal growth factor receptor pathway substrate 8	Endo	level C
+SLIT1	slit guidance ligand 1	Pleura	level C
+EVI5L	ecotropic viral integration site 5 like	Thym	level D
+ARFGEF2	ADP ribosylation factor guanine nucleotide exchange factor 2	KiCl	level C
+TMPRSS7	transmembrane serine protease 7	Pleura	level D
+DBR1	debranching RNA lariats 1	Head	level C
+CDK5RAP2	CDK5 regulatory subunit associated protein 2	Endo	level C
+ZFHX4	zinc finger homeobox 4	Lymph	level C
+PFN1	profilin 1	Lymph	level C
+DYRK1A	dual specificity tyrosine phosphorylation regulated kinase 1A	Liver	level B
+TCF7L2	transcription factor 7 like 2	Colo	level A
+RBM43	RNA binding motif protein 43	GaEso	level C
+PREX2	"phosphatidylinositol-3,4,5-trisphosphate dependent Rac exchange factor 2"	Lymph	level A
+L3MBTL3	"L3MBTL3, histone methyl-lysine binding protein"	Thym	level C
+CASZ1	castor zinc finger 1	Prost	level B
+EOMES	eomesodermin	Sarc	level D
+CR1	complement C3b/C4b receptor 1 (Knops blood group)	GaEso	level C
+SRGAP3	SLIT-ROBO Rho GTPase activating protein 3	Pleura	level A
+LILRB1	leukocyte immunoglobulin like receptor B1	Head	level C
+ATP6V1B1	ATPase H+ transporting V1 subunit B1	GaEso	level D
+SMARCB1	"SWI/SNF related, matrix associated, actin dependent regulator of chromatin, subfamily b, member 1"	Lymph	level A
+FAM135B	family with sequence similarity 135 member B	Blood;Head	level A
+ITGA8	integrin subunit alpha 8	Head	level C
+A1CF	APOBEC1 complementation factor	Skin	level A
+NSD2	nuclear receptor binding SET domain protein 2	Head	level A
+ODF2L	outer dense fiber of sperm tails 2 like	Colo	level D
+ADGRV1	adhesion G protein-coupled receptor V1	Cervix;Sarc	level D
+STAG3L2	null	KiCl	level D
+RECQL5	RecQ like helicase 5	LuSC	level B
+USH2A	usherin	Head	level D
+FAT2	FAT atypical cadherin 2	Cervix	level C
+ICE1	interactor of little elongation complex ELL subunit 1	Blood	level C
+LAMA2	laminin subunit alpha 2	Endo	level C
+PHF6	PHD finger protein 6	Blood	level A
+ZC3H18	zinc finger CCCH-type containing 18	Blood	level D
+PTPRC	"protein tyrosine phosphatase, receptor type C"	Cervix	level A
+PREX1	"phosphatidylinositol-3,4,5-trisphosphate dependent Rac exchange factor 1"	Cervix	level C
+UBR5	ubiquitin protein ligase E3 component n-recognin 5	Lymph	level A
+EBF1	early B cell factor 1	Lymph	level A
+EIF5B	eukaryotic translation initiation factor 5B	GaEso	level B
+ZNF608	zinc finger protein 608	Lymph	level B
+RBMX	RNA binding motif protein X-linked	Endo;Panc	level C
+TNFRSF10C	TNF receptor superfamily member 10c	Colo	level B
+MTMR1	myotubularin related protein 1	Lymph	level D
+BRD8	bromodomain containing 8	GaEso	level C
+NBEA	neurobeachin	Colo	level A
+CD70	CD70 molecule	Lymph	level B
+LAMA1	laminin subunit alpha 1	Head	level C
+CFAP58	cilia and flagella associated protein 58	Endo	level D
+WBP1	WW domain binding protein 1	GaEso	level C
+ITGA6	integrin subunit alpha 6	GaEso	level B
+STRIP2	striatin interacting protein 2	GaEso	level D
+SETD1B	SET domain containing 1B	Panc	level A
+TLE1	transducin like enhancer of split 1	Endo	level C
+NXF1	nuclear RNA export factor 1	Blood	level C
+HERC2	HECT and RLD domain containing E3 ubiquitin protein ligase 2	KiNCl	level C
+ANKRD30A	ankyrin repeat domain 30A	Lymph	level C
+TAOK1	TAO kinase 1	Pleura	level C

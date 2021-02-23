@@ -1,0 +1,156 @@
+{
+  "workflow": {
+    "nodes": [
+      {
+        "name": "haplotypecaller",
+        "cmd": "java -jar #GATK3# #GATK3_HAPLOTTYPECALLER_PARAMS# -T HaplotypeCaller -R #REF# -I <#BAM_FILE#> -o [#SAMPLE_NAME#.gatk3.snp_indel.raw.vcf]"
+      },
+      {
+        "name": "extract_fields",
+        "cmd": "java -jar #SNPSIFT# extractFields <#SAMPLE_NAME#.gatk3.snp_indel.raw.vcf> CHROM POS REF ALT | grep -v CHROM > [#SAMPLE_NAME#.gatk3.snp_indel.tmp.pos]"
+      },
+      {
+        "name": "tmp_pos",
+        "cmd": "perl ./generate_calculaition_region.pl <#SAMPLE_NAME#.gatk3.snp_indel.tmp.pos> [#SAMPLE_NAME#.gatk3.snp_indel.pos]"
+      },
+      {
+        "name": "bam_readcount",
+        "cmd": "#BAM_READCOUNT# #BAM_READCOUNT_PARAMS# -l <#SAMPLE_NAME#.gatk3.snp_indel.pos> -f #REF# <#BAM_FILE#> > [#SAMPLE_NAME#.gatk3.snp_indel.rc]"
+      },
+      {
+        "name": "fpfilter",
+        "cmd": "java -jar #VARSCAN# fpfilter  <#SAMPLE_NAME#.gatk3.snp_indel.raw.vcf> <#SAMPLE_NAME#.gatk3.snp_indel.rc> #GERMLINE_VARSCAN_FPFILTER_PARAMS# --output-file [#SAMPLE_NAME#.gatk3.snp_indel.fpfilter.pass] --filtered-file #SAMPLE_NAME#.gatk3.snp_indel.fpfilter.fail"
+      },
+      {
+        "name": "select_snp",
+        "cmd": "java -jar #GATK3# -T SelectVariants -R #REF# -V <#SAMPLE_NAME#.gatk3.snp_indel.fpfilter.pass> -selectType SNP -selectType MNP -o [#SAMPLE_NAME#.gatk3.snp.fpfilter.pass]"
+      },
+      {
+        "name": "select_indel",
+        "cmd": "java -jar #GATK3# -T SelectVariants -R #REF# -V <#SAMPLE_NAME#.gatk3.snp_indel.fpfilter.pass> -selectType INDEL -o [#SAMPLE_NAME#.gatk3.indel.fpfilter.pass]"
+      },
+      {
+        "name": "filter_snp",
+        "cmd": "java -jar #SNPSIFT# filter #SNPSIFT_SNP_FILTER_PARAMS# <#SAMPLE_NAME#.gatk3.snp.fpfilter.pass> > [#SAMPLE_NAME#.gatk3.snp.manualFilter.pass]"
+      },
+      {
+        "name": "filter_indel",
+        "cmd": "java -jar #SNPSIFT# filter #SNPSIFT_INDEL_FILTER_PARAMS#  <#SAMPLE_NAME#.gatk3.indel.fpfilter.pass> > [#SAMPLE_NAME#.gatk3.indel.manualFilter.pass]"
+      },
+      {
+        "name": "vep_snp",
+        "cmd": "#VEP# #VEP_PARAMS# --input_file <#SAMPLE_NAME#.gatk3.snp.manualFilter.pass> --output_file [#SAMPLE_NAME#.gatk3.snp.vep.vcf]"
+      },
+      {
+        "name": "vep_indel",
+        "cmd": "#VEP# #VEP_PARAMS# --input_file <#SAMPLE_NAME#.gatk3.indel.manualFilter.pass> --output_file [#SAMPLE_NAME#.gatk3.indel.vep.vcf]"
+      },
+      {
+        "name": "filter_vep_snp",
+        "cmd": "#FILTER_VEP# #FILTER_VEP_PARAMS# --input_file <#SAMPLE_NAME#.gakt3.snp.vep.vcf> --output_file [#SAMPLE_NAME#.gatk3.snp.vepfilter.vcf]"
+      },
+      {
+        "name": "filter_vep_indel",
+        "cmd": "#FILTER_VEP# #FILTER_VEP_PARAMS# --input_file <#SAMPLE_NAME#.gatk3.indel.vep.vcf> --output_file [#SAMPLE_NAME#.gatk3.indel.vepfilter.vcf]"
+      }
+    ],
+    "links": [
+      {
+        "from": "Step-haplotypecaller",
+        "to": "Step-extract_fields",
+        "frompid": "#SAMPLE_NAME#.gatk3.snp_indel.raw.vcf",
+        "topid": "#SAMPLE_NAME#.gatk3.snp_indel.raw.vcf"
+      },
+      {
+        "from": "Step-extract_fields",
+        "to": "Step-tmp_pos",
+        "frompid": "#SAMPLE_NAME#.gatk3.snp_indel.tmp.pos",
+        "topid": "#SAMPLE_NAME#.gatk3.snp_indel.tmp.pos"
+      },
+      {
+        "from": "Step-tmp_pos",
+        "to": "Step-bam_readcount",
+        "frompid": "#SAMPLE_NAME#.gatk3.snp_indel.pos",
+        "topid": "#SAMPLE_NAME#.gatk3.snp_indel.pos"
+      },
+      {
+        "from": "Step-bam_readcount",
+        "to": "Step-fpfilter",
+        "frompid": "#SAMPLE_NAME#.gatk3.snp_indel.rc",
+        "topid": "#SAMPLE_NAME#.gatk3.snp_indel.rc"
+      },
+      {
+        "from": "Step-haplotypecaller",
+        "to": "Step-fpfilter",
+        "frompid": "#SAMPLE_NAME#.gatk3.snp_indel.raw.vcf",
+        "topid": "#SAMPLE_NAME#.gatk3.snp_indel.raw.vcf"
+      },
+      {
+        "from": "Step-fpfilter",
+        "to": "Step-select_snp",
+        "frompid": "#SAMPLE_NAME#.gatk3.snp_indel.fpfilter.pass",
+        "topid": "#SAMPLE_NAME#.gatk3.snp_indel.fpfilter.pass"
+      },
+      {
+        "from": "Step-fpfilter",
+        "to": "Step-select_indel",
+        "frompid": "#SAMPLE_NAME#.gatk3.snp_indel.fpfilter.pass",
+        "topid": "#SAMPLE_NAME#.gatk3.snp_indel.fpfilter.pass"
+      },
+      {
+        "from": "Step-select_snp",
+        "to": "Step-filter_snp",
+        "frompid": "#SAMPLE_NAME#.gatk3.snp.fpfilter.pass",
+        "topid": "#SAMPLE_NAME#.gatk3.snp.fpfilter.pass"
+      },
+      {
+        "from": "Step-select_indel",
+        "to": "Step-filter_indel",
+        "frompid": "#SAMPLE_NAME#.gatk3.indel.fpfilter.pass",
+        "topid": "#SAMPLE_NAME#.gatk3.indel.fpfilter.pass"
+      },
+      {
+        "from": "Step-filter_snp",
+        "to": "Step-vep_snp",
+        "frompid": "#SAMPLE_NAME#.gatk3.snp.manualFilter.pass",
+        "topid": "#SAMPLE_NAME#.gatk3.snp.manualFilter.pass"
+      },
+      {
+        "from": "Step-filter_indel",
+        "to": "Step-vep_indel",
+        "frompid": "#SAMPLE_NAME#.gatk3.indel.manualFilter.pass",
+        "topid": "#SAMPLE_NAME#.gatk3.indel.manualFilter.pass"
+      },
+      {
+        "from": "Step-vep_snp",
+        "to": "Step-filter_vep_snp",
+        "frompid": "#SAMPLE_NAME#.gatk3.snp.vep.vcf",
+        "topid": "#SAMPLE_NAME#.gakt3.snp.vep.vcf"
+      },
+      {
+        "from": "Step-vep_indel",
+        "to": "Step-filter_vep_indel",
+        "frompid": "#SAMPLE_NAME#.gatk3.indel.vep.vcf",
+        "topid": "#SAMPLE_NAME#.gatk3.indel.vep.vcf"
+      }
+    ]
+  },
+  "macros": {
+    "GATK3": "",
+    "GATK3_HAPLOTTYPECALLER_PARAMS": "",
+    "REF": "",
+    "BAM_FILE": "",
+    "SAMPLE_NAME": "",
+    "SNPSIFT": "",
+    "BAM_READCOUNT": "",
+    "BAM_READCOUNT_PARAMS": "",
+    "VARSCAN": "",
+    "GERMLINE_VARSCAN_FPFILTER_PARAMS": "",
+    "SNPSIFT_SNP_FILTER_PARAMS": "",
+    "SNPSIFT_INDEL_FILTER_PARAMS": "",
+    "VEP": "",
+    "VEP_PARAMS": "",
+    "FILTER_VEP": "",
+    "FILTER_VEP_PARAMS": ""
+  }
+}

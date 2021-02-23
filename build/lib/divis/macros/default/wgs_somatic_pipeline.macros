@@ -1,0 +1,145 @@
+# LANG:EN:Normal FASTQ File of End 1
+# REQUIRED
+NORMAL_R1=
+
+# LANG:EN:Normal FASTQ File of End 2
+# REQUIRED
+NORMAL_R2=
+
+# LANG:EN:Tumor FASTQ File of End 1
+# REQUIRED
+TUMOR_R1=
+
+# LANG:EN:Tumor FASTQ File of End 2
+# REQUIRED
+TUMOR_R2=
+
+# LANG:EN:Path of Reference Genome
+# REQUIRED
+REF=
+
+# LANG:EN:Reference Genome Name
+# REQUIRED
+# DEFAULT:hg19
+REFNAME=
+
+# LANG:EN:Reference Genome Date
+# REQUIRED
+# DEFAULT:200902
+REFDATE=
+
+# LANG:EN:gatk4 BASERECALIBRATE Command Line Parameters
+# DEFAULT:--known-sites [known-sites]
+# REQUIRED
+GATK4_BASERECALIBRATE_PARAMS=--known-sites [known-sites]
+
+# LANG:EN:Sample Name
+# REQUIRED
+SAMPLE_NAME=
+
+# DEFAULT:
+# LANG:EN:Platform
+# REQUIRED
+# DEFAULT:Illumina
+PLATFORM=
+
+# LANG:EN:Parameters of samtools mpileup
+# OPTIONAL
+# DEFAULT:-B -q 1
+SAMTOOLS_MPILEUP_PARAMS=-B -q 1
+
+# LANG:EN:Parameters of bam-readcount
+# OPTIONAL
+# DEFAULT:-q 20 -w 1
+BAM_READCOUNT_PARAMS=-q 20 -w 1
+
+# LANG:EN:JVM Options for Varscan
+# OPTIONAL
+# DEFAULT:-Xmx8g
+VARSCAN_JAVA_OPTS=-Xmx8g
+
+# LANG:EN:Parameters of Varscan processSomatic Indel
+# OPTIONAL
+# DEFAULT:--min-tumor-freq 0.10 --max-normal-freq 0.05 --p-value 0.07
+VARSCAN_PROCESS_SOMATIC_INDEL_PARAMS=--min-tumor-freq 0.10 --max-normal-freq 0.05 --p-value 0.07
+
+# LANG:EN:Parameters of Varscan processSomatic SNP
+# OPTIONAL
+# DEFAULT:--min-tumor-freq 0.10 --max-normal-freq 0.05 --p-value 0.07
+VARSCAN_PROCESS_SOMATIC_SNP_PARAMS=--min-tumor-freq 0.10 --max-normal-freq 0.05 --p-value 0.07
+
+# LANG:EN:Parameters of Varscan somatic
+# OPTIONAL
+# DEFAULT:--strand-filter 1 --validation 0 --output-vcf 1
+VARSCAN_SOMATIC_PARAMS=--strand-filter 1 --validation 0 --output-vcf 1
+
+# LANG:EN:Parameters of Varscan fpfilter
+# OPTIONAL
+# DEFAULT:--min-var-count 4 --min-strand-reads 1 --min-var-basequal 20 --min-ref-basequal 20
+VARSCAN_FPFILTER_PARAMS=--min-var-count 4 --min-strand-reads 1 --min-var-basequal 20 --min-ref-basequal 20
+
+# LANG:EN:Parameters of Pindel
+# OPTIONAL
+# DEFAULT:-c ALL -w 5 -T 8
+PINDEL_PARAMS=-c ALL -w 5 -T 8
+
+# LANG:EN:JVM Options for Picard
+# OPTIONAL
+# DEFAULT:-Xmx8g
+PICARD_JAVA_OPTS=-Xmx8g
+
+# LANG:EN:Pindel Filter HOM
+# OPTIONAL
+# DEFAULT:1
+FILTER_HOM=1
+
+# LANG:EN:Pindel Filter VAF
+# OPTIONAL
+# DEFAULT:0.1
+FILTER_VAF=0.1
+
+# LANG:EN:Pindel Filter COV
+# OPTIONAL
+# DEFAULT:0.2
+FILTER_COV=0.2
+
+
+# LANG:EN:Work Center
+# DEFAULT:
+# REQUIRED
+CENTER=
+
+# LANG:EN:NCBI Build
+# DEFAULT:hg19
+# REQUIRED
+NCBI_BUILD=
+
+# LANG:EN:Gene Source
+# DEFAULT:WGS
+# OPTIONAL
+SOURCE=WES
+
+# LANG:EN:Sequencer
+# DEFAULT:Illumina
+# REQUIRED
+SEQUENCER=
+
+# LANG:EN:Mutation Status
+# DEFAULT:Somatic
+# OPTIONAL
+MUTATION_STATUS=Somatic
+
+# LANG:EN:Oncotator Parameters
+# DEFAULT:/usr/local/bin/oncotator
+# OPTIONAL
+ONCOTATOR_PARAMS=
+
+# LANG:EN:Oncotator Database Directory
+# DEFAULT:
+# REQUIRED
+ONCOTATOR_DB_DIR=
+
+# LANG:EN:Path of UniProt Protein File
+# DEFAULT:
+# REQUIRED
+CANONICAL_TX_FILE=

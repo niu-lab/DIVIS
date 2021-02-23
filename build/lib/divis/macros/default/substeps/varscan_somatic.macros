@@ -1,0 +1,70 @@
+# LANG:EN:Path of samtools
+# DEFAULT:8
+# OPTIONAL
+SAMTOOLS=/usr/local/samtools-1.8/samtools
+
+
+# LANG:EN:Path of Reference Genome
+# DEFAULT:
+# REQUIRED
+REF=
+
+# LANG:EN:Path of Normal BAM
+# DEFAULT:
+# REQUIRED
+NORMAL_BAM=
+
+# LANG:EN:Parameters of samtools mpileup
+# DEFAULT:-B -q 1
+# OPTIONAL
+SAMTOOLS_MPILEUP_PARAMS=-B -q 1
+
+# LANG:EN:Path of Tumor BAM
+# DEFAULT:
+# REQUIRED
+TUMOR_BAM=
+
+# LANG:EN:Path of bam-readcount
+# DEFAULT:/usr/local/bam-readcount/build/bin/bam-readcount
+BAM_READCOUNT=/usr/local/bam-readcount/build/bin/bam-readcount
+
+# LANG:EN:Parameters of bam-readcount
+# DEFAULT:-q 20 -w 1
+# OPTIONAL
+BAM_READCOUNT_PARAMS=-q 20 -w 1
+
+# LANG:EN:Java Options of Varscan
+# DEFAULT:-Xmx8g
+# OPTIONAL
+VARSCAN_JAVA_OPTS=-Xmx8g
+
+
+# LANG:EN:Parameters of Varscan processSomatic Indel
+# OPTIONAL
+# DEFAULT:--min-tumor-freq 0.10 --max-normal-freq 0.05 --p-value 0.07
+VARSCAN_PROCESS_SOMATIC_INDEL_PARAMS=--min-tumor-freq 0.10 --max-normal-freq 0.05 --p-value 0.07
+
+# LANG:EN:Parameters of Varscan processSomatic SNP
+# OPTIONAL
+# DEFAULT:--min-tumor-freq 0.10 --max-normal-freq 0.05 --p-value 0.07
+VARSCAN_PROCESS_SOMATIC_SNP_PARAMS=--min-tumor-freq 0.10 --max-normal-freq 0.05 --p-value 0.07
+
+# LANG:EN:Parameters of Varscan somatic
+# OPTIONAL
+# DEFAULT:--strand-filter 1 --validation 0 --output-vcf 1
+VARSCAN_SOMATIC_PARAMS=--strand-filter 1 --validation 0 --output-vcf 1
+
+# LANG:EN:Path of varscan
+# DEFAULT:/usr/local/varscan/varscan.jar
+VARSCAN=/usr/local/varscan/varscan.jar
+
+
+# LANG:EN:Sample Name
+# DEFAULT:
+# REQUIRED
+SAMPLE_NAME=
+
+# LANG:EN:Parameters of Varscan fpfilter
+# DEFAULT:--min-var-count 4 --min-strand-reads 1 --min-var-basequal 20 --min-ref-basequal 20
+# OPTIONAL
+VARSCAN_FPFILTER_PARAMS=--min-var-count 4 --min-strand-reads 1 --min-var-basequal 20 --min-ref-basequal 20

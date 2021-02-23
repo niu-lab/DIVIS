@@ -1,0 +1,144 @@
+{
+  "workflow": {
+    "nodes": [
+      {
+        "name": "insert_size_metrics",
+        "cmd": "java -Djava.io.tmpdir=#TMP# -jar #PICARD# CollectInsertSizeMetrics INPUT=#BAM_FILE# OUTPUT=[#SAMPLE_NAME#.insertsize] HISTOGRAM_FILE=#SAMPLE_NAME#.insertsize.pdf VALIDATION_STRINGENCY=LENIENT"
+      },
+      {
+        "name": "generate_pindel_config",
+        "cmd": "python3 ./germline_gernerate_pindel_config.py #BAM_FILE# <#SAMPLE_NAME#.insertsize> #SAMPLE_NAME# [#SAMPLE_NAME#.pindel.config]"
+      },
+      {
+        "name": "pindel",
+        "cmd": "#PINDEL# #PINDEL_PARAMS# -i <#SAMPLE_NAME#.pindel.config> -f #REF# -o #SAMPLE_NAME#"
+      },
+      {
+        "name": "header_d",
+        "cmd": "grep ChrID #SAMPLE_NAME#_D > [#SAMPLE_NAME#.pindel.D.raw.header]"
+      },
+      {
+        "name": "header_si",
+        "cmd": "grep ChrID #SAMPLE_NAME#_SI > [#SAMPLE_NAME#.pindel.SI.raw.header]"
+      },
+      {
+        "name": "pindel_filter_config_d",
+        "cmd": "python3 ./germline_generate_pindel_filter_config.py <#SAMPLE_NAME#.pindel.D.raw.header> #PINDEL2VCF#  #REF# #REFDATE# germline 0.2 0.8 true 10 0.2 true true 6 [#SAMPLE_NAME#.pindel.D.filter.config]"
+      },
+      {
+        "name": "pindel_filter_config_si",
+        "cmd": "python3 ./germline_generate_pindel_filter_config.py <#SAMPLE_NAME#.pindel.SI.raw.header> #PINDEL2VCF# #REF# #REFDATE# germline 0.2 0.8 true 10 0.2 true true 6 [#SAMPLE_NAME#.pindel.SI.filter.config]"
+      },
+      {
+        "name": "filter_si",
+        "cmd": "perl ./pindel_germline.pl <#SAMPLE_NAME#.pindel.SI.filter.config>"
+      },
+      {
+        "name": "filter_d",
+        "cmd": "perl ./pindel_germline.pl <#SAMPLE_NAME#.pindel.D.filter.config>"
+      },
+      {
+        "name": "joinx",
+        "cmd": "#JOINX# sort #SAMPLE_NAME#.pindel.D.raw.header.CvgVafStrand_pass.Homopolymer_pass.vcf #SAMPLE_NAME#.pindel.SI.raw.header.CvgVafStrand_pass.Homopolymer_pass.vcf > [#SAMPLE_NAME#.pindel.out.raw.CvgVafStrand_pass.Homopolymer_pass.vcf]"
+      },
+      {
+        "name": "vep",
+        "cmd": "#VEP# #VEP_PARAMS# --input_file <#SAMPLE_NAME#.pindel.out.raw.CvgVafStrand_pass.Homopolymer_pass.vcf> --output_file [#SAMPLE_NAME#.pindel.indel.vep.vcf]"
+      },
+      {
+        "name": "filter_vep",
+        "cmd": "#FILTER_VEP# --input_file <#SAMPLE_NAME#.pindel.indel.vep.vcf> #FILTER_VEP_PARAMS# --output_file [#SAMPLE_NAME#.pindel.indel.vepfilter.vcf]"
+      }
+    ],
+    "links": [
+      {
+        "from": "Step-insert_size_metrics",
+        "to": "Step-generate_pindel_config",
+        "frompid": "#SAMPLE_NAME#.insertsize",
+        "topid": "#SAMPLE_NAME#.insertsize"
+      },
+      {
+        "from": "Step-header_d",
+        "to": "Step-pindel_filter_config_d",
+        "frompid": "#SAMPLE_NAME#.pindel.D.raw.header",
+        "topid": "#SAMPLE_NAME#.pindel.D.raw.header"
+      },
+      {
+        "from": "Step-header_si",
+        "to": "Step-pindel_filter_config_si",
+        "frompid": "#SAMPLE_NAME#.pindel.SI.raw.header",
+        "topid": "#SAMPLE_NAME#.pindel.SI.raw.header"
+      },
+      {
+        "from": "Step-pindel_filter_config_si",
+        "to": "Step-filter_si",
+        "frompid": "#SAMPLE_NAME#.pindel.SI.filter.config",
+        "topid": "#SAMPLE_NAME#.pindel.SI.filter.config"
+      },
+      {
+        "from": "Step-pindel_filter_config_d",
+        "to": "Step-filter_d",
+        "frompid": "#SAMPLE_NAME#.pindel.D.filter.config",
+        "topid": "#SAMPLE_NAME#.pindel.D.filter.config"
+      },
+      {
+        "from": "Step-filter_d",
+        "to": "Step-joinx",
+        "frompid": "Step-filter_d",
+        "topid": "Step-joinx"
+      },
+      {
+        "from": "Step-filter_si",
+        "to": "Step-joinx",
+        "frompid": "Step-filter_si",
+        "topid": "Step-joinx"
+      },
+      {
+        "from": "Step-joinx",
+        "to": "Step-vep",
+        "frompid": "#SAMPLE_NAME#.pindel.out.raw.CvgVafStrand_pass.Homopolymer_pass.vcf",
+        "topid": "#SAMPLE_NAME#.pindel.out.raw.CvgVafStrand_pass.Homopolymer_pass.vcf"
+      },
+      {
+        "from": "Step-vep",
+        "to": "Step-filter_vep",
+        "frompid": "#SAMPLE_NAME#.pindel.indel.vep.vcf",
+        "topid": "#SAMPLE_NAME#.pindel.indel.vep.vcf"
+      },
+      {
+        "from": "Step-generate_pindel_config",
+        "to": "Step-pindel",
+        "frompid": "#SAMPLE_NAME#.pindel.config",
+        "topid": "#SAMPLE_NAME#.pindel.config"
+      },
+      {
+        "from": "Step-pindel",
+        "to": "Step-header_d",
+        "frompid": "Step-pindel",
+        "topid": "Step-header_d"
+      },
+      {
+        "from": "Step-pindel",
+        "to": "Step-header_si",
+        "frompid": "Step-pindel",
+        "topid": "Step-header_si"
+      }
+    ]
+  },
+  "macros": {
+    "TMP": "",
+    "PICARD": "",
+    "BAM_FILE": "",
+    "PINDEL": "",
+    "PINDEL_PARAMS": "",
+    "REF": "",
+    "REFDATE": "",
+    "PINDEL2VCF": "",
+    "JOINX": "",
+    "SAMPLE_NAME": "",
+    "VEP": "",
+    "VEP_PARAMS": "",
+    "FILTER_VEP": "",
+    "FILTER_VEP_PARAMS": ""
+  }
+}

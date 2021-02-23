@@ -1,0 +1,69 @@
+# LANG:EN:Parameters of fastqc
+# DEFAULT:-f fastq -t 8
+# OPTIONAL
+FASTQC_PARAMS=
+
+# LANG:EN:Sample Name
+# DEFAULT:
+# REQUIRED
+SAMPLE_NAME=
+
+# DEFAULT:
+# LANG:EN:Platform
+# REQUIRED
+# DEFAULT:Illumina
+PLATFORM=
+
+# LANG:EN:FASTQ File of End 1
+# REQUIRED
+R1=
+
+# LANG:EN:FASTQ File of End 2
+# REQUIRED
+R2=
+
+# LANG:EN:Parameters of fastp
+# DEFAULT:
+# OPTIONAL
+FASTP_PARAMS=
+
+# LANG:EN:Thread Number of bwa
+# DEFAULT:8
+# OPTIONAL
+THREAD=8
+
+# LANG:EN:Java Options of Gatk4
+# DEFAULT:-Xmx8g
+# OPTIONAL
+GATK4_JAVA_OPTS=
+
+# LANG:EN:gatk4 BASERECALIBRATE Command Line Parameters
+# DEFAULT:--known-sites [known-sites]
+# REQUIRED
+GATK4_BASERECALIBRATE_PARAMS=
+
+# LANG:EN:Parameters of HaplotypeCaller
+# DEFAULT:-ip 150
+# REQUIRED
+GATK4_HAPLOTYPECALLER_PARAMS=
+
+# LANG:EN:Path of Reference Genome
+# DEFAULT:
+# REQUIRED
+REF=
+
+# LANG:EN:Java Options of SNFSIFT
+# DEFAULT:-Xmx8g
+# OPTIONAL
+SNPSIFT_JAVA_OPTS=
+
+# LANG:EN:SNFSIFT SNP Filter Parameters
+# DEFAULT:
+# REQUIRED
+SNPSIFT_SNP_FILTER_PARAMS=
+
+# LANG:EN:SNFSIFT INDEL Filter Parameters
+# DEFAULT:
+# REQUIRED
+SNPSIFT_INDEL_FILTER_PARAMS=
+

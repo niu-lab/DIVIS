@@ -1,0 +1,195 @@
+{
+  "workflow": {
+    "nodes": [
+      {
+        "name": "mpileup",
+        "cmd": "#SAMTOOLS# mpileup #SAMTOOLS_PARAMS# -f #REF# #BAM_FILE# -o [#SAMPLE_NAME#.mpileup]"
+      },
+      {
+        "name": "mpileup2snp",
+        "cmd": "java -jar #VARSCAN# mpileup2snp <#SAMPLE_NAME#.mpileup> #VARSCAN_SNP_PARAMS#  > [#SAMPLE_NAME#.varscan_mpile2snp.raw.vcf]"
+      },
+      {
+        "name": "mpileup2indel",
+        "cmd": "java -jar #VARSCAN# mpileup2indel <#SAMPLE_NAME#.mpileup> #VARSCAN_INDEL_PARAMS#  > [#SAMPLE_NAME#.varscan_mpile2indel.raw.vcf]"
+      },
+      {
+        "name": "extract_snp",
+        "cmd": "java -jar #SNPSIFT# extractFields <#SAMPLE_NAME#.varscan_mpile2snp.raw.vcf> CHROM POS POS | grep -v CHROM > [#SAMPLE_NAME#.varscan.snp.pos]"
+      },
+      {
+        "name": "extract_indel",
+        "cmd": "java -jar #SNPSIFT# extractFields <#SAMPLE_NAME#.varscan_mpile2indel.raw.vcf> CHROM POS REF ALT | grep -v CHROM > [#SAMPLE_NAME#.varscan.indel.tmp.pos]"
+      },
+      {
+        "name": "more_pos",
+        "cmd": "perl ./modify_start_and_end_for_indel_in_pos_file.pl <#SAMPLE_NAME#.varscan.indel.tmp.pos> [#SAMPLE_NAME#.varscan.indel.pos]"
+      },
+      {
+        "name": "bam_readcount_snp",
+        "cmd": "#BAM_READCOUNT# #BAM_READCOUNT_PARAMS# -l <#SAMPLE_NAME#.varscan.snp.pos> -f #REF# #BAM_FILE# > [#SAMPLE_NAME#.varscan.snp.rc]"
+      },
+      {
+        "name": "bam_readcount_indel",
+        "cmd": "#BAM_READCOUNT# #BAM_READCOUNT_PARAMS# -l <#SAMPLE_NAME#.varscan.indel.pos> -f #REF# #BAM_FILE# > [#SAMPLE_NAME#.varscan.indel.rc]"
+      },
+      {
+        "name": "fpfilter_snp",
+        "cmd": "java -jar #VARSCAN# fpfilter <#SAMPLE_NAME#.varscan_mpile2snp.raw.vcf> <#SAMPLE_NAME#.varscan.snp.rc> #VARSCAN_FPFILTER_SNP_PARAMS#  --output-file [#SAMPLE_NAME#.varscan.snp.fpfilter.pass] --filtered-file #SAMPLE_NAME#.varscan.snp.fpfilter.fail"
+      },
+      {
+        "name": "fpfilter_indel",
+        "cmd": "java -jar #VARSCAN# fpfilter <#SAMPLE_NAME#.varscan_mpile2indel.raw.vcf> <#SAMPLE_NAME#.varscan.indel.rc> #VARSCAN_FPFILTER_INDEL_PARAMS#  --output-file [#SAMPLE_NAME#.varscan.indel.fpfilter.pass] --filtered-file #SAMPLE_NAME#.varscan.indel.fpfilter.fail"
+      },
+      {
+        "name": "manual_filter_snp",
+        "cmd": "perl #GERMLINE_SNP_FILTER_PL# <#SAMPLE_NAME#.varscan.snp.fpfilter.pass> [#SAMPLE_NAME#.varscan.snp.manualFilter.vcf]"
+      },
+      {
+        "name": "manual_filter_indel",
+        "cmd": "perl #GERMLINE_INDEL_FILTER_PL# <#SAMPLE_NAME#.varscan.indel.fpfilter.pass> [#SAMPLE_NAME#.varscan.indel.manualFilter.svcf]"
+      },
+      {
+        "name": "vep_snp",
+        "cmd": "#VEP# #VEP_PARAMS# --input_file <#SAMPLE_NAME#.varscan.snp.manualFilter.pass> --output_file [#SAMPLE_NAME#.varscan.snp.vep.vcf]"
+      },
+      {
+        "name": "vep_indel",
+        "cmd": "#VEP# #VEP_PARAMS# --input_file <#SAMPLE_NAME#.varscan.indel.manualFilter.pass> --output_file [#SAMPLE_NAME#.varscan.indel.vep.vcf]"
+      },
+      {
+        "name": "vep_filter_snp",
+        "cmd": "#FILTER_VEP# #FILTER_VEP_PARAMS# --input_file <#SAMPLE_NAME#.varscan.snp.vep.vcf> --output_file [#SAMPLE_NAME#.varscan.snp.vepfilter.vcf]"
+      },
+      {
+        "name": "vep_filter_indel",
+        "cmd": "#FILTER_VEP# #FILTER_VEP_PARAMS# --input_file <#SAMPLE_NAME#.varscan.indel.vep.vcf> --output_file [#SAMPLE_NAME#.varscan.indel.vepfilter.vcf]"
+      }
+    ],
+    "links": [
+      {
+        "from": "Step-mpileup",
+        "to": "Step-mpileup2snp",
+        "frompid": "#SAMPLE_NAME#.mpileup",
+        "topid": "#SAMPLE_NAME#.mpileup"
+      },
+      {
+        "from": "Step-mpileup",
+        "to": "Step-mpileup2indel",
+        "frompid": "#SAMPLE_NAME#.mpileup",
+        "topid": "#SAMPLE_NAME#.mpileup"
+      },
+      {
+        "from": "Step-mpileup2snp",
+        "to": "Step-extract_snp",
+        "frompid": "#SAMPLE_NAME#.varscan_mpile2snp.raw.vcf",
+        "topid": "#SAMPLE_NAME#.varscan_mpile2snp.raw.vcf"
+      },
+      {
+        "from": "Step-mpileup2indel",
+        "to": "Step-extract_indel",
+        "frompid": "#SAMPLE_NAME#.varscan_mpile2indel.raw.vcf",
+        "topid": "#SAMPLE_NAME#.varscan_mpile2indel.raw.vcf"
+      },
+      {
+        "from": "Step-extract_indel",
+        "to": "Step-more_pos",
+        "frompid": "#SAMPLE_NAME#.varscan.indel.tmp.pos",
+        "topid": "#SAMPLE_NAME#.varscan.indel.tmp.pos"
+      },
+      {
+        "from": "Step-extract_snp",
+        "to": "Step-bam_readcount_snp",
+        "frompid": "#SAMPLE_NAME#.varscan.snp.pos",
+        "topid": "#SAMPLE_NAME#.varscan.snp.pos"
+      },
+      {
+        "from": "Step-more_pos",
+        "to": "Step-bam_readcount_indel",
+        "frompid": "#SAMPLE_NAME#.varscan.indel.pos",
+        "topid": "#SAMPLE_NAME#.varscan.indel.pos"
+      },
+      {
+        "from": "Step-mpileup2snp",
+        "to": "Step-fpfilter_snp",
+        "frompid": "#SAMPLE_NAME#.varscan_mpile2snp.raw.vcf",
+        "topid": "#SAMPLE_NAME#.varscan_mpile2snp.raw.vcf"
+      },
+      {
+        "from": "Step-bam_readcount_snp",
+        "to": "Step-fpfilter_snp",
+        "frompid": "#SAMPLE_NAME#.varscan.snp.rc",
+        "topid": "#SAMPLE_NAME#.varscan.snp.rc"
+      },
+      {
+        "from": "Step-mpileup2indel",
+        "to": "Step-fpfilter_indel",
+        "frompid": "#SAMPLE_NAME#.varscan_mpile2indel.raw.vcf",
+        "topid": "#SAMPLE_NAME#.varscan_mpile2indel.raw.vcf"
+      },
+      {
+        "from": "Step-bam_readcount_indel",
+        "to": "Step-fpfilter_indel",
+        "frompid": "#SAMPLE_NAME#.varscan.indel.rc",
+        "topid": "#SAMPLE_NAME#.varscan.indel.rc"
+      },
+      {
+        "from": "Step-fpfilter_snp",
+        "to": "Step-manual_filter_snp",
+        "frompid": "#SAMPLE_NAME#.varscan.snp.fpfilter.pass",
+        "topid": "#SAMPLE_NAME#.varscan.snp.fpfilter.pass"
+      },
+      {
+        "from": "Step-fpfilter_indel",
+        "to": "Step-manual_filter_indel",
+        "frompid": "#SAMPLE_NAME#.varscan.indel.fpfilter.pass",
+        "topid": "#SAMPLE_NAME#.varscan.indel.fpfilter.pass"
+      },
+      {
+        "from": "Step-manual_filter_snp",
+        "to": "Step-vep_snp",
+        "frompid": "#SAMPLE_NAME#.varscan.snp.manualFilter.vcf",
+        "topid": "#SAMPLE_NAME#.varscan.snp.manualFilter.pass"
+      },
+      {
+        "from": "Step-manual_filter_indel",
+        "to": "Step-vep_indel",
+        "frompid": "#SAMPLE_NAME#.varscan.indel.manualFilter.svcf",
+        "topid": "#SAMPLE_NAME#.varscan.indel.manualFilter.pass"
+      },
+      {
+        "from": "Step-vep_snp",
+        "to": "Step-vep_filter_snp",
+        "frompid": "#SAMPLE_NAME#.varscan.snp.vep.vcf",
+        "topid": "#SAMPLE_NAME#.varscan.snp.vep.vcf"
+      },
+      {
+        "from": "Step-vep_indel",
+        "to": "Step-vep_filter_indel",
+        "frompid": "#SAMPLE_NAME#.varscan.indel.vep.vcf",
+        "topid": "#SAMPLE_NAME#.varscan.indel.vep.vcf"
+      }
+    ]
+  },
+  "macros": {
+    "SAMTOOLS": "",
+    "SAMTOOLS_PARAMS": "",
+    "REF": "",
+    "BAM_FILE": "",
+    "SAMPLE_NAME": "",
+    "VARSCAN": "",
+    "VARSCAN_SNP_PARAMS": "",
+    "VARSCAN_INDEL_PARAMS": "",
+    "SNPSIFT": "",
+    "BAM_READCOUNT": "",
+    "BAM_READCOUNT_PARAMS": "",
+    "VARSCAN_FPFILTER_SNP_PARAMS": "",
+    "VARSCAN_FPFILTER_INDEL_PARAMS": "",
+    "GERMLINE_SNP_FILTER_PL": "",
+    "GERMLINE_INDEL_FILTER_PL": "",
+    "VEP": "",
+    "VEP_PARAMS": "",
+    "FILTER_VEP": "",
+    "FILTER_VEP_PARAMS": ""
+  }
+}

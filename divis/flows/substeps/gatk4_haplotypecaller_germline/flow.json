@@ -1,0 +1,94 @@
+{
+  "workflow": {
+    "nodes": [
+      {
+        "name": "varcall",
+        "cmd": "#GATK4# --java-options \"#GATK4_JAVA_OPTS#\" HaplotypeCaller #GATK4_HAPLOTYPECALLER_PARAMS# -R #REF# -I <#BAM_FILE#>  -O [#SAMPLE_NAME#.vcf.gz] -bamout #SAMPLE_NAME#.gatk4.hc.assembly.bam"
+      },
+      {
+        "name": "unzip",
+        "cmd": "gunzip -c <#SAMPLE_NAME#.vcf.gz> > [#SAMPLE_NAME#.raw.vcf]"
+      },
+      {
+        "name": "select_snp",
+        "cmd": "#GATK4# SelectVariants -R #REF# -V <#SAMPLE_NAME#.raw.vcf> --select-type-to-include SNP --select-type-to-include MNP -O [#SAMPLE_NAME#.snp.raw.vcf]"
+      },
+      {
+        "name": "select_indel",
+        "cmd": "#GATK4# SelectVariants -R #REF# -V <#SAMPLE_NAME#.raw.vcf> --select-type-to-include INDEL -O [#SAMPLE_NAME#.indel.raw.vcf]"
+      },
+      {
+        "name": "filter_snp",
+        "cmd": "java -jar #SNPSIFT_JAVA_OPTS# #SNPSIFT# filter \"#SNPSIFT_SNP_FILTER_PARAMS#\"  <#SAMPLE_NAME#.snp.raw.vcf> > [#SAMPLE_NAME#.snp.filter.vcf]"
+      },
+      {
+        "name": "filter_indel",
+        "cmd": "java -jar #SNPSIFT_JAVA_OPTS# #SNPSIFT# filter \"#SNPSIFT_INDEL_FILTER_PARAMS#\" <#SAMPLE_NAME#.indel.raw.vcf> > [#SAMPLE_NAME#.indel.filter.vcf]"
+      },
+      {
+        "name": "manual_filter_snp",
+        "cmd": "perl panel_germline_snp_filter.pl <#SAMPLE_NAME#.snp.filter.vcf> [#SAMPLE_NAME#.snp.vcf]"
+      },
+      {
+        "name": "manual_filter_indel",
+        "cmd": "perl panel_germline_indel_filter.pl <#SAMPLE_NAME#.indel.filter.vcf> [#SAMPLE_NAME#.indel.vcf]"
+      }
+    ],
+    "links": [
+      {
+        "from": "Step-varcall",
+        "to": "Step-unzip",
+        "frompid": "#SAMPLE_NAME#.vcf.gz",
+        "topid": "#SAMPLE_NAME#.vcf.gz"
+      },
+      {
+        "from": "Step-unzip",
+        "to": "Step-select_snp",
+        "frompid": "#SAMPLE_NAME#.raw.vcf",
+        "topid": "#SAMPLE_NAME#.raw.vcf"
+      },
+      {
+        "from": "Step-unzip",
+        "to": "Step-select_indel",
+        "frompid": "#SAMPLE_NAME#.raw.vcf",
+        "topid": "#SAMPLE_NAME#.raw.vcf"
+      },
+      {
+        "from": "Step-select_snp",
+        "to": "Step-filter_snp",
+        "frompid": "#SAMPLE_NAME#.snp.vcf",
+        "topid": "#SAMPLE_NAME#.snp.vcf"
+      },
+      {
+        "from": "Step-select_indel",
+        "to": "Step-filter_indel",
+        "frompid": "#SAMPLE_NAME#.indel.vcf",
+        "topid": "#SAMPLE_NAME#.indel.vcf"
+      },
+      {
+        "from": "Step-filter_snp",
+        "to": "Step-manual_filter_snp",
+        "frompid": "#SAMPLE_NAME#.snp.filter.vcf",
+        "topid": "#SAMPLE_NAME#.snp.filter.vcf"
+      },
+      {
+        "from": "Step-filter_indel",
+        "to": "Step-manual_filter_indel",
+        "frompid": "#SAMPLE_NAME#.indel.filter.vcf",
+        "topid": "#SAMPLE_NAME#.indel.filter.vcf"
+      }
+    ]
+  },
+  "macros": {
+    "GATK4": "",
+    "GATK4_JAVA_OPTS": "",
+    "GATK4_HAPLOTYPECALLER_PARAMS": "",
+    "REF": "",
+    "BAM_FILE": "",
+    "SAMPLE_NAME": "",
+    "SNPSIFT_JAVA_OPTS": "",
+    "SNPSIFT": "",
+    "SNPSIFT_SNP_FILTER_PARAMS": "",
+    "SNPSIFT_INDEL_FILTER_PARAMS": ""
+  }
+}

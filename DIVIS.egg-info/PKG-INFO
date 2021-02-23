@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: DIVIS
+Version: 0.1
+Summary: Integrated Somatic and Germline Pipelines for WES, WGS and Panel.
+Home-page: UNKNOWN
+Author: ZhangYu
+Author-email: zhangy@sccas.cn
+License: MIT
+Description: UNKNOWN
+Platform: linux
+Requires-Python: >=3.5

@@ -1,0 +1,28 @@
+# LANG:EN:Thread of Make
+# DEFAULT:8
+# OPTIONAL
+THREAD=8
+
+# LANG:EN:Path of configureStrelkaWorkflow.pl
+# DEFAULT:/usr/local/bin/configureStrelkaSomaticWorkflow.py
+STRELKA=/usr/local/bin/configureStrelkaSomaticWorkflow.py
+
+# LANG:EN:Path of Normal BAM
+# DEFAULT:
+# REQUIRED
+NORMAL_BAM=
+
+# LANG:EN:Path of Tumor BAM
+# DEFAULT:
+# REQUIRED
+TUMOR_BAM=
+
+# LANG:EN:Path of Reference Genome
+# DEFAULT:
+# REQUIRED
+REF=
+
+# LANG:EN:Strelka WES or WGS
+# DEFAULT:
+# REQUIRED:
+STRELKA_IS_WES=

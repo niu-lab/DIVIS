@@ -1,0 +1,6 @@
+include divis/flows/substeps/*.zip
+include divis/flows/pipelines/*.zip
+include divis/macros/default/pipelines/*.macros
+include divis/macros/default/substeps/*.macros
+include divis/macros/tpl/pipelines/*.macros
+include divis/macros/tpl/substeps/*.macros

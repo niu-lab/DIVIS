@@ -1,0 +1,47 @@
+# LANG:EN:Path of Gatk4
+# DEFAULT:/usr/local/gatk4/gatk
+GATK4=/usr/local/gatk4/gatk
+
+# LANG:EN:Java Options of Gatk4
+# DEFAULT:-Xmx8g
+# OPTIONAL
+GATK4_JAVA_OPTS=-Xmx8g
+
+# LANG:EN:Parameters of HaplotypeCaller
+# DEFAULT:-ip 150
+# REQUIRED
+GATK4_HAPLOTYPECALLER_PARAMS=-L /opt/DIVISPipeline/web/resource/bed_files/S0684402_Covered_GATK4.bed -ip 150 -D /opt/DIVISPipeline/web/resource/known_sites/dbsnp_138.hg19.vcf
+
+# LANG:EN:Path of Reference Genome
+# DEFAULT:
+# REQUIRED
+REF=/opt/DIVISPipeline/web/resource/hg19_simple/ucsc.hg19.simple.fa
+
+# LANG:EN:Path of BAM File
+# DEFAULT:
+# REQUIRED
+BAM_FILE=
+
+# LANG:EN:Sample Name
+# DEFAULT:
+# REQUIRED
+SAMPLE_NAME=
+
+# LANG:EN:Java Options of SNFSIFT
+# DEFAULT:-Xmx8g
+# OPTIONAL
+SNPSIFT_JAVA_OPTS=-Xmx8g
+
+# LANG:EN:Path of snfsift
+# DEFAULT:/usr/local/snpEff/snpEff/SnpSift.jar
+SNPSIFT=/usr/local/snpEff/snpEff/SnpSift.jar
+
+# LANG:EN:SNFSIFT SNP Filter Parameters
+# DEFAULT:
+# REQUIRED
+SNPSIFT_SNP_FILTER_PARAMS=((DP>20) &(FS < 200) & (SOR < 10.0) & (QD > 2)) & (MQRankSum > -12.5)
+
+# LANG:EN:SNFSIFT INDEL Filter Parameters
+# DEFAULT:
+# REQUIRED
+SNPSIFT_INDEL_FILTER_PARAMS=((DP>20) &(FS < 60) & (SOR < 4.0) & (QD > 2))

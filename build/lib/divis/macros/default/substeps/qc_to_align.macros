@@ -1,0 +1,72 @@
+# LANG:EN:Path of fastqc
+# DEFAULT:/usr/local/FastQC/fastqc
+FASTQC=/usr/local/FastQC/fastqc
+
+# LANG:EN:Parameters of fastqc
+# DEFAULT:-f fastq -t 8
+# OPTIONAL
+FASTQC_PARAMS=-f fastq -t 8
+
+# LANG:EN:Sample Name
+# DEFAULT:
+# REQUIRED
+SAMPLE_NAME=
+
+# LANG:EN:FASTQ File of End 1
+# REQUIRED
+R1=
+
+# LANG:EN:FASTQ File of End 2
+# REQUIRED
+R2=
+
+# LANG:EN:Path of fastp
+# DEFAULT:/usr/local/fastp/fastp
+FASTP=/usr/local/fastp/fastp
+
+# LANG:EN:Parameters of fastp
+# DEFAULT:-p -c
+# OPTIONAL
+FASTP_PARAMS=-p -c
+
+
+# LANG:EN:Path of bwa
+# DEFAULT:/usr/local/bwa/bwa
+BWA=/usr/local/bwa/bwa
+
+# LANG:EN:Thread Number of bwa
+# DEFAULT:8
+# OPTIONAL
+THREAD=8
+
+# LANG:EN:Read Group,eg:'@RG\tID:SampleID\tSM:SampleName\tLB:SampleLibrary\tPL:Platform'
+# DEFAULT:'@RG\tID:SampleID\tSM:SampleName\tLB:SampleLibrary\tPL:Platform'
+# REQUIRED
+RG=
+
+# LANG:EN:Path of samtools
+# DEFAULT:/usr/local/samtools-1.8/samtools
+SAMTOOLS=/usr/local/samtools-1.8/samtools
+
+# LANG:EN: Path of Temporary Directory
+# DEFAULT:/tmp
+TMP=/tmp
+
+# LANG:EN:Path of gatk4
+# DEFAULT:/usr/local/gatk4/gatk
+GATK4=/usr/local/gatk4/gatk
+
+# LANG:EN:gatk4 BASERECALIBRATE Command Line Parameters
+# DEFAULT:--known-sites [known-sites]
+# REQUIRED
+GATK4_BASERECALIBRATE_PARAMS=-ip 150 -L /opt/DIVISPipeline/web/resource/bed_files/S0684402_Covered_GATK4.bed --known-sites  /opt/DIVISPipeline/web/resource/known_sites/dbsnp_138.hg19.vcf --known-sites /opt/DIVISPipeline/web/resource/known_sites/1000G_phase1.indels.hg19.sites.vcf  --known-sites /opt/DIVISPipeline/web/resource/known_sites/Mills_and_1000G_gold_standard.indels.hg19.sites.vcf
+
+# LANG:EN:Path of Reference Genome
+# REQUIRED
+REF=/opt/DIVISPipeline/web/resource/hg19_simple/ucsc.hg19.simple.fa
+
+
+# LANG:EN:Path of picard.jar
+# DEFAULT:/usr/local/picard/picard.jar
+PICARD=/usr/local/picard/picard.jar
+

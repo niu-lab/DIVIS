@@ -1,0 +1,26 @@
+{
+  "workflow": {
+    "nodes": [
+      {
+        "name": "fastqc",
+        "cmd": "rm -rf #SAMPLE_NAME#.fastqc.dir && mkdir #SAMPLE_NAME#.fastqc.dir && #FASTQC# #FASTQC_PARAMS# -o #SAMPLE_NAME#.fastqc.dir [#R1#] [#R2#] "
+      },
+      {
+        "name": "fastp",
+        "cmd": "#FASTP# #FASTP_PARAMS# -i <#R1#> -o [#SAMPLE_NAME#.R1.clean.fq.gz] -I <#R2#> -O [#SAMPLE_NAME#.R2.clean.fq.gz] -j #SAMPLE_NAME#.fastp.json -h #SAMPLE_NAME#.fastp.html --adapter_sequence #ADAPTER1# --adapter_sequence_r2 #ADAPTER2#"
+      }
+    ],
+    "links": []
+  },
+  "macros": {
+    "FASTQC": "",
+    "FASTQC_PARAMS": "",
+    "FASTP": "",
+    "FASTP_PARAMS": "",
+    "R1": "",
+    "SAMPLE_NAME": "",
+    "R2": "",
+    "ADAPTER1":"",
+    "ADAPTER2":""
+  }
+}

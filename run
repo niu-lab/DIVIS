@@ -1,0 +1,146 @@
+#!/usr/bin/env bash
+
+function usage() {
+    echo "
+Version: 0.1
+Author: NIU-LAB 2019
+
+usage:   run -t [task_dir] -l [log_dir] -u [upload_dir] -r [resource_dir]
+
+options: -t       required, task directory, eg: -t \$HOME/task
+         -l       required, log directory, eg: -l \$HOME/log
+         -u       required, upload files directory, eg: -u \$HOME/upload
+         -r       required, static resource, eg: -r \$HOME/resource
+         -v       optional, other mount volumes, eg: -v /data:/data,/home:/home
+         -c       optional, cpu number, eg: 4, default: 4
+         -m       optional, memory limit(g) eg: 8, default: 8
+         -p       optional, web port, eg: 80, default: 8080
+"
+}
+
+
+function prepare() {
+    # kill runing container
+    running_container=`docker ps | grep 'divis_web' | awk '{print $1}'`
+    if [[ ${running_container} != "" ]]
+    then
+        echo "docker kill ${running_container}"
+        docker kill ${running_container}
+    fi
+
+
+    # remove container
+    running_container=`docker ps -a | grep 'divis_web' | awk '{print $1}'`
+    if [[ ${running_container} != "" ]]
+    then
+        echo "docker rm ${running_container}"
+        docker rm ${running_container}
+    fi
+}
+
+
+while getopts ":hw:t:l:u:r:n:v:c:m:p:" OPTION
+    do
+	case "${OPTION}" in
+	    h)
+		usage
+		exit 1
+		;;
+	    t)
+	    TASKDIR=$OPTARG
+		;;
+		l)
+	    LOGDIR=$OPTARG
+		;;
+		u)
+	    UPLOADDIR=$OPTARG
+		;;
+		r)
+	    RESOURCEDIR=$OPTARG
+		;;
+		n)
+	    RUNNINGDIR=$OPTARG
+		;;
+	    v)
+	    VOLUMES="$OPTARG"
+		;;
+		c)
+	    CPUS=$OPTARG
+		;;
+		m)
+	    MEMORY=$OPTARG
+		;;
+		p)
+	    PORT=$OPTARG
+		;;
+	esac
+	done
+
+
+if [ ! ${TASKDIR} ];then
+    echo "ERROR:no task directory"
+    exit 1
+fi
+
+if [ ! ${LOGDIR} ];then
+    echo "ERROR:no log directory"
+    exit 1
+fi
+
+if [ ! ${UPLOADDIR} ];then
+    echo "ERROR:no upload directory"
+    exit 1
+fi
+
+if [ ! ${RESOURCEDIR} ];then
+    echo "ERROR:no resource directory"
+    exit 1
+fi
+
+V_STR=""
+if [ ${VOLUMES} ];then
+    arr=(${VOLUMES//,/ })
+    for i in ${arr[@]}
+    do
+        V_STR=$V_STR" -v ${i} "
+    done
+fi
+
+if [ ! ${CPUS} ];then
+    CPUS=4
+fi
+
+if [ ! ${MEMORY} ];then
+    MEMORY=8
+fi
+
+if [ ! ${PORT} ];then
+    PORT=8080
+fi
+
+
+prepare
+
+echo "docker run -it -d -u $(id -u):$(id -g) -p ${PORT}:8080 \
+-v ${TASKDIR}:/opt/DIVISPipeline/web/task \
+-v ${LOGDIR}:/opt/DIVISPipeline/web/log \
+-v ${UPLOADDIR}:/opt/DIVISPipeline/web/upload \
+-v ${RESOURCEDIR}:/opt/DIVISPipeline/web/resource \
+-v ${LOGDIR}:/opt/DIVISPipeline/web/run \
+${V_STR} \
+-w /opt/DIVISPipeline \
+--cpus ${CPUS} \
+-m ${MEMORY}g \
+--name divis_web divis:0.1"
+
+docker run -it -d -u $(id -u):$(id -g) -p ${PORT}:8080 \
+-v ${TASKDIR}:/opt/DIVISPipeline/web/task \
+-v ${LOGDIR}:/opt/DIVISPipeline/web/log \
+-v ${UPLOADDIR}:/opt/DIVISPipeline/web/upload \
+-v ${RESOURCEDIR}:/opt/DIVISPipeline/web/resource \
+-v ${LOGDIR}:/opt/DIVISPipeline/web/run \
+${V_STR} \
+-w /opt/DIVISPipeline \
+--cpus ${CPUS} \
+-m ${MEMORY}g \
+--name divis_web divis:0.1

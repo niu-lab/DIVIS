@@ -1,0 +1,71 @@
+# LANG:EN:Path of Pindel
+# DEFAULT:/usr/local/pindel/pindel
+PINDEL=/usr/local/pindel/pindel
+
+# LANG:EN:Parameters of Pindel
+# DEFAULT:-c ALL -w 5 -T 8
+# OPTIONAL
+PINDEL_PARAMS=-c ALL -w 5 -t 8 -T 8
+
+# LANG:EN:Java Option of Picard
+# DEFAULT:-Xmx8g
+# OPTIONAL
+PICARD_JAVA_OPTS=-Xmx8g
+
+# LANG:EN:Temporary Directory
+# DEFAULT:/tmp
+TMP=/tmp
+
+# LANG:EN:Path of Picard
+# DEFAULT:/usr/local/picard/picard.jar
+# OPTIONAL
+PICARD=/usr/local/picard/picard.jar
+
+# LANG:EN:Path of Normal BAM
+# DEFAULT:
+# REQUIRED
+NORMAL_BAM=
+
+# LANG:EN:Path of Tumor BAM
+# DEFAULT:
+# REQUIRED
+TUMOR_BAM=
+
+# LANG:EN:Pindel Filter HOM
+# DEFAULT:1
+# OPTIONAL
+FILTER_HOM=1
+
+# LANG:EN:Pindel Filter VAF
+# DEFAULT:0.1
+# OPTIONAL
+FILTER_VAF=0.1
+
+# LANG:EN:Pindel Filter COV
+# DEFAULT:0.2
+# OPTIONAL
+FILTER_COV=0.2
+
+# LANG:EN:Path of Tumor pindel2vcf
+# DEFAULT:
+PINDEL2VCF=/usr/local/pindel/pindel2vcf
+
+# LANG:EN:Path of Reference Genome
+# DEFAULT:
+# REQUIRED
+REF=
+
+# LANG:EN:Name of Reference Genome
+# DEFAULT:hg19
+# REQUIRED
+REFNAME=
+
+# LANG:EN:Date of Reference Genome
+# DEFAULT:200902
+# REQUIRED
+REFDATE=
+
+# LANG:EN:Sample Name
+# DEFAULT:
+# REQUIRED
+SAMPLE_NAME=

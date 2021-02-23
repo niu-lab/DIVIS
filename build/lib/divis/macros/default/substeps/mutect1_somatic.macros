@@ -1,0 +1,4 @@
+DBSNP=/work2/scbniu/workspace_hexiaoyu/data_tongji/WGS/Ref/dbsnp_138.hg19.vcf
+COSMIC=/work2/scbniu/workspace_hexiaoyu/data_tongji/WGS/Ref/CosmicCodingMuts_chr_M_sorted.vcf
+MUTECT1=/home/schexy/biosoft/mutect-1.1.7.jar
+REF=/work2/scbniu/workspace_hexiaoyu/data_tongji/WGS/Ref/ucsc.hg19.fasta

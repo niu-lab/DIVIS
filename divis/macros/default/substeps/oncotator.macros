@@ -1,0 +1,63 @@
+# LANG:EN:VCF Files
+# DEFAULT: 1.vcf 2.vcf 3.vcf
+# REQUIRED
+VCFS=
+
+# LANG:EN:Sample Name
+# DEFAULT:
+# REQUIRED
+SAMPLE_NAME=
+
+# LANG:EN:Normal Barcode
+# DEFAULT:test_normal
+# REQUIRED
+NORMAL_BARCODE=
+
+# LANG:EN:Tumor Barcode
+# DEFAULT:test_tumor
+# REQUIRED
+TUMOR_BARCODE=
+
+# LANG:EN:Work Center
+# DEFAULT:
+# REQUIRED
+CENTER=
+
+# LANG:EN:NCBI Build
+# DEFAULT:hg19
+# REQUIRED
+NCBI_BUILD=
+
+# LANG:EN:Gene Source
+# DEFAULT:eg:WES,WGS
+# REQUIRED
+SOURCE=
+
+# LANG:EN:Sequencer
+# DEFAULT:Illumina
+# REQUIRED
+SEQUENCER=
+
+# LANG:EN:Mutation Status
+# DEFAULT:eg:Somatic,Germline
+# REQUIRED
+MUTATION_STATUS=
+
+# LANG:EN:Path of Oncotator
+# DEFAULT:/usr/local/bin/oncotator
+ONCOTATOR=/usr/local/bin/oncotator
+
+# LANG:EN:Oncotator Parameters
+# DEFAULT:
+# OPTIONAL
+ONCOTATOR_PARAMS= 
+
+# LANG:EN:Oncotator Database Directory
+# DEFAULT:
+# REQUIRED
+ONCOTATOR_DB_DIR=
+
+# LANG:EN:Path of UniProt Protein File
+# DEFAULT:
+# REQUIRED
+CANONICAL_TX_FILE=

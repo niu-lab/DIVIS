@@ -1,0 +1,24 @@
+# LANG:EN:Path of gatk4
+# DEFAULT:/usr/local/gatk-4.1.9.0
+GATK4=/usr/local/gatk-4.1.9.0
+
+# LANG:EN: version of reference genome
+# DEFAULT: hg19
+REF_VERSION= hg19
+
+# LANG:EN: path of funcotator somatic database 
+# DEFAULT: download from ftp://gsapubftp-anonymous@ftp.broadinstitute.org/bundle/funcotator/
+# example: FUNCO_DATABASE= ./Ref/Funcotator/funcotator_dataSources.v1.6.20190124s
+FUNCO_DATABASE= 
+
+# LANG:EN:path of gatk3
+GATK3=/usr/local/gatk3/GenomeAnalysisTK.jar
+
+# LANG:EN:Path of Reference Genome
+# REQUIRED
+# EXAMPLE: REF= ./Ref/ucsc.hg19.fa
+REF=
+
+# LANG:EN:Sample Name
+# REQUIRED
+SAMPLE_NAME=

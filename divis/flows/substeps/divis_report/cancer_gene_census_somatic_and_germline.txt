@@ -1,0 +1,724 @@
+Gene Symbol	Name	Somatic	Germline	Tumour Types(Somatic)	Tumour Types(Germline)	Cancer Syndrome
+A1CF	APOBEC1 complementation factor	yes		melanoma		
+ABI1	abl-interactor 1	yes		AML		
+ABL1	v-abl Abelson murine leukemia viral oncogene homolog 1	yes		"CML, ALL, T-ALL"		
+ABL2	"c-abl oncogene 2, non-receptor tyrosine kinase"	yes		AML		
+ACKR3	atypical chemokine receptor 3	yes		lipoma		
+ACSL3	acyl-CoA synthetase long-chain family member 3	yes		prostate		
+ACSL6	acyl-CoA synthetase long-chain family member 6	yes		"AML, AEL"		
+ACVR1	"activin A receptor, type I"	yes		DIPG		
+ACVR2A	activin A receptor type 2A	yes		"large intestine carcinoma, stomach carcinoma, pancreatic carcinoma, biliary tract, oesophagus"		
+AFDN	"myeloid/lymphoid or mixed-lineage leukemia (trithorax homolog, Drosophila); translocated to, 4 (AF6)"	yes		AL		
+AFF1	"AF4/FMR2 family, member 1"	yes		AL		
+AFF3	"AF4/FMR2 family, member 3"	yes		"ALL, T-ALL"		
+AFF4	"AF4/FMR2 family, member 4"	yes		ALL		
+AKAP9	A kinase (PRKA) anchor protein (yotiao) 9	yes		papillary thyroid		
+AKT1	v-akt murine thymoma viral oncogene homolog 1	yes		"breast, colorectal, ovarian, NSCLC"		
+AKT2	v-akt murine thymoma viral oncogene homolog 2	yes		"ovarian, pancreatic"		
+AKT3	v-akt murine thymoma viral oncogene homolog 3	yes		GBM		
+ALDH2	aldehyde dehydrogenase 2 family (mitochondrial)	yes		leiomyoma		
+ALK	anaplastic lymphoma kinase (Ki-1)	yes	yes	"ALCL, NSCLC, neuroblastoma, inflammatory myofibroblastic tumour, Spitzoid tumour"	neuroblastoma	familial neuroblastoma
+AMER1	APC membrane recruitment protein 1	yes		Wilms tumour		
+ANK1	ankyrin 1	yes		CCRCC		
+APC	adenomatous polyposis of the colon gene	yes	yes	"colorectal, pancreatic, desmoid, hepatoblastoma, glioma, other CNS"	"colorectal, pancreatic, desmoid, hepatoblastoma, glioma, other CNS"	adenomatous polyposis coli; Turcot syndrome
+APOBEC3B	apolipoprotein B mRNA editing enzyme catalytic subunit 3B		yes		breast cancer	
+AR	Androgen Receptor	yes	yes	prostate		
+ARAF	"A-Raf proto-oncogene, serine/threonine kinase"	yes		"cholangiocarcinoma, lung adenocarcinoma, Langerhans cell histiocytosis"		
+ARHGAP26	Rho GTPase activating protein 26	yes		"AML, MDS"		
+ARHGAP5	Rho GTPase activating protein 5	yes		"colon cancer, glioma"		
+ARHGEF10	Rho guanine nucleotide exchange factor 10	yes		colon cancer		
+ARHGEF10L	Rho guanine nucleotide exchange factor 10 like	yes		lymphoma		
+ARHGEF12	RHO guanine nucleotide exchange factor (GEF) 12 (LARG)	yes		AML		
+ARID1A	AT rich interactive domain 1A (SWI-like)	yes		"clear cell ovarian carcinoma, RCC, breast"		
+ARID1B	AT rich interactive domain 1B	yes		"breast, hepatocellular carcinoma, clear cell ovarian carcinoma"		
+ARID2	AT rich interactive domain 2	yes		hepatocellular carcinoma		
+ARNT	aryl hydrocarbon receptor nuclear translocator	yes		AML		
+ASPSCR1	"alveolar soft part sarcoma chromosome region, candidate 1"	yes		alveolar soft part sarcoma		
+ASXL1	additional sex combs like 1	yes		"MDS, CMML"		
+ASXL2	"additional sex combs like 2, transcriptional regulator"	yes		"melanoma, CCRCC, AML"		
+ATF1	activating transcription factor 1	yes		"malignant melanoma of soft parts, angiomatoid fibrous histiocytoma"		
+ATIC	5-aminoimidazole-4-carboxamide ribonucleotide formyltransferase/IMP cyclohydrolase	yes		ALCL		
+ATM	ataxia telangiectasia mutated	yes	yes	T-PLL	"leukaemia, lymphoma, medulloblastoma, glioma"	ataxia-telangiectasia
+ATP1A1	"ATPase, Na+/K+ transporting, alpha 1 polypeptide"	yes		adrenal aldosterone producing adenoma		
+ATP2B3	"ATPase, Ca++ transporting, plasma membrane 3"	yes		adrenal aldosterone producing adenoma		
+ATR	ATR serine/threonine kinase	yes	yes	"endometrial, gastric, epithelial ovarian, myeloma"	oropharyngeal	familial cutaneous telangiectasia and cancer syndrome
+ATRX	alpha thalassemia/mental retardation syndrome X-linked	yes		"pancreatic neuroendocrine tumours, paediatric GBM"		
+AXIN1	axin 1	yes		"colorectal, endometrial, prostate, hepatocellular carcinoma, hepatoblastoma, sporadic medulloblastoma"		
+AXIN2	axin 2	yes	yes	"colorectal carcinoma, stomach carcinoma, hepatocellular carcinoma"	colorectal carcinoma	oligodontia-colorectal cancer syndrome
+B2M	beta-2-microglobulin	yes		"DLBCL, melanoma, colorectal adenocarcinoma"		
+BAP1	BRCA1 associated protein-1 (ubiquitin carboxy-terminal hydrolase)	yes	yes	"uveal melanoma, breast, NSCLC, RCC"	"mesothelioma, skin and uveal melanoma, kidney cancer"	BAP1 tumor predisposition syndrome
+BARD1	BRCA1 associated RING domain 1	yes	yes	breast cancer	"ovarian cancer, breast cancer, endometrioid cancer"	
+BAX	"BCL2 associated X, apoptosis regulator"	yes		colorectal cancer		
+BAZ1A	bromodomain adjacent to zinc finger domain 1A	yes		"uterine carcinosarcoma, colon cancer"		
+BCL10	B-cell CLL/lymphoma 10	yes		MALT		
+BCL11A	B-cell CLL/lymphoma 11A	yes		B-CLL		
+BCL11B	B-cell CLL/lymphoma 11B  (CTIP2)	yes		T-ALL		
+BCL2	B-cell CLL/lymphoma 2	yes		"NHL, CLL"		
+BCL2L12	BCL2 like 12	yes		"melanoma, SCC"		
+BCL3	B-cell CLL/lymphoma 3	yes		CLL		
+BCL6	B-cell CLL/lymphoma 6	yes		"NHL, CLL"		
+BCL7A	B-cell CLL/lymphoma 7A	yes		BNHL		
+BCL9	B-cell CLL/lymphoma 9	yes		B-ALL		
+BCL9L	B-cell CLL/lymphoma 9-like	yes		"colorectal cancer, endometrial carcinoma, gastric cancer"		
+BCLAF1	BCL2 associated transcription factor 1	yes		"melanoma, SCC"		
+BCOR	BCL6 corepressor	yes		"retinoblastoma, AML, APL (translocation)"		
+BCORL1	BCL6 corepressor-like 1	yes		"AML, HNSCC"		
+BCR	breakpoint cluster region	yes		"CML, ALL, AML"		
+BIRC3	baculoviral IAP repeat-containing 3	yes		"CLL, MALT, MCL, MM"		
+BIRC6	baculoviral IAP repeat containing 6	yes		"melanoma, gastric adenocarcinoma, lung adenocarcinoma"		
+BLM	Bloom Syndrome		yes		"leukaemia, lymphoma, skin squamous cell, other tumour types"	Bloom syndrome
+BMP5	bone morphogenetic protein 5	yes		melanoma		
+BMPR1A	"bone morphogenetic protein receptor, type IA"		yes		gastrointestinal polyps	juvenile polyposis
+BRAF	v-raf murine sarcoma viral oncogene homolog B1	yes		"melanoma, colorectal, papillary thyroid, borderline ovarian, NSCLC, cholangiocarcinoma, pilocytic astrocytoma, Spitzoid tumour, pancreas acinar carcinoma, melanocytic nevus, prostate, gastric"		
+BRCA1	familial breast/ovarian cancer gene 1	yes	yes	ovarian	"breast, ovarian"	hereditary breast/ovarian cancer
+BRCA2	familial breast/ovarian cancer gene 2	yes	yes	"breast, ovarian, pancreatic"	"breast, ovarian, pancreatic, leukaemia  (FANCB, FANCD1)"	hereditary breast/ovarian cancer
+BRD3	bromodomain containing 3	yes		lethal midline carcinoma of young people		
+BRD4	bromodomain containing 4	yes		lethal midline carcinoma of young people		
+BRIP1	BRCA1 interacting protein C-terminal helicase 1		yes		"AML, leukaemia, breast"	"Fanconi anaemia J, breast cancer susceptiblity"
+BTG1	"B-cell translocation gene 1, anti-proliferative"	yes		B-CLL		
+BTK	Bruton agammaglobulinemia tyrosine kinase	yes		"CLL, mantle cell lymphoma, WM"		
+BUB1B	BUB1 budding uninhibited by benzimidazoles 1 homolog beta (yeast)		yes		rhabdomyosarcoma	mosaic variegated aneuploidy
+C15orf65	chromosome 15 open reading frame 65	yes		"PMBL, Hodgkin lymphoma"		
+CACNA1D	"calcium channel, voltage-dependent, L type, alpha 1D subunit"	yes		adrenal aldosterone producing adenoma		
+CALR	calreticulin	yes		"MPN, MDS"		
+CAMTA1	calmodulin binding transcription activator 1	yes		epithelioid haemangioendothelioma		
+CANT1	calcium activated nucleotidase 1	yes		prostate		
+CARD11	"caspase recruitment domain family, member 11"	yes		DLBCL		
+CARS	cysteinyl-tRNA synthetase	yes		ALCL		
+CASP3	caspase 3	yes		ovarian cancer		
+CASP8	"caspase 8, apoptosis-related cysteine peptidase"	yes		"hepatocellular, oral squamous cell, breast"		
+CASP9	caspase 9	yes		glioma		
+CBFA2T3	"core-binding factor, runt domain, alpha subunit 2; translocated to, 3 (MTG-16)"	yes		AML		
+CBFB	"core-binding factor, beta subunit"	yes		AML		
+CBL	Cas-Br-M (murine) ecotropic retroviral transforming	yes		"AML, JMML, MDS"		
+CBLB	Cas-Br-M (murine) ecotropic retroviral transforming sequence b	yes		AML		
+CBLC	Cas-Br-M (murine) ecotropic retroviral transforming sequence c	yes		AML		
+CCDC6	coiled-coil domain containing 6	yes		"papillary thyroid, CML, NSCLC"		
+CCNB1IP1	"cyclin B1 interacting protein 1, E3 ubiquitin protein ligase"	yes		leiomyoma		
+CCNC	cyclin C	yes		T-ALL		
+CCND1	cyclin D1	yes		"CLL, B-ALL, breast"		
+CCND2	cyclin D2	yes		"NHL,CLL"		
+CCND3	cyclin D3	yes		MM		
+CCNE1	cyclin E1	yes		serous ovarian		
+CCR4	C-C motif chemokine receptor 4	yes		adult T-cell leukaemia/lymphoma		
+CCR7	C-C motif chemokine receptor 7	yes		adult T-cell leukaemia/lymphoma		
+CD209	CD209 molecule	yes		prostate carcinoma		
+CD274	CD274 molecule	yes		"PMBL, Hodgkin lymphoma"		
+CD28	CD28 molecule	yes		T-cell lymphoma		
+CD74	"CD74 molecule, major histocompatibility complex, class II invariant chain"	yes		NSCLC		
+CD79A	"CD79a molecule, immunoglobulin-associated alpha"	yes		"DLBCL, WM"		
+CD79B	"CD79b molecule, immunoglobulin-associated beta"	yes		"DLBCL, WM"		
+CDC73	cell division cycle 73	yes	yes	parathyroid adenoma	"parathyroid adenoma, multiple ossifying jaw fibroma"	hyperparathyroidism-jaw tumour syndrome
+CDH1	"cadherin 1, type 1, E-cadherin (epithelial) (ECAD)"	yes	yes	"lobular breast, gastric"	gastric	familial gastric carcinoma
+CDH10	cadherin 10	yes	yes	melanoma	pancreatic ductal adenocarcinoma	
+CDH11	"cadherin 11, type 2, OB-cadherin (osteoblast)"	yes		aneurysmal bone cyst		
+CDH17	cadherin 17	yes		melanoma		
+CDK12	cyclin-dependent kinase 12	yes		serous ovarian		
+CDK4	cyclin-dependent kinase 4		yes		melanoma	familial malignant melanoma
+CDK6	cyclin-dependent kinase 6	yes		ALL		
+CDKN1A	cyclin dependent kinase inhibitor 1A	yes		bladder cancer		
+CDKN1B	"cyclin-dependent kinase inhibitor 1B (p27, Kip1)"	yes	yes	"breast, small intestine neuroendocrine tumours"	"pituitary, parathyroid"	multiple endocrine neoplasia type IV
+CDKN2A	cyclin-dependent kinase inhibitor 2A (p16(INK4a)) gene	yes	yes	"melanoma, multiple other tumour types"	"melanoma, pancreatic"	familial malignant melanoma
+CDKN2C	"cyclin-dependent kinase inhibitor 2C (p18, inhibits CDK4)"	yes		"glioma, MM"		
+CDX2	caudal type homeo box transcription factor 2	yes		AML		
+CEBPA	"CCAAT/enhancer binding protein (C/EBP), alpha"	yes		"AML, MDS"		
+CEP89	centrosomal protein 89kDa	yes		Spitzoid tumour		
+CHCHD7	coiled-coil-helix-coiled-coil-helix domain containing 7	yes		salivary adenoma		
+CHD2	chromodomain helicase DNA binding protein 2	yes		"melanoma, large intestine, CLL, monoclonal B lymphocytosis"		
+CHD4	chromodomain helicase DNA binding protein 4	yes		uterine serous carcinoma		
+CHEK2	CHK2 checkpoint homolog (S. pombe)		yes		breast	familial breast cancer
+CHIC2	cysteine-rich hydrophobic domain 2	yes		AML		
+CHST11	carbohydrate sulfotransferase 11	yes		B-CLL		
+CIC	capicua homolog	yes		"oligodendroglioma, soft tissue sarcoma"		
+CIITA	"class II, major histocompatibility complex, transactivator"	yes		"PMBL, Hodgkin lymphoma"		
+CLIP1	CAP-GLY domain containing linker protein 1	yes		Spitzoid tumour		
+CLP1	cleavage and polyadenylation factor I subunit 1	yes		AML		
+CLTC	"clathrin, heavy polypeptide (Hc)"	yes		"ALCL, renal"		
+CLTCL1	"clathrin, heavy polypeptide-like 1"	yes		ALCL		
+CNBD1	cyclic nucleotide binding domain containing 1	yes		"gastric cancer, colon cancer"		
+CNBP	"CCHC-type zinc finger, nucleic acid binding protein"	yes		aneurysmal bone cyst		
+CNOT3	CCR4-NOT transcription complex subunit 3	yes		T-ALL		
+CNTNAP2	contactin associated protein like 2	yes		"glioma, melanoma"		
+CNTRL	centriolin	yes		"MPN, NHL"		
+COL1A1	"collagen, type I, alpha 1"	yes		"DFSP, aneurysmal bone cyst"		
+COL2A1	"collagen, type II, alpha 1"	yes		"chondrosarcoma, enchondroma"		
+COL3A1	collagen type III alpha 1 chain	yes		lipoblastoma		
+COX6C	cytochrome c oxidase subunit VIc	yes		uterine leiomyoma		
+CPEB3	cytoplasmic polyadenylation element binding protein 3	yes		lung cancer		
+CREB1	cAMP responsive element binding protein 1	yes		"clear cell sarcoma, angiomatoid fibrous histiocytoma"		
+CREB3L1	cAMP responsive element binding protein 3-like 1	yes		myxofibrosarcoma		
+CREB3L2	cAMP responsive element binding protein 3-like 2	yes		fibromyxoid sarcoma		
+CREBBP	CREB binding protein (CBP)	yes		"ALL, AML, DLBCL, B-NHL"		
+CRLF2	cytokine receptor-like factor 2	yes		"B-ALL, Downs associated ALL"		
+CRNKL1	crooked neck pre-mRNA splicing factor 1	yes		base cell carcinoma		
+CRTC1	CREB regulated transcription coactivator 1	yes		salivary gland mucoepidermoid		
+CRTC3	CREB regulated transcription coactivator 3	yes		salivary gland mucoepidermoid		
+CSF1R	colony stimulating factor 1 receptor	yes		"MDS, CML, AML, hemangioblastoma, CCRCC"		
+CSF3R	colony stimulating factor 3 receptor (granulocyte)	yes		"aCML, CNL,  leukaemia lymphoma and MDS associated with severe congenital neutropenia, CMML, de novo AML, MDS"		
+CSMD3	CUB and Sushi multiple domains 3	yes		"ovarian cancer, oral SCC, lung cancer"		
+CTCF	CCCTC-binding factor	yes		"endometrial, breast, head and neck cancer"		
+CTNNA2	catenin alpha 2	yes		gastric cancer		
+CTNNB1	"catenin (cadherin-associated protein), beta 1"	yes		"colorectal, ovarian,  hepatoblastoma, pleomorphic salivary gland adenoma, other tumour types"		
+CTNND1	catenin delta 1	yes		large intestine carcinoma		
+CTNND2	catenin delta 2	yes		"prostae adenocarcinoma, GIST"		
+CUL3	cullin 3	yes		lung cancer		
+CUX1	cut-like homeobox 1	yes		"endometrial, melanoma, colorectal, AML, MDS, other tumour types"		
+CXCR4	C-X-C motif chemokine receptor 4	yes	yes	WM		
+CYLD	familial cylindromatosis gene	yes	yes	cylindroma	cylindroma	"familial cylindromatosis, familial trichoepithelioma, Brooke-Spiegler syndrome"
+CYP2C8	cytochrome P450 family 2 subfamily C member 8	yes		melanoma		
+CYSLTR2	cysteinyl leukotriene receptor 2	yes		uveal melanoma		
+DAXX	death-domain associated protein	yes		"pancreatic neuroendocrine tumour, paediatric glioblastoma"		
+DCAF12L2	DDB1 and CUL4 associated factor 12 like 2	yes		CRC		
+DCC	DCC netrin 1 receptor	yes		"CRC, melanoma, SCC"		
+DCTN1	dynactin 1	yes		"inflammatory myofibroblastic tumour, Spitzoid tumour"		
+DDB2	damage-specific DNA binding protein 2		yes		"skin basal cell, skin squamous cell, melanoma"	xeroderma pigmentosum (E)
+DDIT3	DNA-damage-inducible transcript 3	yes		liposarcoma		
+DDR2	discoidin domain receptor 2	yes		"squamous cell carcinoma, NSCLC"		
+DDX10	DEAD (Asp-Glu-Ala-Asp) box polypeptide 10	yes		AML*		
+DDX3X	"DEAD-box helicase 3, X-linked"	yes		"CLL, medulloblastoma"		
+DDX5	DEAD (Asp-Glu-Ala-Asp) box polypeptide 5	yes		prostate		
+DDX6	DEAD (Asp-Glu-Ala-Asp) box polypeptide 6	yes		B-NHL		
+DEK	DEK oncogene (DNA binding)	yes		AML		
+DGCR8	"DGCR8, microprocessor complex subunit"	yes		Wilms tumour		
+DICER1	"dicer 1, ribonuclease type III"	yes	yes	"sex cord-stromal tumour, TGCT, embryonal rhabdomyosarcoma, pleuropulmonary blastoma, pituitary blastoma, Wilms tumour, thyroid cancer, other tumour types"	pleuropulmonary blastoma	familial pleuropulmonary blastoma or DICER1 syndrome
+DNAJB1	DnaJ heat shock protein family (Hsp40) member B1	yes		fibrolamellar hepatocellular carcinoma		
+DNM2	dynamin 2	yes		T-ALL		
+DNMT3A	DNA (cytosine-5-)-methyltransferase 3 alpha	yes		AML		
+DROSHA	drosha ribonuclease III	yes		"Wilms tumour, NSCLC, bladder carcinoma"		
+DUX4L1	double homeobox 4 like 1	yes		soft tissue sarcoma		
+EBF1	early B-cell factor 1	yes		lipoma		
+ECT2L	epithelial cell transforming sequence 2 oncogene-like	yes		ETP ALL		
+EED	embryonic ectoderm development	yes		"malignant peripheral nerve sheath tumours, MDS and related, lung adenocarcinoma"		
+EGFR	"epidermal growth factor receptor (erythroblastic leukemia viral (v-erb-b) oncogene homolog, avian)"	yes	yes	"glioma, NSCLC"	NSCLC	familial lung cancer
+EIF1AX	"eukaryotic translation initiation factor 1A, X-linked"	yes		"uveal melanoma, thyroid cancer (PDTC and ATC), low grade serous ovarian cancer"		
+EIF3E	"eukaryotic translation initiation factor 3, subunit E"	yes		colorectal		
+EIF4A2	"eukaryotic translation initiation factor 4A, isoform 2"	yes		NHL		
+ELF3	E74 like ETS transcription factor 3	yes		pancreatic cancer		
+ELF4	E74-like factor 4 (ets domain transcription factor)	yes		AML		
+ELK4	"ELK4, ETS-domain protein (SRF accessory protein 1)"	yes		prostate		
+ELL	ELL gene (11-19 lysine-rich leukemia gene)	yes		AL		
+ELN	elastin	yes		B-ALL		
+EML4	echinoderm microtubule associated protein like 4	yes		NSCLC		
+EP300	300 kd E1A-Binding protein gene	yes		"colorectal, breast, pancreatic, AML, ALL, DLBCL"		
+EPAS1	endothelial PAS domain protein 1	yes		"paraganglioma, pheochromocytoma, central nervous system hemangioblastomas"		
+EPHA3	EPH receptor A3	yes		"lung cancer, CRC, melanoma"		
+EPHA7	EPH receptor A7	yes		"CRC, melanoma"		
+EPS15	epidermal growth factor receptor pathway substrate 15 (AF1p)	yes		ALL		
+ERBB2	"v-erb-b2 erythroblastic leukemia viral oncogene homolog 2, neuro/glioblastoma derived oncogene homolog (avian)"	yes		"breast, ovarian, other tumour types, NSCLC, gastric"		
+ERBB3	erb-b2 receptor tyrosine kinase 3	yes		"colon, gastric, head and neck, bladder, skin"		
+ERBB4	erb-b2 receptor tyrosine kinase 4	yes	yes	"melanoma, gastric, NSCLC"		
+ERC1	ELKS/RAB6-interacting/CAST family member 1	yes		"papillary thyroid, Spitzoid tumour"		
+ERCC2	"excision repair cross-complementing rodent repair deficiency, complementation group 2 (xeroderma pigmentosum D)"		yes		"skin basal cell, skin squamous cell, melanoma"	xeroderma pigmentosum (D)
+ERCC3	"excision repair cross-complementing rodent repair deficiency, complementation group 3 (xeroderma pigmentosum group B complementing)"		yes		"skin basal cell, skin squamous cell, melanoma"	xeroderma pigmentosum (B)
+ERCC4	"excision repair cross-complementing rodent repair deficiency, complementation group 4"		yes		"skin basal cell, skin squamous cell, melanoma"	xeroderma pigmentosum (F)
+ERCC5	"excision repair cross-complementing rodent repair deficiency, complementation group 5 (xeroderma pigmentosum, complementation group G (Cockayne syndrome))"		yes		"skin basal cell, skin squamous cell, melanoma"	xeroderma pigmentosum (G)
+ERG	v-ets erythroblastosis virus E26 oncogene like (avian)	yes		"Ewing sarcoma, prostate, AML"		
+ESR1	estrogen receptor 1	yes		breast		
+ETNK1	ethanolamine kinase 1	yes		"aCML, CMML, SM-AHD, HES"		
+ETV1	ets variant gene 1	yes		"Ewing sarcoma, prostate"		
+ETV4	"ets variant gene 4 (E1A enhancer binding protein, E1AF)"	yes		"Ewing sarcoma, prostate carcinoma"		
+ETV5	ets variant gene 5	yes		prostate		
+ETV6	ets variant gene 6 (TEL oncogene)	yes		"congenital fibrosarcoma, multiple different leukaemia and lymphoma tumour types including ALL, secretory breast, MDS"		
+EWSR1	Ewing sarcoma breakpoint region 1 (EWS)	yes		"Ewing sarcoma, desmoplastic small round cell tumour , ALL, clear cell sarcoma, sarcoma, myoepithelioma, mesothelioma"		
+EXT1	multiple exostoses type 1 gene		yes		"exostoses, osteosarcoma"	multiple exostoses type 1
+EXT2	multiple exostoses type 2 gene		yes		"exostoses, osteosarcoma"	multiple exostoses type 2
+EZH2	enhancer of zeste homolog 2	yes		DLBCL		
+EZR	ezrin	yes		NSCLC		
+FAM131B	"family with sequence similarity 131, member B"	yes		pilocytic astrocytoma		
+FAM135B	family with sequence similarity 135 member B	yes		SCLC		
+FAM47C	family with sequence similarity 47 member C	yes		"melanoma, clear cell sarcoma of soft parts, SCLC"		
+FANCA	"Fanconi anemia, complementation group A"		yes		"AML, leukaemia"	Fanconi anaemia A
+FANCC	"Fanconi anemia, complementation group C"		yes		"AML, leukaemia"	Fanconi anaemia C
+FANCD2	"Fanconi anemia, complementation group D2"		yes		"AML, leukaemia"	Fanconi anaemia D2
+FANCE	"Fanconi anemia, complementation group E"		yes		"AML, leukaemia"	Fanconi anaemia E
+FANCF	"Fanconi anemia, complementation group F"		yes		"AML, leukaemia"	Fanconi anaemia F
+FANCG	"Fanconi anemia, complementation group G"		yes		"AML, leukaemia"	Fanconi anaemia G
+FAS	Fas cell surface death receptor	yes		"TGCT, nasal NK/T lymphoma, skin squamous cell carcinoma-burn scar related"		
+FAT1	FAT atypical cadherin 1	yes	yes	"oral squamous cell, chemorefractory CLL, head and neck, pancreatic acinar cell carcinoma"	pancreatic	
+FAT3	FAT atypical cadherin 3	yes		"SCC, colon adenocarcinoma, gastric adenocarcinoma"		
+FAT4	FAT atypical cadherin 4	yes		"lymphoma, pancreatic, head and neck, melanoma, hepatocellular carcinoma"		
+FBLN2	fibulin 2	yes		"breast cancer, colorectal adenocarcinoma"		
+FBXO11	F-box protein 11	yes		DLBCL		
+FBXW7	"F-box and WD-40 domain protein 7 (archipelago homolog, Drosophila)"	yes		"colorectal, endometrial, T-ALL"		
+FCGR2B	"Fc fragment of IgG, low affinity IIb, receptor for (CD32)"	yes		ALL		
+FCRL4	Fc receptor-like 4	yes		B-NHL		
+FEN1	flap structure-specific endonuclease 1		yes		breast cancer	
+FES	"FES proto-oncogene, tyrosine kinase"	yes		"HNSCC, ovarian carcinoma"		
+FEV	FEV protein - (HSRNAFEV)	yes		Ewing sarcoma		
+FGFR1	fibroblast growth factor receptor 1	yes		"MPN, NHL, salivary adenoma"		
+FGFR1OP	FGFR1 oncogene partner (FOP)	yes		"MPN, NHL"		
+FGFR2	fibroblast growth factor receptor 2	yes		"gastric, NSCLC, endometrial"		
+FGFR3	fibroblast growth factor receptor 3	yes		"bladder, MM, T-cell lymphoma"		
+FGFR4	fibroblast growth factor receptor 4	yes		rhabdomyosarcoma		
+FH	fumarate hydratase		yes		"leiomyomatosis, renal"	hereditary leiomyomatosis and renal cell cancer
+FHIT	fragile histidine triad gene	yes		pleomorphic salivary gland adenoma		
+FIP1L1	FIP1 like 1 (S. cerevisiae)	yes		idiopathic hypereosinophilic syndrome		
+FKBP9	FK506 binding protein 9	yes		glioma		
+FLCN	folliculin		yes		"renal, fibrofolliculomas, trichodiscomas"	Birt-Hogg-Dube syndrome
+FLI1	Friend leukemia virus integration 1	yes		Ewing sarcoma		
+FLNA	filamin A	yes		phyllodes tumour of the breast		
+FLT3	fms-related tyrosine kinase 3	yes		"AML, ALL"		
+FLT4	fms-related tyrosine kinase 4	yes		soft tissue sarcoma		
+FNBP1	formin binding protein 1 (FBP17)	yes		AML		
+FOXA1	forkhead box A1	yes		"breast, prostate"		
+FOXL2	forkhead box L2	yes		granulosa-cell tumour of the ovary		
+FOXO1	forkhead box O1	yes		alveolar rhabdomyosarcoma		
+FOXO3	forkhead box O3	yes		AL		
+FOXO4	forkhead box O4	yes		"AL, soft tissue sarcoma"		
+FOXP1	forkhead box P1	yes		ALL		
+FOXR1	forkhead box R1	yes		neuroblastoma		
+FSTL3	follistatin-like 3 (secreted glycoprotein)	yes		B-CLL		
+FUBP1	far upstream element (FUSE) binding protein 1	yes		oligodendroglioma		
+FUS	"fusion, derived from t(12;16) malignant liposarcoma"	yes		"liposarcoma, AML, Ewing sarcoma, angiomatoid fibrous histiocytoma, fibromyxoid sarcoma"		
+GAS7	growth arrest-specific 7	yes		AML*		
+GATA1	GATA binding protein 1 (globin transcription factor 1)	yes		megakaryoblastic leukaemia of Downs syndrome		
+GATA2	GATA binding protein 2	yes		AML (CML blast transformation)		
+GATA3	GATA binding protein 3	yes		breast		
+GLI1	GLI family zinc finger 1	yes		"CRC, oesophagus cancer"		
+GMPS	guanine monphosphate synthetase	yes		AML		
+GNA11	"guanine nucleotide binding protein (G protein), alpha 11 (Gq class)"	yes		"uveal melanoma, primary central nervous system melanocytic neoplasms"		
+GNAQ	"guanine nucleotide binding protein (G protein), q polypeptide"	yes		"uveal melanoma, primary central nervous system melanocytic neoplasms"		
+GNAS	"guanine nucleotide binding protein (G protein), alpha stimulating activity polypeptide 1"	yes		"pituitary adenoma, pancreatic intraductal papillary mucinous neoplasm, fibrous dysplasia"		
+GOLGA5	"golgi autoantigen, golgin subfamily a, 5  (PTC5)"	yes		"papillary thyroid, Spitzoid tumour"		
+GOPC	golgi associated PDZ and coiled-coil motif containing	yes		"glioblastoma, cholangiocarcinoma, borderline ovarian"		
+GPC3	glypican 3		yes		Wilms tumour	Simpson-Golabi-Behmel syndrome
+GPC5	glypican 5	yes		lung adenocarcinoma		
+GPHN	gephyrin (GPH)	yes		AL		
+GRIN2A	"glutamate receptor, ionotropic, N-methyl D-aspartate 2A"	yes		"melanoma, colorectal carcinoma, gastric carcinoma, lung carcinoma"		
+GRM3	glutamate metabotropic receptor 3	yes		"melanoma, oral SCC"		
+H3F3A	"H3 histone, family 3A"	yes		glioma		
+H3F3B	"H3 histone, family 3B (H3.3B)"	yes		chondroblastoma		
+HERPUD1	"homocysteine-inducible, endoplasmic reticulum stress-inducible, ubiquitin-like domain member 1"	yes		prostate		
+HEY1	hairy/enhancer-of-split related with YRPW motif 1	yes		mesenchymal chondrosarcoma		
+HIF1A	hypoxia inducible factor 1 alpha subunit	yes		"endometrioid carcinoma, glioblastoma, colorectal, renal, lung, pancreatic"		
+HIP1	huntingtin interacting protein 1	yes		"CMML, NSCLC"		
+HIST1H3B	"histone cluster 1, H3b"	yes		glioma		
+HIST1H4I	"histone 1, H4i (H4FM)"	yes		NHL		
+HLA-A	"major histocompatibility complex, class I, A"	yes		Spitzoid tumour		
+HLF	hepatic leukemia factor	yes		ALL		
+HMGA1	high mobility group AT-hook 1	yes		"microfollicular thyroid adenoma, various benign mesenchymal tumours"		
+HMGA2	high mobility group AT-hook 2 (HMGIC)	yes		"lipoma, leiomyoma, pleomorphic salivary gland adenoma"		
+HMGN2P46	high mobility group nucleosomal binding domain 2 pseudogene 46	yes		prostate		
+HNF1A	HNF1 homeobox A	yes	yes	"hepatic adenoma, hepatocellular"	"hepatic adenoma, hepatocellular carcinoma"	familial hepatic adenoma
+HNRNPA2B1	heterogeneous nuclear ribonucleoprotein A2/B1	yes		prostate		
+HOOK3	hook homolog 3	yes		papillary thyroid		
+HOXA11	homeo box A11	yes		CML		
+HOXA13	homeo box A13	yes		AML		
+HOXA9	homeo box A9	yes		AML*		
+HOXC11	homeo box C11	yes		AML		
+HOXC13	homeo box C13	yes		AML		
+HOXD11	homeo box D11	yes		AML		
+HOXD13	homeo box D13	yes		AML*		
+HRAS	v-Ha-ras Harvey rat sarcoma viral oncogene homolog	yes	yes	"infrequent sarcomas, rare other tumour types"	"rhabdomyosarcoma, ganglioneuroblastoma, bladder"	Costello syndrome
+HSP90AA1	"heat shock protein 90kDa alpha (cytosolic), class A member 1"	yes		NHL		
+HSP90AB1	"heat shock protein 90kDa alpha (cytosolic), class B member 1"	yes		NHL		
+ID3	"inhibitor of DNA binding 3, HLH protein"	yes		Burkitt lymphoma		
+IDH1	"isocitrate dehydrogenase 1 (NADP+), soluble"	yes		glioblastoma		
+IDH2	"isocitrate dehydrogenase 2 (NADP+), mitochondrial"	yes		glioblastoma		
+IGF2BP2	insulin like growth factor 2 mRNA binding protein 2	yes		lymphoma		
+IGH	immunoglobulin heavy locus	yes		"MM, Burkitt lymphoma, NHL, CLL, B-ALL, MALT, MLCLS"		
+IGK	immunoglobulin kappa locus	yes		"Burkitt lymphoma, B-NHL"		
+IGL	immunoglobulin lambda locus	yes		Burkitt lymphoma		
+IKBKB	"inhibitor of kappa light polypeptide gene enhancer in B-cells, kinase beta"	yes		SMZL		
+IKZF1	IKAROS family zinc finger 1	yes		"ALL, DLBCL"		
+IL2	interleukin 2	yes		intestinal T-cell lymphoma		
+IL21R	interleukin 21 receptor	yes		NHL		
+IL6ST	"interleukin 6 signal transducer (gp130, oncostatin M receptor)"	yes		hepatocellular carcinoma		
+IL7R	interleukin 7 receptor	yes		"ALL, ETP ALL"		
+IRF4	interferon regulatory factor 4	yes		MM		
+IRS4	insulin receptor substrate 4	yes		"glioma, rhabdomyosarcoma, melanoma, breast cancer, T-ALL"		
+ISX	intestine specific homeobox	yes		melanoma		
+ITGAV	integrin subunit alpha V	yes		large intestine carcinoma		
+ITK	IL2-inducible T-cell kinase	yes		peripheral T-cell lymphoma		
+JAK1	Janus kinase 1	yes		ALL		
+JAK2	Janus kinase 2	yes		"ALL, AML, MPN,  CML"		
+JAK3	Janus kinase 3	yes		"acute megakaryocytic leukaemia, ETP ALL"		
+JAZF1	juxtaposed with another zinc finger gene 1	yes		endometrial stromal tumour		
+JUN	jun oncogene	yes		sarcoma		
+KAT6A	K(lysine) acetyltransferase 6A	yes		AML		
+KAT6B	K(lysine) acetyltransferase 6B	yes		"AML, leiomyoma"		
+KAT7	lysine acetyltransferase 7	yes		CCRCC		
+KCNJ5	potassium inwardly-rectifying channel; subfamily J; member 5	yes		adrenal adenoma		
+KDM5A	"lysine (K)-specific demethylase 5A, JARID1A"	yes		AML		
+KDM5C	lysine (K)-specific demethylase 5C (JARID1C)	yes		clear cell renal carcinoma		
+KDM6A	"lysine (K)-specific demethylase 6A, UTX"	yes		"renal cell carcinoma, bladder carcinoma, oesophageal SCC, MM, medulloblastoma, T-ALL, other tumour types"		
+KDR	vascular endothelial growth factor receptor 2	yes	yes	"NSCLC, angiosarcoma"	melanoma	
+KDSR	3-ketodihydrosphingosine reductase	yes		B-NHL		
+KEAP1	kelch like ECH associated protein 1	yes		"NSCLC, breast carcinoma"		
+KIAA1549	KIAA1549	yes		pilocytic astrocytoma		
+KIF5B	kinesin family member 5B	yes		"NSCLC, Spitzoid tumour"		
+KIT	v-kit Hardy-Zuckerman 4 feline sarcoma viral oncogene homolog	yes	yes	"GIST, AML, TGCT, mastocytosis, mucosal melanoma"	"GIST, epithelioma"	familial gastrointestinal stromal tumour
+KLF4	Kruppel-like factor 4	yes		meningioma		
+KLF6	Kruppel-like factor 6	yes		"prostate, glioma"		
+KLK2	kallikrein-related peptidase 2	yes		prostate		
+KMT2A	lysine (K)-specific methyltransferase 2A	yes		"AML, ALL"		
+KMT2C	lysine (K)-specific methyltransferase 2C	yes		medulloblastoma		
+KMT2D	lysine (K)-specific methyltransferase 2D	yes		"medulloblastoma, renal"		
+KNL1	cancer susceptibility candidate 5	yes		AML		
+KNSTRN	kinetochore localized astrin/SPAG5 binding protein	yes		SCC		
+KRAS	v-Ki-ras2 Kirsten rat sarcoma 2 viral oncogene homolog	yes		"pancreatic, colorectal, lung, thyroid, AML, other tumour types"		
+KTN1	kinectin 1 (kinesin receptor)	yes		papillary thyroid		
+LARP4B	La ribonucleoprotein domain family member 4B	yes		"CRC, glioma"		
+LASP1	LIM and SH3 protein 1	yes		AML		
+LATS1	large tumor suppressor kinase 1	yes		skin basal cell carcinoma		
+LATS2	large tumor suppressor kinase 2	yes		malignant mesothelioma		
+LCK	lymphocyte-specific protein tyrosine kinase	yes		T-ALL		
+LCP1	lymphocyte cytosolic protein 1 (L-plastin)	yes		NHL		
+LEF1	lymphoid enhancer binding factor 1	yes		"B-ALL, T-ALL, eyelid sebaceous carcinoma, AML, lymphomas"		
+LEPROTL1	leptin receptor overlapping transcript like 1	yes		"lung cancer, colon cancer"		
+LHFPL6	lipoma HMGIC fusion partner	yes		lipoma		
+LIFR	leukemia inhibitory factor receptor	yes		salivary adenoma		
+LMNA	lamin A/C	yes		Spitzoid tumour		
+LMO1	LIM domain only 1 (rhombotin 1) (RBTN1)	yes	yes	"T-ALL, neuroblastoma"	neuroblastoma	
+LMO2	LIM domain only 2 (rhombotin-like 1) (RBTN2)	yes		T-ALL		
+LPP	LIM domain containing preferred translocation partner in lipoma	yes		"lipoma, leukaemia"		
+LRIG3	leucine-rich repeats and immunoglobulin-like domains 3	yes		NSCLC		
+LRP1B	LDL receptor related protein 1B	yes		"CLL, ovarian cancer, oesophageal squamous cell carcinoma, urothelial cancer"		
+LSM14A	"LSM14A, SCD6 homolog A (S. cerevisiae)"	yes		Spitzoid tumour		
+LYL1	lymphoblastic leukemia derived sequence 1	yes		T-ALL		
+LZTR1	leucine-zipper-like transcription regulator 1	yes	yes	glioblastoma	"glioblastoma, schwannoma"	Schwannomatosis-2
+MACC1	MET transcriptional regulator MACC1	yes		"liver, CRC"		
+MAF	v-maf musculoaponeurotic fibrosarcoma oncogene homolog	yes		MM		
+MAFB	v-maf musculoaponeurotic fibrosarcoma oncogene homolog B (avian)	yes		MM		
+MALAT1	metastasis associated lung adenocarcinoma transcript 1 ( lnc-RNA; non-protein coding)	yes		"renal cell carcinoma (childhood epithelioid), lung"		
+MALT1	mucosa associated lymphoid tissue lymphoma translocation gene 1	yes		MALT		
+MAML2	mastermind-like 2 (Drosophila)	yes		salivary gland mucoepidermoid		
+MAP2K1	mitogen-activated protein kinase kinase 1	yes		"NSCLC, melanoma, colorectal"		
+MAP2K2	mitogen-activated protein kinase kinase 2	yes		"NSCLC, melanoma"		
+MAP2K4	mitogen-activated protein kinase kinase 4	yes		"pancreatic, breast, colorectal"		
+MAP3K1	"mitogen-activated protein kinase kinase kinase 1, E3 ubiquitin protein ligase"	yes		luminal A breast		
+MAP3K13	mitogen-activated protein kinase kinase kinase 13	yes		breast		
+MAPK1	mitogen-activated protein kinase 1	yes		"CLL, ovarian mixed germ cell tumour, cervical carcinoma"		
+MAX	Myc associated factor X	yes	yes	"pheochromocytoma, endometrioid carcinoma, colon carcinoma"	pheochromocytoma	
+MB21D2	Mab-21 domain containing 2	yes		lung cancer		
+MDM2	Mdm2 p53 binding protein homolog	yes		"sarcoma, glioma, colorectal, other tumour types"		
+MDM4	Mdm4 p53 binding protein homolog	yes		"glioblastoma, bladder, retinoblastoma"		
+MDS2	myelodysplastic syndrome 2	yes		MDS		
+MECOM	MDS1 and EVI1 complex locus	yes		"AML, CML, MDS"		
+MED12	mediator complex subunit 12	yes		"uterine leiomyoma, fibroadenoma, phyllodes tumour"		
+MEN1	multiple endocrine neoplasia type 1 gene	yes	yes	"parathyroid tumours, pancreatic neuroendocrine tumour"	"parathyroid adenoma, pituitary adenoma, pancreatic islet cell, carcinoid"	multiple endocrine neoplasia type 1
+MET	met proto-oncogene (hepatocyte growth factor receptor)	yes		"papillary renal, head-neck squamous cell"	papillary renal	familial papillary renal cancer
+MGMT	O-6-methylguanine-DNA methyltransferase	yes		glioma		
+MITF	melanogenesis-associated transcription factor	yes		melanoma		
+MLF1	myeloid leukemia factor 1	yes		AML		
+MLH1	E.coli MutL homolog gene	yes	yes	"colorectal, endometrial, ovarian, CNS tumours"	"colorectal, endometrial, ovarian, CNS"	"hereditary non-polyposis colorectal cancer, Turcot syndrome"
+MLLT1	"myeloid/lymphoid or mixed-lineage leukemia (trithorax homolog, Drosophila); translocated to, 1 (ENL)"	yes		AL		
+MLLT10	"myeloid/lymphoid or mixed-lineage leukemia (trithorax homolog, Drosophila); translocated to, 10 (AF10)"	yes		AL		
+MLLT11	"myeloid/lymphoid or mixed-lineage leukemia (trithorax homolog, Drosophila); translocated to, 11"	yes		ALL		
+MLLT3	"myeloid/lymphoid or mixed-lineage leukemia (trithorax homolog, Drosophila); translocated to, 3 (AF9)"	yes		ALL		
+MLLT6	"myeloid/lymphoid or mixed-lineage leukemia (trithorax homolog, Drosophila); translocated to, 6 (AF17)"	yes		AL		
+MN1	"MN1 proto-oncogene, transcriptional regulator"	yes		"AML, MDS"		
+MNX1	motor neuron and pancreas homeobox 1	yes		AML		
+MPL	"myeloproliferative leukaemia virus oncogene, thrombopoietin receptor"	yes	yes	MPN	MPN	familial essential thrombocythemia
+MRTFA	megakaryoblastic leukemia (translocation) 1	yes		acute megakaryocytic leukaemia		
+MSH2	mutS homolog 2 (E. coli)	yes	yes	"colorectal, endometrial, ovarian"	"colorectal, endometrial, ovarian"	hereditary non-polyposis colorectal cancer
+MSH6	mutS homolog 6 (E. coli)	yes	yes	colorectal	"colorectal, endometrial, ovarian"	hereditary non-polyposis colorectal cancer
+MSI2	musashi homolog 2 (Drosophila)	yes		CML		
+MSN	moesin	yes		ALCL		
+MTCP1	mature T-cell proliferation 1	yes		T cell prolymphocytic leukaemia		
+MTOR	mechanistic target of rapamycin	yes		"endometrial carcinoma, head and neck, clear cell renal cell carcinoma, anaplastic thyroid cancer, urothelial cell carcinoma, central nervous system tumours, testicular germ cell tumours and other tumour types"		
+MUC1	"mucin 1, transmembrane"	yes		B-NHL		
+MUC16	"mucin 16, cell surface associated"	yes		"HNSCC, melanoma"		
+MUC4	"mucin 4, cell surface associated"	yes		HNSCC		
+MUTYH	mutY homolog (E. coli)		yes		colorectal	adenomatous polyposis coli
+MYB	v-myb myeloblastosis viral oncogene homolog	yes		adenoid cystic carcinoma		
+MYC	v-myc myelocytomatosis viral oncogene homolog (avian)	yes		"Burkitt lymphoma, amplified in other cancers, B-CLL"		
+MYCL	v-myc avian myelocytomatosis viral oncogene lung carcinoma derived homolog	yes		small cell lung carcinoma		
+MYCN	"v-myc myelocytomatosis viral related oncogene, neuroblastoma derived (avian)"	yes		"neuroblastoma, Wilms tumour"		
+MYD88	myeloid differentiation primary response gene (88)	yes		ABC-DLBCL		
+MYH11	"myosin, heavy polypeptide 11, smooth muscle"	yes		AML		
+MYH9	"myosin, heavy polypeptide 9, non-muscle"	yes		ALCL		
+MYO5A	"myosin VA (heavy chain 12, myoxin)"	yes		Spitzoid tumour		
+MYOD1	myogenic differentiation 1	yes		embryonal rhabdomyosarcoma		
+N4BP2	NEDD4 binding protein 2	yes		lung cancer		
+NAB2	NGFI-A binding protein 2	yes		"solitary fibrous tumour, meningeal haemangiopericytoma"		
+NACA	nascent-polypeptide-associated complex alpha polypeptide	yes		NHL		
+NBEA	neurobeachin	yes		"large intestine carcinoma, multiple myeloma"		
+NBN	nibrin		yes		"NHL, glioma, medulloblastoma, rhabdomyosarcoma"	Nijmegen breakage syndrome
+NCKIPSD	NCK interacting protein with SH3 domain	yes		ALL		
+NCOA1	nuclear receptor coactivator 1	yes		alveolar rhabdomyosarcoma		
+NCOA2	nuclear receptor coactivator 2 (TIF2)	yes		"AML, chondrosarcoma, rhabdomyosarcoma"		
+NCOA4	nuclear receptor coactivator 4 - PTC3 (ELE1)	yes		papillary thyroid		
+NCOR1	nuclear receptor corepressor 1	yes		breast		
+NCOR2	nuclear receptor corepressor 2	yes		prostate		
+NDRG1	N-myc downstream regulated 1	yes		prostate		
+NF1	neurofibromatosis type 1 gene	yes	yes	"neurofibroma, glioma"	"neurofibroma, glioma"	neurofibromatosis type 1
+NF2	neurofibromatosis type 2 gene	yes	yes	"meningioma, acoustic neuroma, renal"	"meningioma, acoustic neuroma"	neurofibromatosis type 2
+NFATC2	"nuclear factor of activated T-cells, cytoplasmic, calcineurin-dependent 2"	yes		Ewing sarcoma		
+NFE2L2	nuclear factor (erythroid-derived 2)-like 2 (NRF2)	yes		"NSCLC, HNSCC"		
+NFIB	nuclear factor I/B	yes		"adenoid cystic carcinoma, lipoma"		
+NFKB2	nuclear factor of kappa light polypeptide gene enhancer in B-cells 2 (p49/p100)	yes		B-NHL		
+NFKBIE	"nuclear factor of kappa light polypeptide gene enhancer in B-cells inhibitor, epsilon"	yes		"CLL, desmoplastic melanoma"		
+NIN	ninein (GSK3B interacting protein)	yes		MPN		
+NKX2-1	NK2 homeobox 1	yes		NSCLC		
+NONO	"non-POU domain containing, octamer-binding"	yes		papillary renal		
+NOTCH1	"Notch homolog 1, translocation-associated (Drosophila) (TAN1)"	yes		"T-ALL, breast, bladder, skin SCC, lung SCC, head and neck SCC"		
+NOTCH2	Notch homolog 2	yes		"marginal zone lymphoma, DLBCL, bladder"		
+NPM1	"nucleophosmin (nucleolar phosphoprotein B23, numatrin)"	yes		"NHL, APL, AML"		
+NR4A3	"nuclear receptor subfamily 4, group A, member 3 (NOR1)"	yes		extraskeletal myxoid chondrosarcoma		
+NRAS	neuroblastoma RAS viral (v-ras) oncogene homolog	yes		"melanoma, MM, AML, thyroid"		
+NRG1	neuregulin 1	yes		NSCLC		
+NSD1	nuclear receptor binding SET domain protein 1	yes		AML		
+NSD2	Wolf-Hirschhorn syndrome candidate 1(MMSET)	yes		MM		
+NSD3	Wolf-Hirschhorn syndrome candidate 1-like 1 (NSD3)	yes		AML		
+NT5C2	"5'-nucleotidase, cytosolic II"	yes		relapse ALL		
+NTHL1	nth like DNA glycosylase 1		yes		CRC	Familial adenomatous polyposis
+NTRK1	"neurotrophic tyrosine kinase, receptor, type 1"	yes		"papillary thyroid, Spitzoid tumour"		
+NTRK3	"neurotrophic tyrosine kinase, receptor, type 3"	yes		"congenital fibrosarcoma, secretory breast"		
+NUMA1	nuclear mitotic apparatus protein 1	yes		APL		
+NUP214	nucleoporin 214kDa (CAN)	yes		"AML, T-ALL"		
+NUP98	nucleoporin 98kDa	yes		AML		
+NUTM1	"NUT midline carcinoma, family member 1"	yes		lethal midline carcinoma		
+NUTM2B	NUT family member 2B	yes		endometrial stromal sarcoma		
+NUTM2D	NUT family member 2A	yes		endometrial stromal sarcoma		
+OLIG2	oligodendrocyte lineage transcription factor 2 (BHLHB1)	yes		T-ALL		
+OMD	osteomodulin	yes		aneurysmal bone cyst		
+P2RY8	"purinergic receptor P2Y, G-protein coupled, 8"	yes		"B-ALL, Down syndrome associated ALL"		
+PABPC1	poly(A) binding protein cytoplasmic 1	yes		"HNSCC, biliary tract carcinoma"		
+PAFAH1B2	"platelet-activating factor acetylhydrolase, isoform Ib, beta subunit 30kDa"	yes		MLCLS		
+PALB2	partner and localizer of BRCA2		yes		"Wilms tumour, medulloblastoma, AML ,breast"	"Fanconi anaemia N, breast cancer susceptibility"
+PATZ1	zinc finger protein 278 (ZSG)	yes		Ewing sarcoma		
+PAX3	paired box gene 3	yes		alveolar rhabdomyosarcoma		
+PAX5	paired box gene 5 (B-cell lineage specific activator protein)	yes		"NHL, ALL, B-ALL"		
+PAX7	paired box gene 7	yes		alveolar rhabdomyosarcoma		
+PAX8	paired box gene 8	yes		follicular thyroid		
+PBRM1	polybromo 1	yes		"clear cell renal carcinoma, breast"		
+PBX1	pre-B-cell leukemia transcription factor 1	yes		"pre B-ALL, myoepithelioma"		
+PCBP1	poly(rC) binding protein 1	yes		CRC		
+PCM1	pericentriolar material 1  (PTC4)	yes		"papillary thyroid, CML, MPN"		
+PDCD1LG2	programmed cell death 1 ligand 2	yes		"PMBL, Hodgkin lymphoma"		
+PDE4DIP	phosphodiesterase 4D interacting protein (myomegalin)	yes		MPN		
+PDGFB	platelet-derived growth factor beta polypeptide (simian sarcoma viral (v-sis) oncogene homolog)	yes		DFSP		
+PDGFRA	"platelet-derived growth factor, alpha-receptor"	yes	yes	"GIST, idiopathic hypereosinophilic syndrome, paediatric glioblastoma"	GIST	familial gastrointestinal stromal tumour
+PDGFRB	"platelet-derived growth factor receptor, beta polypeptide"	yes		"MPN, AML, CMML, CML"		
+PER1	period homolog 1 (Drosophila)	yes		"AML, CMML"		
+PHF6	PHD finger protein 6	yes		ETP ALL		
+PHOX2B	paired-like homeobox 2b	yes	yes	neuroblastoma	neuroblastoma	familial neuroblastoma
+PICALM	phosphatidylinositol binding clathrin assembly protein (CALM)	yes		"T-ALL, AML"		
+PIK3CA	"phosphoinositide-3-kinase, catalytic, alpha polypeptide"	yes		"colorectal, gastric, glioblastoma, breast"		
+PIK3CB	"phosphatidylinositol-4,5-bisphosphate 3-kinase catalytic subunit beta"	yes		"SCC, NSCLC"		
+PIK3R1	"phosphoinositide-3-kinase, regulatory subunit 1 (alpha)"	yes		"glioblastoma, ovarian, colorectal"		
+PIM1	pim-1 oncogene	yes		NHL		
+PLAG1	pleiomorphic adenoma gene 1	yes		"salivary adenoma, lipoblastoma"		
+PLCG1	"phospholipase C, gamma 1"	yes		angiosarcoma		
+PML	promyelocytic leukemia	yes		"APL, ALL"		
+PMS1	PMS1 postmeiotic segregation increased 1 (S. cerevisiae)		yes		"colorectal, endometrial, ovarian"	hereditary non-polyposis colorectal cancer
+PMS2	PMS2 postmeiotic segregation increased 2 (S. cerevisiae)		yes		"colorectal, endometrial, ovarian, medulloblastoma, glioma"	"hereditary non-polyposis colorectal cancer, Turcot syndrome"
+POLD1	"DNA polymerase delta 1, catalytic subunit"	yes	yes	CRC	CRC	Lynch syndrome
+POLE	"polymerase (DNA directed), epsilon, catalytic subunit"	yes	yes	"colorectal carcinoma, endometrioid carcinoma, stomach carcinoma, skin cancer"	colorectal cancer susceptibility	
+POLG	"DNA polymerase gamma, catalytic subunit"	yes		CRC		
+POLQ	DNA polymerase theta	yes	yes	oral SCC	breast cancer	
+POT1	protection of telomeres 1	yes		CLL		
+POU2AF1	"POU domain, class 2, associating factor 1 (OBF1)"	yes		NHL		
+POU5F1	"POU domain, class 5, transcription factor 1"	yes		sarcoma		
+PPARG	"peroxisome proliferative activated receptor, gamma"	yes		follicular thyroid		
+PPFIBP1	"PTPRF interacting protein, binding protein 1 (liprin beta 1)"	yes		"Spitzoid tumour, inflammatory myofibroblastic tumour"		
+PPM1D	"protein phosphatase, Mg2+/Mn2+ dependent 1D"	yes		"glioma, ovarian cancer, breast cancer"		
+PPP2R1A	"protein phosphatase 2, regulatory subunit A, alpha"	yes		clear cell ovarian carcinoma		
+PPP6C	"protein phosphatase 6, catalytic subunit"	yes		melanoma		
+PRCC	papillary renal cell carcinoma (translocation-associated)	yes		papillary renal		
+PRDM1	"PR domain containing 1, with ZNF domain"	yes		DLBCL		
+PRDM16	PR domain containing 16	yes		"MDS, AML"		
+PRDM2	PR/SET domain 2	yes		"glioma, colon adenocarcinoma, gastric carcinoma, ovarian carcinoma, HNSCC"		
+PREX2	"phosphatidylinositol-3,4,5-trisphosphate dependent Rac exchange factor 2"	yes		"melanoma, pancreatic ductal adenocarcinoma"		
+PRF1	perforin 1 (pore forming protein)		yes		"various leukaemia, lymphoma"	
+PRKACA	protein kinase cAMP-activated catalytic subunit alpha	yes		"fibrolamellar hepatocellular carcinoma, cortisol secreting adrenal adenoma"		
+PRKAR1A	"protein kinase, cAMP-dependent, regulatory, type I, alpha (tissue specific extinguisher 1)"	yes	yes	papillary thyroid	"myxoma, endocrine, papillary thyroid"	Carney complex
+PRKCB	protein kinase C beta	yes		adult T-cell lymphoma-leukaemia		
+PRPF40B	pre-mRNA processing factor 40 homolog B	yes		"melanoma, colon carcinoma, MDS"		
+PRRX1	paired related homeobox 1	yes		AML		
+PSIP1	PC4 and SFRS1 interacting protein 1 (LEDGF)	yes		AML		
+PTCH1	Homolog of Drosophila Patched gene	yes	yes	"skin basal cell, medulloblastoma"	"skin basal cell, medulloblastoma"	nevoid basal cell carcinoma syndrome
+PTEN	phosphatase and tensin homolog gene	yes	yes	"glioma, prostate, endometrial"	"harmartoma, glioma, prostate, endometrial"	"Cowden syndrome, Bannayan-Riley-Ruvalcaba syndrome"
+PTK6	protein tyrosine kinase 6	yes		"renal, gastric, head and neck, ovarian, others"		
+PTPN11	"protein tyrosine phosphatase, non-receptor type 11"	yes		"JMML, AML, MDS"		
+PTPN13	"protein tyrosine phosphatase, non-receptor type 13"	yes	yes	"lung, NSCLC, gastric, peritoneal carcinomatosis"	hepatocellular	Familial Hepatocellular Carcinoma
+PTPN6	"protein tyrosine phosphatase, non-receptor type 6"	yes		DLBCL		
+PTPRB	"protein tyrosine phosphatase, receptor type, B"	yes		angiosarcoma		
+PTPRC	"protein tyrosine phosphatase, receptor type, C"	yes		T-ALL		
+PTPRD	"protein tyrosine phosphatase, receptor type D"	yes		"lung cancer, kidney cancer, HNSCC, glioblastoma"		
+PTPRK	"protein tyrosine phosphatase, receptor type, K"	yes		colorectal		
+PTPRT	"protein tyrosine phosphatase, receptor type T"	yes		"HNSCC, colorectal cancer, gastric cancer, lung cancer, melanoma"		
+PWWP2A	PWWP domain containing 2A	yes		Spitzoid tumour		
+QKI	"QKI, KH domain containing, RNA binding"	yes		"angiocentric glioma, colorectal cancer"		
+RABEP1	"rabaptin, RAB GTPase binding effector protein 1"	yes		CMML		
+RAC1	"ras-related C3 botulinum toxin substrate 1 (rho family, small GTP binding protein Rac1)"	yes		"melanoma, carcinoma"		
+RAD17	RAD17 checkpoint clamp loader component	yes		"lymphoma, colon cancer"		
+RAD21	RAD21 homolog (S. pombe)	yes		"AML, endometrium, colorectal, lung"		
+RAD51B	RAD51 paralog B	yes		"lipoma, uterine leiomyoma"		
+RAF1	v-raf-1 murine leukemia viral oncogene homolog 1	yes		"pilocytic astrocytoma, prostate"		
+RALGDS	ral guanine nucleotide dissociation stimulator	yes		"PMBL, Hodgkin lymphoma,"		
+RANBP2	RAN binding protein 2	yes		inflammatory myofibroblastic tumour		
+RAP1GDS1	"RAP1, GTP-GDP dissociation stimulator 1"	yes		T-ALL		
+RARA	"retinoic acid receptor, alpha"	yes		APL		
+RB1	retinoblastoma gene	yes	yes	"retinoblastoma, sarcoma, breast, small cell lung carcinoma"	"retinoblastoma, sarcoma, breast, small cell lung carcinoma"	familial retinoblastoma
+RBM10	RNA binding motif protein 10	yes		lung adenocarcinoma		
+RBM15	RNA binding motif protein 15	yes		acute megakaryocytic leukaemia		
+RECQL4	RecQ protein-like 4		yes		"osteosarcoma, skin basal cell, skin sqamous cell"	Rothmund-Thompson syndrome
+REL	v-rel reticuloendotheliosis viral oncogene homolog (avian)	yes		Hodgkin lymphoma		
+RET	ret proto-oncogene	yes	yes	"medullary thyroid, papillary thyroid, pheochromocytoma, NSCLC, Spitzoid tumour"	"medullary thyroid,  papillary thyroid, pheochromocytoma"	multiple endocrine neoplasia 2A/2B
+RFWD3	ring finger and WD repeat domain 3	yes	yes	lung cancer		Fanconi anemia W
+RGPD3	RANBP2-like and GRIP domain containing 3	yes		endometrioid adenocarcinoma		
+RGS7	regulator of G protein signaling 7	yes		melanoma		
+RHOA	ras homolog family member A	yes		"diffuse gastric, T cell lymphomas, paediatric Burkitt lymphoma"		
+RHOH	ras homolog family member H	yes		NHL		
+RMI2	RecQ mediated genome instability 2	yes		"PMBL, Hodgkin lymphoma"		
+RNF213	ring finger protein 213	yes		ALCL		
+RNF43	ring finger protein 43	yes		"cholangiocarcinoma, ovary, pancreas"		
+ROBO2	roundabout guidance receptor 2	yes		"colorectal adenocarcinoma, melanoma"		
+ROS1	v-ros UR2 sarcoma virus oncogene homolog 1 (avian)	yes		"glioblastoma, NSCLC, Spitzoid tumour, cholangiocarcinoma, borderline ovarian"		
+RPL10	ribosomal protein L10	yes		T-ALL		
+RPL22	ribosomal protein L22 (EAP)	yes		"AML, CML"		
+RPL5	ribososomal protein L5	yes		T-ALL		
+RPN1	ribophorin I	yes		AML		
+RSPO2	R-spondin 2	yes		colorectal		
+RSPO3	R-spondin 3	yes		colorectal		
+RUNX1	runt-related transcription factor 1  (AML1)	yes		"AML, pre B-ALL, T-ALL"		
+RUNX1T1	"runt-related transcription factor 1; translocated to, 1 (cyclin D-related)"	yes		AML		
+S100A7	S100 calcium binding protein A7	yes		"melanoma, T-cell lymphoma"		
+SALL4	spalt like transcription factor 4	yes		"colorectal cancer, breast cancer, prostate cancer, glioblastoma, melanoma"		
+SBDS	Shwachman-Bodian-Diamond syndrome protein		yes		"AML, MDS"	Schwachman-Diamond syndrome
+SDC4	syndecan 4	yes		NSCLC		
+SDHA	"succinate dehydrogenase complex, subunit A, flavoprotein (Fp)"	yes	yes	"GIST, paraganglioma"	paraganglioma	paragangliomas-5 (PGL5)
+SDHAF2	succinate dehydrogenase complex assembly factor 2		yes		paraganglioma	familial paraganglioma
+SDHB	"succinate dehydrogenase complex, subunit B, iron sulfur (Ip)"		yes		"paraganglioma, pheochromocytoma"	familial paraganglioma
+SDHC	"succinate dehydrogenase complex, subunit C, integral membrane protein, 15kDa"		yes		"paraganglioma, pheochromocytoma"	familial paraganglioma
+SDHD	"succinate dehydrogenase complex, subunit D, integral membrane protein"		yes		"paraganglioma, pheochromocytoma"	familial paraganglioma
+5-Sep	septin 5	yes		AML		
+6-Sep	septin 6	yes		AML		
+9-Sep	septin 9	yes		AML*		
+SET	SET translocation	yes		T-ALL		
+SETBP1	SET binding protein 1	yes	yes	"aCML, sAML, MDS/MPN-U, CMML, JMML"	neuroepithelial tumours	Schinzel-Giedion syndrome
+SETD1B	SET domain containing 1B	yes		"CRC, endometrium"		
+SETD2	SET domain containing 2	yes		clear cell renal carcinoma		
+SETDB1	SET domain bifurcated 1	yes		malignant mesothelioma		
+SF3B1	"splicing factor 3b, subunit 1, 155kDa"	yes		myelodysplastic syndrome		
+SFPQ	splicing factor proline/glutamine rich(polypyrimidine tract binding protein associated)	yes		papillary renal		
+SFRP4	secreted frizzled related protein 4	yes		"colorectal cancer, melanoma, SCC, gastric cancer, oesophageal SCC"		
+SGK1	serum/glucocorticoid regulated kinase 1	yes		Nodular lymphocyte predominant Hodgkin lymphoma		
+SH2B3	SH2B adaptor protein 3	yes		"MPN, sAML, erythrocytosis, B-ALL"		
+SH3GL1	SH3-domain GRB2-like 1 (EEN)	yes		AL		
+SHTN1	KIAA1598	yes		Spitzoid tumour		
+SIRPA	signal regulatory protein alpha	yes		"HNSCC, colorectal cancer, Lung SCC"		
+SIX1	SIX homeobox 1	yes		Wilms tumour		
+SIX2	SIX homeobox 2	yes		Wilms tumour		
+SKI	SKI proto-oncogene	yes		melanoma		
+SLC34A2	"solute carrier family 34 (sodium phosphate), member 2"	yes		NSCLC		
+SLC45A3	"solute carrier family 45, member 3"	yes		prostate		
+SMAD2	SMAD family member 2	yes		"colorectal carcinoma, hepatocellular carcinoma"		
+SMAD3	SMAD family member 3	yes		"colorectal carcinoma, oral squamous cell carcinoma"		
+SMAD4	SMAD family member 4	yes	yes	"colorectal, pancreatic, small intestine"	gastrointestinal polyp	juvenile polyposis
+SMARCA4	"SWI/SNF related, matrix associated, actin dependent regulator of chromatin, subfamily a, member 4"	yes		"NSCLC, SCCOHT"		
+SMARCB1	"SWI/SNF related, matrix associated, actin dependent regulator of chromatin, subfamily b, member 1"	yes	yes	malignant rhabdoid	malignant rhabdoid	rhabdoid predisposition syndrome
+SMARCD1	"SWI/SNF related, matrix associated, actin dependent regulator of chromatin, subfamily d, member 1"	yes		breast		
+SMARCE1	"SWI/SNF related, matrix associated, actin dependent regulator of chromatin, subfamily e, member 1"		yes		meningioma	
+SMC1A	structural maintenance of chromosomes 1A	yes		AML		
+SMO	smoothened homolog (Drosophila)	yes		skin basal cell		
+SND1	staphylococcal nuclease and tudor domain containing 1	yes		pancreas acinar carcinoma		
+SNX29	RUN domain containing 2A	yes		"PMBL, Hodgkin lymphoma"		
+SOCS1	suppressor of cytokine signaling 1	yes		"Hodgkin lymphoma, PMBL"		
+SOX2	SRY (sex determining region Y)-box 2	yes		"NSCLC, oesophageal squamous carcinoma"		
+SOX21	SRY-box 21	yes		multiple myeloma		
+SPECC1	sperm antigen with calponin homology and coiled-coil domains 1	yes		JMML		
+SPEN	spen family transcriptional repressor	yes		"SMZL, adenoid cystic carcinoma, DLBCL"		
+SPOP	speckle type POZ protein	yes	yes	"prostate, endometrial"	prostate cancer	
+SRC	"SRC proto-oncogene, non-receptor tyrosine kinase"	yes		"colorectal cancer, endometrial carcinoma"		
+SRGAP3	SLIT-ROBO Rho GTPase activating protein 3	yes		pilocytic astrocytoma		
+SRSF2	serine/arginine-rich splicing factor 2	yes		"MDS, CLL"		
+SRSF3	serine/arginine-rich splicing factor 3	yes		follicular lymphoma		
+SS18	"synovial sarcoma translocation, chromosome 18"	yes		synovial sarcoma		
+SS18L1	synovial sarcoma translocation gene on chromosome 18-like 1	yes		synovial sarcoma		
+SSX1	"synovial sarcoma, X breakpoint 1"	yes		synovial sarcoma		
+SSX2	"synovial sarcoma, X breakpoint 2"	yes		synovial sarcoma		
+SSX4	"synovial sarcoma, X breakpoint 4"	yes		synovial sarcoma		
+STAG1	stromal antigen 1	yes		"colorectal cancer, AML"		
+STAG2	stromal antigen 2	yes		"bladder carcinoma, glioblastoma, melanoma, Ewing's sarcoma, myeloid neoplasms"		
+STAT3	signal transducer and activator of transcription 3 (acute-phase response factor)	yes	yes	T-cell large granular lymphocytic leukaemia	paediatric large granular lymphocytic leukaemia	
+STAT5B	signal transducer and activator of transcription 5B	yes		"large granular lymphocytic leukaemia, skin basal cell, APL"		
+STAT6	"signal transducer and activator of transcription 6, interleukin-4 induced"	yes		"solitary fibrous tumour, meningeal haemangiopericytoma"		
+STIL	SCL/TAL1 interrupting locus	yes		T-ALL		
+STK11	serine/threonine kinase 11 gene (LKB1)	yes	yes	"NSCLC, pancreatic"	"jejunal hamartoma, ovarian, testicular, pancreatic"	Peutz-Jeghers syndrome
+STRN	"striatin, calmodulin binding protein"	yes		"anaplastic thyroid, papillary thyroid, lung"		
+SUFU	suppressor of fused homolog (Drosophila)	yes	yes	medulloblastoma	medulloblastoma	medulloblastoma predisposition
+SUZ12	suppressor of zeste 12 homolog (Drosophila)	yes		endometrial stromal tumour		
+SYK	spleen tyrosine kinase	yes		"MDS, peripheral T-cell lymphoma"		
+TAF15	"TAF15 RNA polymerase II, TATA box binding protein (TBP)-associated factor, 68kDa"	yes		"extraskeletal myxoid chondrosarcoma, ALL"		
+TAL1	T-cell acute lymphocytic leukemia 1 (SCL)	yes		lymphoblastic leukaemia/biphasic		
+TAL2	T-cell acute lymphocytic leukemia 2	yes		T-ALL		
+TBL1XR1	transducin (beta)-like 1 X-linked receptor 1	yes		"splenic marginal zone lymphoma, primary central nervous system lymphoma, colorectal carcinoma, gallbladder carcinoma"		
+TBX3	T-box 3	yes		"breast, large intestine, skin"		
+TCEA1	"transcription elongation factor A (SII), 1"	yes		salivary adenoma		
+TCF12	"transcription factor 12 (HTF4, helix-loop-helix transcription factors 4)"	yes		extraskeletal myxoid chondrosarcoma		
+TCF3	transcription factor 3 (E2A immunoglobulin enhancer binding factors E12/E47)	yes		pre B-ALL		
+TCF7L2	transcription factor 7-like 2	yes		colorectal		
+TCL1A	T-cell leukemia/lymphoma 1A	yes		T-CLL		
+TEC	tec protein tyrosine kinase	yes		myxoid chondrosarcoma		
+TENT5C	"family with sequence similarity 46, member C"	yes		MM		
+TERT	telomerase reverse transcriptase	yes	yes	"melanoma, glioblastoma, hepatocellular carcinoma, bladder, skin basal cell, skin squamous cell, mesothelioma, medulloblastoma, other tumour types"	melanoma	
+TET1	tet methylcytosine dioxygenase 1	yes		AML		
+TET2	tet oncogene family member 2	yes		MDS		
+TFE3	transcription factor binding to IGHM enhancer 3	yes		"papillary renal, alveolar soft part sarcoma, renal"		
+TFEB	transcription factor EB	yes		renal cell carcinoma (childhood epithelioid)		
+TFG	TRK-fused gene	yes		"papillary thyroid, ALCL, NSCLC, extraskeletal myxoid chondrosarcoma"		
+TFPT	TCF3 (E2A) fusion partner (in childhood leukaemia)	yes		pre-B ALL		
+TFRC	"transferrin receptor (p90, CD71)"	yes		NHL		
+TGFBR2	transforming growth factor beta receptor II	yes	yes	"head and neck, colorectal"	colorectal	Hereditary Nonpolyposis Colorectal Cancer type 6
+THRAP3	thyroid hormone receptor associated protein 3 (TRAP150)	yes		aneurysmal bone cyst		
+TLX1	"T-cell leukemia, homeobox 1 (HOX11)"	yes		T-ALL		
+TLX3	"T-cell leukemia, homeobox 3 (HOX11L2)"	yes		T-ALL		
+TMEM127	transmembrane protein 127		yes		"pheochromocytoma, renal cell carcinoma"	
+TMPRSS2	"transmembrane protease, serine 2"	yes		prostate		
+TNC	tenascin C	yes		"SCC, melanoma"		
+TNFAIP3	"tumor necrosis factor, alpha-induced protein 3"	yes		"marginal zone B-cell lymphomas, Hodgkin lymphoma, PMBL"		
+TNFRSF14	"tumor necrosis factor receptor superfamily, member 14 (herpesvirus entry mediator)"	yes		follicular lymphoma		
+TNFRSF17	"tumor necrosis factor receptor superfamily, member 17"	yes		intestinal T-cell lymphoma		
+TOP1	topoisomerase (DNA) I	yes		AML*		
+TP53	tumor protein p53	yes	yes	"breast, colorectal, lung, sarcoma, adrenocortical, glioma, Spitzoid tumour, multiple other tumour types"	"breast, sarcoma, adrenocortical carcinoma, glioma, multiple other tumour types"	Li-Fraumeni syndrome
+TP63	tumor protein p63	yes	yes	"HNSCC, DLBCL"	NSCLC	
+TPM3	tropomyosin 3	yes		"papillary thyroid, ALCL, NSCLC, Spitzoid tumour"		
+TPM4	tropomyosin 4	yes		ALCL		
+TPR	translocated promoter region	yes		"papillary thyroid, NSCLC"		
+TRA	T cell receptor alpha locus	yes		T-ALL		
+TRAF7	tumour necrosis factor receptor-associated factor 7	yes		meningioma		
+TRB	T cell receptor beta locus	yes		T-ALL		
+TRD	T cell receptor delta locus	yes		T-cell leukaemia		
+TRIM24	tripartite motif containing 24	yes		APL		
+TRIM27	tripartite motif-containing 27	yes		papillary thyroid		
+TRIM33	"tripartite motif-containing 33 (PTC7,TIF1G)"	yes		papillary thyroid		
+TRIP11	thyroid hormone receptor interactor 11	yes		AML		
+TRRAP	transformation/transcription domain-associated protein	yes		melanoma		
+TSC1	tuberous sclerosis 1 gene	yes	yes	"renal cell carcinoma, bladder carcinoma"	"hamartoma, renal cell carcinoma, tuberous sclerosis tuber"	Tuberous sclerosis 1
+TSC2	tuberous sclerosis 2 gene	yes	yes	"pulmonary lymphangioleiomyomatosis (LAM), renal angiomyolipoma, HNSCC"	"hamartoma, renal cell carcinoma, tuberous sclerosis tuber"	Tuberous sclerosis 2
+TSHR	thyroid stimulating hormone receptor	yes	yes	toxic thyroid adenoma	thyroid adenoma	
+U2AF1	U2 small nuclear RNA auxiliary factor 1	yes		"CLL, MDS"		
+UBR5	ubiquitin protein ligase E3 component n-recognin 5	yes		"mantle cell lymphoma, gastric, colorectal"		
+USP44	ubiquitin specific peptidase 44	yes		"lung cancer, colon cancer"		
+USP6	ubiquitin specific peptidase 6 (Tre-2 oncogene)	yes		aneurysmal bone cyst		
+USP8	ubiquitin specific peptidase 8	yes		corticotroph adenoma		
+VAV1	vav guanine nucleotide exchange factor 1	yes		T-cell lymphoma		
+VHL	von Hippel-Lindau syndrome gene	yes	yes	"renal, haemangioma, pheochromocytoma"	"renal, haemangioma, pheochromocytoma"	Von Hippel-Lindau syndrome
+VTI1A	vesicle transport through interaction with t-SNAREs homolog 1A	yes		colorectal		
+WAS	Wiskott-Aldrich syndrome		yes		lymphoma	Wiskott-Aldrich syndrome
+WDCP	chromosome 2 open reading frame 44	yes		colorectal		
+WIF1	WNT inhibitory factor 1	yes		pleomorphic salivary gland adenoma		
+WNK2	WNK lysine deficient protein kinase 2	yes		gastric cancer		
+WRN	Werner syndrome (RECQL2)		yes		"osteosarcoma, meningioma, other tumour types"	Werner syndrome
+WT1	Wilms tumour 1 gene	yes	yes	"Wilms tumour, desmoplastic small round cell tumour"	Wilms tumour	"Denys-Drash syndrome, Frasier syndrome, familial Wilms tumour"
+WWTR1	WW domain containing transcription regulator 1	yes		epithelioid haemangioendothelioma		
+XPA	"xeroderma pigmentosum, complementation group A"		yes		"skin basal cell, skin squamous cell, melanoma"	xeroderma pigmentosum (A)
+XPC	"xeroderma pigmentosum, complementation group C"		yes		"skin basal cell, skin squamous cell, melanoma"	xeroderma pigmentosum (C)
+XPO1	"exportin 1 (CRM1 homolog, yeast)"	yes		CLL		
+YWHAE	"tyrosine 3-monooxygenase/tryptophan 5-monooxygenase activation protein, epsilon polypeptide (14-3-3 epsilon)"	yes		endometrial stromal sarcoma		
+ZBTB16	zinc finger and BTB domain containing 16	yes		APL		
+ZCCHC8	"zinc finger, CCHC domain containing 8"	yes		Spitzoid tumour		
+ZEB1	zinc finger E-box binding homeobox 1	yes		"CCRCC, melanoma"		
+ZFHX3	zinc finger homeobox 3	yes		"endometrial, gastric, prostate"		
+ZMYM2	zinc finger protein 198	yes		"MPN, NHL"		
+ZMYM3	zinc finger MYM-type containing 3	yes		"CRC, breast cancer"		
+ZNF331	zinc finger protein 331	yes		follicular thyroid adenoma		
+ZNF384	zinc finger protein 384 (CIZ/NMP4)	yes		ALL		
+ZNF429	zinc finger protein 429	yes		GBM		
+ZNF479	zinc finger protein 479	yes		"lung cancer, bladder carcinoma, prostate carcinoma"		
+ZNF521	zinc finger protein 521	yes		ALL		
+ZNRF3	zinc and ring finger 3	yes		"colorectal cancer, adrenocortical carcinoma, gastric cancer"		
+ZRSR2	"zinc finger (CCCH type), RNA-binding motif and serine/arginine rich 2"	yes		"MDS, CLL"		

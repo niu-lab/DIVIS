@@ -1,0 +1,40 @@
+# LANG:EN:Path of fastqc
+# DEFAULT:/usr/local/FastQC/fastqc
+FASTQC=/usr/local/FastQC/fastqc
+
+# LANG:EN:Parameters of fastqc
+# DEFAULT:-f fastq -t 8
+# OPTIONAL
+FASTQC_PARAMS=-f fastq -t 8
+
+# LANG:EN:Sample Name
+# DEFAULT:
+# REQUIRED
+SAMPLE_NAME=
+
+# LANG:EN:FASTQ File of End 1
+# REQUIRED
+R1=
+
+# LANG:EN:FASTQ File of End 2
+# REQUIRED
+R2=
+
+# LANG:EN:Path of fastp
+# DEFAULT:/usr/local/fastp-0.20.0/fastp
+FASTP=/usr/local/fastp-0.20.0/fastp
+
+# LANG:EN:Parameters of fastp
+# DEFAULT:-p -c
+# OPTIONAL
+FASTP_PARAMS=-p -c
+
+# LANG:EN:Adataper sequence of R1
+# DEFAULT:
+# OPTIONAL
+ADAPTER1=
+
+# LANG:EN:Adataper sequence of R2
+# DEFAULT:
+# OPTIONAL:
+ADAPTER2=

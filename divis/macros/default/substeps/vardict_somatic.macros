@@ -1,0 +1,57 @@
+# LANG:EN: Path of SNPSIFT
+# DEFAULT: /usr/local/snpEff/snpEff/SnpSift.jar
+SNPSIFT=/usr/local/snpEff/snpEff/SnpSift.jar
+
+# LANG:EN:Path of dbsnp data
+# REQUIRED
+# EXAMPLE: DBSNP_DB=./Ref/dbsnp_138.hg19.vcf
+DBSNP_DB=
+
+# LANG:EN:calling mode of vardict
+# REQUIRED
+MODE=filter
+
+# LANG:EN:Path of VarDict
+# DEFAULT: /usr/local/VarDict-1.8.2/bin/VarDict
+VARDICT= /usr/local/VarDict-1.8.2/bin/VarDict
+
+# LANG:EN:Path of Reference Genome
+# DEFAULT:
+# REQUIRED
+REF=
+
+# LANG:EN:Parameters of VarDict
+# DEFAULT: -f 0.01 -r 4 -q 25 -z -F 0 -c 1 -S 2 -E 3 -th 10 -k 0
+# REQUIRED
+VARDICT_PARAMS=-f 0.01 -r 4 -q 25 -z -F 0 -c 1 -S 2 -E 3 -th 10 -k 0
+
+# LANG:EN: Tumor Sample Name
+TUMOR_NAME=
+
+# LANG:EN: Tumor Sample Bam File
+TUMOR_BAM=
+
+# LANG:EN: Normal Sample Bam File
+NORMAL_BAM=
+
+# Bed file
+BED_FILE=
+
+# LANG:EN:Path of VarDict
+# DEFAULT: /usr/local/VarDict-1.8.2/bin/testsomatic.R
+VARDICT_TEST_SOMAITC=/usr/local/VarDict-1.8.2/bin/testsomatic.R
+
+# LANG:EN:Path of VarDict
+# DEFAULT: /usr/local/VarDict-1.8.2/bin/var2vcf_paired.pl
+VARDICT_TO_VCF=/usr/local/VarDict-1.8.2/bin/var2vcf_paired.pl
+
+# LANG:EN: Normal Sample Name
+NORMAL_NAME=
+
+# LANG:EN: Filter Allele Frequency
+FREQ=
+
+# LANG:EN:Sample Name
+# DEFAULT:
+# REQUIRED
+SAMPLE_NAME=
