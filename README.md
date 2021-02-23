@@ -2,11 +2,7 @@
 
 ***DIVIS***，an easy-to-use, extensible, and customisable cancer genome sequencing analysis platform which including the functions of variant Detection, Interpretation, Visualisation, and one can use DIVIS as an infrastructure of genome analysis. 
 
-Please cite VarDict:
 
-xxxxxxxxxx.
-
-The link to is article can be accessed through: https://xxxxxxxxxxxx .
 
 DIVIS can run in single sample (see Single sample mode section) and paired sample (see Paired variant calling section). As input, DIVIS takes a config files which contains reference genomes in FASTA format, sequencing reads in FASTQ format or aligned reads in BAM format, and target regions in BED format, *ect.*
 
