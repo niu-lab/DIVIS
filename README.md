@@ -27,18 +27,18 @@ DIVIS currently covers software of all stages of cancer genome sequencing, Users
 
 ***Required***: 
 
-1. [FastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/),  
-2. [Fastp](https://github.com/OpenGene/fastp), 
-3. [bwa](https://github.com/lh3/bwa),
-4. [samtools](http://www.htslib.org/), 
-5. [GATK](https://gatk.broadinstitute.org/hc/en-us), 
-6. [VarDict](https://github.com/AstraZeneca-NGS/VarDict), 
-7. [Strelka](https://github.com/Illumina/strelka), 
-8. [VarScan2](http://varscan.sourceforge.net/), 
+1. [FastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/) 
+2. [Fastp](https://github.com/OpenGene/fastp)
+3. [bwa](https://github.com/lh3/bwa)
+4. [samtools](http://www.htslib.org/)
+5. [GATK](https://gatk.broadinstitute.org/hc/en-us)
+6. [VarDict](https://github.com/AstraZeneca-NGS/VarDict)
+7. [Strelka](https://github.com/Illumina/strelka)
+8. [VarScan2](http://varscan.sourceforge.net/)
 
 ***Optinal:***  
 
-1. [Annovar](https://annovar.openbioinformatics.org/en/latest/), 
+1. [Annovar](https://annovar.openbioinformatics.org/en/latest/) 
 2. [Ensembl Variant Effect Predictor (VEP)](https://www.ensembl.org/vep)
 
 or run the following command  directly:
@@ -233,9 +233,9 @@ drwxrwxr-x 3 scuser scuser    4096 Feb 19  2013 release
   TEST.varscan.som_snv.Somatic.hc.somatic_pass.vcf  ## *filtered high confidence somatic snvs of VarScan2*
   ```
 
-# Licence
+# License
 
-DIVIS code is freely available under the [MIT license](http://www.opensource.org/licenses/mit-license.html). You can use DIVIS for free as long as for non-profit research purposes. However, if you plan to use DIVIS for commercial purposes, a licence is required and please contact hexy@cnic.cn or niubf@cnic.cn to obtain one.
+DIVIS code is freely available under the [MIT license](http://www.opensource.org/licenses/mit-license.html). You can use DIVIS for free as long as for non-profit research purposes. However, if you plan to use DIVIS for commercial purposes, a license is required and please contact hexy@cnic.cn or niubf@cnic.cn to obtain one.
 
 
 
